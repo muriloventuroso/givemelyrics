@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema id="com.github.muriloventuroso.givemelyrics" path="/com/github/muriloventuroso/givemelyrics/">
+
+        <key name="pos-x" type="i">
+            <default>920</default>
+            <summary>The saved width of the window.</summary>
+            <description></description>
+        </key>
+
+        <key name="pos-y" type="i">
+            <default>920</default>
+            <summary>The saved width of the window.</summary>
+            <description></description>
+        </key>
+
+        <key name="window-width" type="i">
+            <default>1100</default>
+            <summary>The saved width of the window.</summary>
+            <description></description>
+        </key>
+
+        <key name="window-height" type="i">
+            <default>640</default>
+            <summary>The saved height of the window.</summary>
+            <description></description>
+        </key>
+
+         <key name="window-maximized" type="b">
+            <default>false</default>
+            <summary>Maximized window.</summary>
+            <description></description>
+        </key>
+
+    </schema>
+
+</schemalist>

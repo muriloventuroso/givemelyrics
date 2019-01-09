@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Give Me Lyrics
+GenericName=Give Me Lyrics
+Comment=See the lyrics of the song that is playing.
+Categories=GTK;Audio;
+Exec=com.github.muriloventuroso.givemelyrics
+Icon=com.github.muriloventuroso.givemelyrics
+Terminal=false
+Type=Application
+X-GNOME-Gettext-Domain=com.github.muriloventuroso.givemelyrics
+Keywords=audio;lyrics;
