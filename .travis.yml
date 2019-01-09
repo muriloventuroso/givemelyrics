@@ -23,5 +23,5 @@ install:
 script:
   - houston ci
     --type system-app
-    --name-domain com.github.muriloventuroso.pdftricks
-    --name-human PDFTricks
+    --name-domain com.github.muriloventuroso.givemelyrics
+    --name-human GiveMeLyrics
