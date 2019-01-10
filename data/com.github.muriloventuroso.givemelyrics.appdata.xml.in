@@ -9,6 +9,12 @@
   <summary>Lyrics for your songs</summary>
   <description><p>See the lyrics of the song that is playing, from any application.</p></description>
   <releases>
+    <release version="0.1.1" date="2019-01-10">
+      <description>
+        <p>New Source: letras.mus.br</p>
+        <p>Bugfix</p>
+      </description>
+    </release>
     <release version="0.1.0" date="2019-01-09">
       <description>
         <p>Show lyrics</p>
@@ -50,7 +56,7 @@
     <content_attribute id="language-humor">none</content_attribute>
     <content_attribute id="language-discrimination">none</content_attribute>
     <content_attribute id="social-chat">none</content_attribute>
-    <content_attribute id="social-info">none</content_attribute>
+    <content_attribute id="social-info">mild</content_attribute>
     <content_attribute id="social-audio">none</content_attribute>
     <content_attribute id="social-location">none</content_attribute>
     <content_attribute id="social-contacts">none</content_attribute>
