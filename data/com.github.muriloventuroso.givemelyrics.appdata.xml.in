@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2019 MuriloVenturoso <muriloventuroso@gmail.com> -->
 <component type="desktop">
-  <id>com.github.muriloventuroso.givemepyrics</id>
+  <id>com.github.muriloventuroso.givemelyrics</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_group>MuriloVenturoso</project_group>
   <project_license>GPL-3.0+</project_license>
