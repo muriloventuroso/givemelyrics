@@ -83,6 +83,7 @@ namespace GiveMeLyrics {
 
             var doc = html_cntx.read_doc(result_string.replace("<br />", "\n"), "");
             var lyricbox = getValue(doc, "//div[contains(@class, 'lyricbox')]");
+
             if(lyricbox != null){
                 return lyricbox;
             }

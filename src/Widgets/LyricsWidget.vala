@@ -96,6 +96,7 @@ namespace GiveMeLyrics {
             scrolled.margin_bottom = 30;
 
             view = new Gtk.TextView ();
+            view.editable = false;
             view.set_wrap_mode (Gtk.WrapMode.WORD);
             view.vexpand = true;
             view.get_style_context().add_class("view-lyric");

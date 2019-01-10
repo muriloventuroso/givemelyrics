@@ -30,8 +30,8 @@ If you want to hack on and build EasySSH yourself, you'll need the following dep
 * libgranite-dev
 * meson
 * valac
-* libxml-2.0
-* libsoup-2.4
+* libxml2-dev
+* libsoup2.4-dev
 * libjson-glib-dev
 
 Run `meson build` to configure the build environment and run `ninja test` to build and run automated tests
