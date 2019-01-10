@@ -38,7 +38,7 @@ namespace GiveMeLyrics {
         private Gtk.ScrolledWindow scrolled;
         private Gtk.Image icon;
         private Gtk.Box box_message;
-        private Gtk.Spinner spinner;
+        private Gtk.Box box_spinner;
         private Gtk.Label label_message;
 
         public LyricsWidget (Gtk.Window window) {
@@ -116,25 +116,28 @@ namespace GiveMeLyrics {
             label_message = new Gtk.Label(_("Nothing is playing"));
             label_message.get_style_context().add_class("h1");
 
-            spinner = new Gtk.Spinner();
+            var spinner = new Gtk.Spinner();
             spinner.active = true;
             spinner.height_request = 32;
             spinner.width_request = 32;
-            box_message.pack_start(spinner, false, false, 0);
+
+            box_spinner = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
+            box_spinner.add(spinner);
+            box_message.pack_start(box_spinner, false, false, 0);
 
             box_message.pack_start(label_message, false, false, 0);
             box_message.pack_start(icon, false, false, 0);
             box_message.pack_start(spinner, false, false, 0);
 
             var box = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
-            box.pack_start(box_message);
             box.pack_start(titles, false, true, 0);
+            box.pack_start(box_message);
             box.pack_start(scrolled, true, true, 0);
             add(box);
             show_all();
             titles.hide();
             scrolled.hide();
-            spinner.hide();
+            box_spinner.hide();
 
         }
 
@@ -260,7 +263,8 @@ namespace GiveMeLyrics {
 
         protected void update_from_meta (MprisClient client) {
             var metadata = client.player.metadata;
-            bool playing = false;
+            var playing = false;
+            var must_update_lyric = false;
             if(client.player.playback_status == "Playing"){
                 playing = true;
                 if  ("mpris:artUrl" in metadata) {
@@ -278,6 +282,7 @@ namespace GiveMeLyrics {
                     if(title != last_title){
                         last_title = title.split("-")[0];
                         title_label.label = "<b>%s</b>".printf (Markup.escape_text (last_title));
+                        must_update_lyric = true;
                     }
                 }
 
@@ -294,24 +299,24 @@ namespace GiveMeLyrics {
                 }
             }
 
-            if(playing){
-                titles.hide();
+            if(playing == true && must_update_lyric == true){
                 scrolled.hide();
                 icon.hide();
+                titles.show();
                 box_message.show();
-                spinner.show();
+                box_spinner.show();
+                label_message.label = _("Loading");
                 if(update_lyric() == true){
+                    box_spinner.hide();
                     box_message.hide();
-                    titles.show();
                     scrolled.show();
                 }else{
-                    titles.hide();
                     scrolled.hide();
-                    box_message.show();
-                    spinner.hide();
+                    box_spinner.hide();
                     icon.show();
                     label_message.label = _("No lyric found");
                 }
+
 
             }
 

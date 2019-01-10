@@ -34,6 +34,7 @@ namespace GiveMeLyrics {
 
         public LyricsFetcher () {
             lyrics_apis += "lyrics_wikia";
+            lyrics_apis += "letras_mus";
             lyrics_apis += "api_seeds";
         }
 
@@ -42,7 +43,6 @@ namespace GiveMeLyrics {
             var api_key = "DasGEcpYgIQRlcEEs0reSyuvn9uIcvisOaFW1QiVK7uS3mPpYL7Qb25YmPIVl60r";
             var session = new Soup.Session ();
             var url = seeds_url + artist + "/" + title + "/?apikey=" + api_key;
-            print(url);
             var message = new Soup.Message ("GET", url);
 
             /* send a sync request */
@@ -69,8 +69,7 @@ namespace GiveMeLyrics {
         private string get_lyrics_wikia(string title, string artist){
             var seeds_url = "http://lyrics.wikia.com/wiki/";
             var session = new Soup.Session ();
-            var url = seeds_url + artist + ":" + title;
-            print(url);
+            var url = seeds_url + artist.replace("&apos;", "'") + ":" + title;
             var message = new Soup.Message ("GET", url);
 
             /* send a sync request */
@@ -90,6 +89,29 @@ namespace GiveMeLyrics {
             return "";
         }
 
+        private string get_letras_mus(string title, string artist){
+            var letras_url = "https://www.letras.mus.br/";
+            var session = new Soup.Session ();
+            var url = letras_url + artist.replace(" ", "-").replace("&apos;", "-") + "/" + title.replace(" ", "-");
+            var message = new Soup.Message ("GET", url);
+
+            /* send a sync request */
+            session.send_message (message);
+
+            // parse html
+            var html_cntx = new Html.ParserCtxt();
+            html_cntx.use_options(Html.ParserOption.NOERROR + Html.ParserOption.NOWARNING);
+            var result_string = (string) message.response_body.flatten ().data;
+
+            var doc = html_cntx.read_doc(result_string.replace("<br/>", "\n").replace("</p><p>", "\n\n").replace("<p>", "").replace("</p>", ""), "");
+            var lyricbox = getValue(doc, "//div[contains(@class, 'cnt-letra')]//article");
+
+            if(lyricbox != null){
+                return lyricbox;
+            }
+            return "";
+        }
+
         public string get_lyric(string title, string artist){
             string song_ret = "";
             var n_title = title.replace("?", "");
@@ -99,6 +121,8 @@ namespace GiveMeLyrics {
                     ret = get_api_seeds(n_title, artist);
                 }else if(s_api == "lyrics_wikia"){
                     ret = get_lyrics_wikia(n_title, artist);
+                }else if(s_api == "letras_mus"){
+                    ret = get_letras_mus(n_title, artist);
                 }
                 if(ret != ""){
                     song_ret = ret;
