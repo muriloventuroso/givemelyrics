@@ -9,7 +9,7 @@
   <summary>Lyrics for your songs</summary>
   <description><p>See the lyrics of the song that is playing, from any application.</p></description>
   <releases>
-    <release version="0.1.1" date="2019-01-10">
+    <release version="0.1.2" date="2019-01-10">
       <description>
         <p>New Source: letras.mus.br</p>
         <p>Bugfix</p>
