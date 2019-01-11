@@ -42,7 +42,7 @@ dependencies = [
 # Adds subfolders specific build system
 message ('Adds subfolders specific build system')
 
-icon_sizes = ['32', '48', '64', '128', '256']
+icon_sizes = ['16', '24', '32', '48', '64', '128', '256']
 
 foreach i : icon_sizes
     install_data(
