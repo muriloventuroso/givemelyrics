@@ -1,5 +1,3 @@
-[![Translation status](https://hosted.weblate.org/widgets/givemelyrics/-/translations/svg-badge.svg)](https://hosted.weblate.org/engage/givemelyrics/?utm_source=widget)
-
 <h1 align="center">Give Me Lyrics</h1>
 
 See the lyrics of the song that is playing, from any application.
@@ -24,7 +22,7 @@ See the lyrics of the song that is playing, from any application.
 
 ## Developing and Building
 
-If you want to hack on and build EasySSH yourself, you'll need the following dependencies:
+If you want to hack on and build Give Me Lyrics yourself, you'll need the following dependencies:
 
 * libgtk-3-dev
 * libgranite-dev
@@ -44,17 +42,6 @@ To install, use `ninja install`, then execute with `com.github.muriloventuroso.g
 
     sudo ninja install
     com.github.muriloventuroso.givemelyrics
-
-
-## Install with Flatpak
-
-Install:
-
-    flatpak install flathub com.github.muriloventuroso.givemelyrics
-
-Run:
-
-    flatpak run com.github.muriloventuroso.givemelyrics
 
 
 -----
