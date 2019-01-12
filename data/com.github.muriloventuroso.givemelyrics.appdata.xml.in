@@ -9,6 +9,12 @@
   <summary>Lyrics for your songs</summary>
   <description><p>See the lyrics of the song that is playing, from any application.</p></description>
   <releases>
+    <release version="0.1.3" date="2019-01-12">
+      <description>
+        <p>New icon</p>
+        <p>New translation: French</p>
+      </description>
+    </release>
     <release version="0.1.2" date="2019-01-10">
       <description>
         <p>New Source: letras.mus.br</p>
