@@ -19,12 +19,12 @@ msgstr ""
 
 #: src/Application.vala:62 src/Application.vala:68
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "Give Me Lyrics"
 
 #: src/Widgets/LyricsWidget.vala:116
 msgid "Nothing is playing"
-msgstr ""
+msgstr "Pas de lecture en cours"
 
 #: src/Widgets/LyricsWidget.vala:313
 msgid "No lyric found"
-msgstr ""
+msgstr "Pas de paroles trouvées"
