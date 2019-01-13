@@ -83,10 +83,13 @@ namespace GiveMeLyrics {
             var doc = html_cntx.read_doc(result_string.replace("<br />", "\n"), "");
             var lyricbox = getValue(doc, "//div[contains(@class, 'lyricbox')]");
 
-            if(lyricbox != null){
-                return lyricbox;
+            if(lyricbox == null){
+                return "";
             }
-            return "";
+            if(lyricbox.contains("Unfortunately, we are not licensed to display the full lyrics for this song at the moment.")){
+                return "";
+            }
+            return lyricbox;
         }
 
         private string get_letras_mus(string title, string artist){
@@ -106,10 +109,11 @@ namespace GiveMeLyrics {
             var doc = html_cntx.read_doc(result_string.replace("<br/>", "\n").replace("</p><p>", "\n\n").replace("<p>", "").replace("</p>", ""), "");
             var lyricbox = getValue(doc, "//div[contains(@class, 'cnt-letra')]//article");
 
-            if(lyricbox != null){
-                return lyricbox;
+            if(lyricbox == null){
+                return "";
             }
-            return "";
+
+            return lyricbox;
         }
 
         public string get_lyric(string title, string artist){
