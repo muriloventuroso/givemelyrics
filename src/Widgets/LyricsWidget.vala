@@ -127,7 +127,6 @@ namespace GiveMeLyrics {
 
             box_message.pack_start(label_message, false, false, 0);
             box_message.pack_start(icon, false, false, 0);
-            box_message.pack_start(spinner, false, false, 0);
 
             var box = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
             box.pack_start(titles, false, true, 0);
