@@ -38,7 +38,7 @@ namespace GiveMeLyrics {
             lyrics_apis += "api_seeds";
         }
 
-        private string get_api_seeds(string title, string artist){
+        private string[] get_api_seeds(string title, string artist){
             var seeds_url = "https://orion.apiseeds.com/api/music/lyric/";
             var api_key = "DasGEcpYgIQRlcEEs0reSyuvn9uIcvisOaFW1QiVK7uS3mPpYL7Qb25YmPIVl60r";
             var session = new Soup.Session ();
@@ -56,17 +56,17 @@ namespace GiveMeLyrics {
                     var result = root_object.get_object_member ("result");
                     var track = result.get_object_member ("track");
                     var text = track.get_string_member("text");
-                    return text;
+                    return {text, ""};
                 }
 
 
             } catch (Error e) {
                 stderr.printf ("I guess something is not working...\n");
             }
-            return "";
+            return {"", ""};
         }
 
-        private string get_lyrics_wikia(string title, string artist){
+        private string[] get_lyrics_wikia(string title, string artist){
             var seeds_url = "http://lyrics.wikia.com/wiki/";
             var session = new Soup.Session ();
             var url = seeds_url + artist.replace("&apos;", "'") + ":" + title;
@@ -84,15 +84,15 @@ namespace GiveMeLyrics {
             var lyricbox = getValue(doc, "//div[contains(@class, 'lyricbox')]");
 
             if(lyricbox == null){
-                return "";
+                return {"", ""};
             }
             if(lyricbox.contains("Unfortunately, we are not licensed to display the full lyrics for this song at the moment.")){
-                return "";
+                return {"", ""};
             }
-            return lyricbox;
+            return {lyricbox, url};
         }
 
-        private string get_letras_mus(string title, string artist){
+        private string[] get_letras_mus(string title, string artist){
             var letras_url = "https://www.letras.mus.br/";
             var session = new Soup.Session ();
             var url = letras_url + artist.replace(" ", "-").replace("&apos;", "-") + "/" + title.replace(" ", "-");
@@ -110,30 +110,37 @@ namespace GiveMeLyrics {
             var lyricbox = getValue(doc, "//div[contains(@class, 'cnt-letra')]//article");
 
             if(lyricbox == null){
-                return "";
+                return {"", ""};
             }
 
-            return lyricbox;
+            return {lyricbox, url};
         }
 
-        public string get_lyric(string title, string artist){
+        public string[] get_lyric(string title, string artist){
             string song_ret = "";
+            var url = "";
+            string[] r;
             var n_title = title.replace("?", "");
             foreach (var s_api in lyrics_apis) {
                 var ret = "";
                 if(s_api == "api_seeds"){
-                    ret = get_api_seeds(n_title, artist);
+                    r = get_api_seeds(n_title, artist);
                 }else if(s_api == "lyrics_wikia"){
-                    ret = get_lyrics_wikia(n_title, artist);
+                    r = get_lyrics_wikia(n_title, artist);
                 }else if(s_api == "letras_mus"){
-                    ret = get_letras_mus(n_title, artist);
+                    r = get_letras_mus(n_title, artist);
+                }else{
+                    return {"", ""};
                 }
+
+                ret = r[0];
+                url = r[1];
                 if(ret != ""){
                     song_ret = ret;
                     break;
                 }
             }
-            return song_ret;
+            return {song_ret, url};
         }
 
         public static string? getValue(Html.Doc* doc, string xpath, bool remove = false){

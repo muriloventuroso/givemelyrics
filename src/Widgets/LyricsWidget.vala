@@ -40,11 +40,12 @@ namespace GiveMeLyrics {
         private Gtk.Box box_message;
         private Gtk.Box box_spinner;
         private Gtk.Label label_message;
+        private Gtk.LinkButton source_link;
 
         public LyricsWidget (Gtk.Window window) {
             Object (
                 margin_start: 30,
-                margin_end: 30,
+                margin_end: 60,
                 window: window
             );
             last_title = "";
@@ -93,7 +94,6 @@ namespace GiveMeLyrics {
             titles.margin_bottom = 10;
 
             scrolled = new Gtk.ScrolledWindow (null, null);
-            scrolled.margin_bottom = 30;
 
             view = new Gtk.TextView ();
             view.editable = false;
@@ -101,6 +101,11 @@ namespace GiveMeLyrics {
             view.vexpand = true;
             view.get_style_context().add_class("view-lyric");
             scrolled.add (view);
+
+            source_link = new Gtk.LinkButton.with_label("http://google.com/", _("Source"));
+            source_link.hexpand = false;
+            source_link.margin_bottom = 10;
+            source_link.margin_top = 10;
 
             box_message = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
             box_message.hexpand = true;
@@ -132,12 +137,13 @@ namespace GiveMeLyrics {
             box.pack_start(titles, false, true, 0);
             box.pack_start(box_message);
             box.pack_start(scrolled, true, true, 0);
+            box.pack_end(source_link, false, false, 0);
             add(box);
             show_all();
             titles.hide();
             scrolled.hide();
             box_spinner.hide();
-
+            source_link.hide();
         }
 
         public void setup_dbus() {
@@ -322,7 +328,15 @@ namespace GiveMeLyrics {
         }
 
         private bool update_lyric(){
-            var lyric = fetcher.get_lyric(last_title, last_artist);
+            var r = fetcher.get_lyric(last_title, last_artist);
+            var lyric = r[0];
+            var url = r[1];
+            if(url != ""){
+                source_link.set_uri(url);
+                source_link.show();
+            }else{
+                source_link.hide();
+            }
             view.buffer.text = lyric;
             if(lyric != ""){
                 return true;
