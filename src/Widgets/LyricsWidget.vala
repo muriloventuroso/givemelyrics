@@ -137,7 +137,7 @@ namespace GiveMeLyrics {
             box.pack_start(titles, false, true, 0);
             box.pack_start(box_message);
             box.pack_start(scrolled, true, true, 0);
-            box.pack_end(source_link, false, false, 0);
+            box.pack_start(source_link, false, false, 0);
             add(box);
             show_all();
             titles.hide();
@@ -302,6 +302,15 @@ namespace GiveMeLyrics {
                         artist_label.label = artist;
                     }
                 }
+            }
+
+            if(last_title == "Spotify" || last_title == "Advertisement" && last_artist == ""){
+                must_update_lyric = false;
+                scrolled.hide();
+                titles.show();
+                box_message.show();
+                icon.show();
+                label_message.label = _("Advertising");
             }
 
             if(playing == true && must_update_lyric == true){
