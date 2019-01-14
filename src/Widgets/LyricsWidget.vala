@@ -104,6 +104,7 @@ namespace GiveMeLyrics {
 
             source_link = new Gtk.LinkButton.with_label("http://google.com/", _("Source"));
             source_link.hexpand = false;
+            source_link.vexpand = false;
             source_link.margin_bottom = 10;
             source_link.margin_top = 10;
 
@@ -137,7 +138,10 @@ namespace GiveMeLyrics {
             box.pack_start(titles, false, true, 0);
             box.pack_start(box_message);
             box.pack_start(scrolled, true, true, 0);
-            box.pack_start(source_link, false, false, 0);
+
+            var grid_source = new Gtk.Grid();
+            grid_source.attach(source_link, 0, 0, 1, 1);
+            box.pack_start(grid_source, false, false, 0);
             add(box);
             show_all();
             titles.hide();
