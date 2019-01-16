@@ -10,6 +10,7 @@ See the lyrics of the song that is playing, from any application.
 
 * Lyrics Wikia
 * API Seeds
+* Letras.mus.br
 
 ### Donate
 <a href="https://www.paypal.me/muriloventuroso">PayPal</a> | <a href="https://www.patreon.com/muriloventuroso">Patreon</a>
