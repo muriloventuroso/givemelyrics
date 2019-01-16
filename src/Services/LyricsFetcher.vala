@@ -42,6 +42,7 @@ namespace GiveMeLyrics {
             var seeds_url = "https://orion.apiseeds.com/api/music/lyric/";
             var api_key = "DasGEcpYgIQRlcEEs0reSyuvn9uIcvisOaFW1QiVK7uS3mPpYL7Qb25YmPIVl60r";
             var session = new Soup.Session ();
+            session.timeout = 5;
             var url = seeds_url + artist + "/" + title + "/?apikey=" + api_key;
             var message = new Soup.Message ("GET", url);
 
@@ -62,6 +63,7 @@ namespace GiveMeLyrics {
 
             } catch (Error e) {
                 stderr.printf ("I guess something is not working...\n");
+                return {"", ""};
             }
             return {"", ""};
         }
@@ -69,6 +71,7 @@ namespace GiveMeLyrics {
         private string[] get_lyrics_wikia(string title, string artist){
             var seeds_url = "http://lyrics.wikia.com/wiki/";
             var session = new Soup.Session ();
+            session.timeout = 5;
             var url = seeds_url + artist.replace("&apos;", "'") + ":" + title;
             var message = new Soup.Message ("GET", url);
 
@@ -95,6 +98,7 @@ namespace GiveMeLyrics {
         private string[] get_letras_mus(string title, string artist){
             var letras_url = "https://www.letras.mus.br/";
             var session = new Soup.Session ();
+            session.timeout = 5;
             var url = letras_url + artist.replace(" ", "-").replace("&apos;", "-") + "/" + title.replace(" ", "-");
             var message = new Soup.Message ("GET", url);
 

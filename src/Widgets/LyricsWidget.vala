@@ -351,7 +351,7 @@ namespace GiveMeLyrics {
                 source_link.hide();
             }
             view.buffer.text = lyric;
-            if(lyric != ""){
+            if(lyric != "" && lyric != null){
                 return true;
             }
             return false;
