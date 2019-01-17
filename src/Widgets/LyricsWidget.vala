@@ -314,6 +314,7 @@ namespace GiveMeLyrics {
                 titles.show();
                 box_message.show();
                 icon.show();
+                source_link.hide();
                 label_message.label = _("Advertising");
             }
 
