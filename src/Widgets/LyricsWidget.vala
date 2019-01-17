@@ -94,19 +94,24 @@ namespace GiveMeLyrics {
             titles.margin_bottom = 10;
 
             scrolled = new Gtk.ScrolledWindow (null, null);
+            var box_scrolled = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
 
             view = new Gtk.TextView ();
             view.editable = false;
             view.set_wrap_mode (Gtk.WrapMode.WORD);
             view.vexpand = true;
             view.get_style_context().add_class("view-lyric");
-            scrolled.add (view);
+            box_scrolled.pack_start(view, true, true, 0);
 
             source_link = new Gtk.LinkButton.with_label("http://google.com/", _("Source"));
             source_link.hexpand = false;
             source_link.vexpand = false;
             source_link.margin_bottom = 10;
             source_link.margin_top = 10;
+            source_link.halign = Gtk.Align.START;
+            box_scrolled.pack_start(source_link, false, false, 0);
+
+            scrolled.add (box_scrolled);
 
             box_message = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
             box_message.hexpand = true;
