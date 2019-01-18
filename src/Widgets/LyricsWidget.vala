@@ -45,7 +45,7 @@ namespace GiveMeLyrics {
         public LyricsWidget (Gtk.Window window) {
             Object (
                 margin_start: 30,
-                margin_end: 60,
+                margin_end: 30,
                 window: window
             );
             last_title = "";
