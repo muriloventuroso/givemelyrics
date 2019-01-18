@@ -265,10 +265,9 @@ namespace GiveMeLyrics {
                     /* Handle mediaplayer2 iface */
                     p.foreach ((k,v) => {
                         if (k == "Metadata") {
-                            Idle.add (() => {
-                                update_from_meta (client);
-                                return false;
-                            });
+
+                            update_from_meta (client);
+
                         }
                     });
                 }
@@ -292,9 +291,9 @@ namespace GiveMeLyrics {
                 string title = "";
                 if  ("xesam:title" in metadata && metadata["xesam:title"].is_of_type (VariantType.STRING)
                     && metadata["xesam:title"].get_string () != "") {
-                    title = metadata["xesam:title"].get_string ();
+                    title = metadata["xesam:title"].get_string ().split("-")[0];
                     if(title != last_title){
-                        last_title = title.split("-")[0];
+                        last_title = title;
                         title_label.label = "<b>%s</b>".printf (Markup.escape_text (last_title));
                         must_update_lyric = true;
                     }
@@ -330,37 +329,42 @@ namespace GiveMeLyrics {
                 box_message.show();
                 box_spinner.show();
                 label_message.label = _("Loading");
-                if(update_lyric() == true){
-                    box_spinner.hide();
-                    box_message.hide();
-                    scrolled.show();
-                }else{
-                    scrolled.hide();
-                    box_spinner.hide();
-                    icon.show();
-                    label_message.label = _("No lyric found");
-                }
-
-
+                update_lyric();
             }
 
         }
 
-        private bool update_lyric(){
-            var r = fetcher.get_lyric(last_title, last_artist);
-            var lyric = r[0];
-            var url = r[1];
-            if(url != ""){
-                source_link.set_uri(url);
-                source_link.show();
-            }else{
-                source_link.hide();
-            }
-            view.buffer.text = lyric;
-            if(lyric != "" && lyric != null){
-                return true;
-            }
-            return false;
+        private void update_lyric(){
+            new Thread<void*> (null, () => {
+                bool error = false;
+                var r = fetcher.get_lyric(last_title, last_artist);
+                var lyric = r[0];
+                var url = r[1];
+                if(url != ""){
+                    source_link.set_uri(url);
+                    source_link.show();
+                }else{
+                    source_link.hide();
+                }
+                view.buffer.text = lyric;
+                if(lyric == "" || lyric == null){
+                    error = true;
+                }
+
+                if (error == true) {
+                    scrolled.hide();
+                    box_spinner.hide();
+                    icon.show();
+                    label_message.label = _("No lyric found");
+                } else {
+                    box_spinner.hide();
+                    box_message.hide();
+                    scrolled.show();
+                }
+
+
+                return null;
+            });
         }
 
         private static Gdk.Pixbuf? mask_pixbuf (Gdk.Pixbuf pixbuf, int scale) {

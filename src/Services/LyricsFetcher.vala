@@ -72,7 +72,7 @@ namespace GiveMeLyrics {
             var seeds_url = "http://lyrics.wikia.com/wiki/";
             var session = new Soup.Session ();
             session.timeout = 5;
-            var url = seeds_url + artist.replace("&apos;", "'") + ":" + title;
+            var url = seeds_url + artist.replace("&apos;", "'").replace("&amp;", "e") + ":" + title;
             var message = new Soup.Message ("GET", url);
 
             /* send a sync request */
@@ -96,10 +96,10 @@ namespace GiveMeLyrics {
         }
 
         private string[] get_letras_mus(string title, string artist){
-            var letras_url = "https://www.letras.mus.br/";
+            var letras_url = "https://www.letras.com/";
             var session = new Soup.Session ();
             session.timeout = 5;
-            var url = letras_url + artist.replace(" ", "-").replace("&apos;", "-") + "/" + title.replace(" ", "-");
+            var url = letras_url + artist.replace(" ", "-").replace("&apos;", "-").replace("&amp;", "e") + "/" + title.replace(" ", "-");
             var message = new Soup.Message ("GET", url);
 
             /* send a sync request */
@@ -124,15 +124,16 @@ namespace GiveMeLyrics {
             string song_ret = "";
             var url = "";
             string[] r;
-            var n_title = title.replace("?", "");
+            var n_title = remove_accents(title.replace("?", "").down());
+            var n_artist = remove_accents(artist.down());
             foreach (var s_api in lyrics_apis) {
                 var ret = "";
                 if(s_api == "api_seeds"){
-                    r = get_api_seeds(n_title, artist);
+                    r = get_api_seeds(n_title, n_artist);
                 }else if(s_api == "lyrics_wikia"){
-                    r = get_lyrics_wikia(n_title, artist);
+                    r = get_lyrics_wikia(n_title, n_artist);
                 }else if(s_api == "letras_mus"){
-                    r = get_letras_mus(n_title, artist);
+                    r = get_letras_mus(n_title, n_artist);
                 }else{
                     return {"", ""};
                 }
@@ -146,6 +147,7 @@ namespace GiveMeLyrics {
             }
             return {song_ret, url};
         }
+
 
         public static string? getValue(Html.Doc* doc, string xpath, bool remove = false){
             Xml.XPath.Context cntx = new Xml.XPath.Context(doc);
@@ -190,6 +192,11 @@ namespace GiveMeLyrics {
             }
 
             return tmpText.chomp();
+        }
+
+        private string remove_accents(string input){
+            var new_string = input.replace("ê", "e").replace("á", "á").replace("à", "à").replace("ã", "a").replace("ó", "o").replace("ç", "c").replace("í", "i");
+            return new_string;
         }
     }
 }
