@@ -101,6 +101,7 @@ namespace GiveMeLyrics {
             view.set_wrap_mode (Gtk.WrapMode.WORD);
             view.vexpand = true;
             view.get_style_context().add_class("view-lyric");
+            view.buffer.create_tag("lyric");
             box_scrolled.pack_start(view, true, true, 0);
 
             source_link = new Gtk.LinkButton.with_label("http://google.com/", _("Source"));
@@ -336,36 +337,56 @@ namespace GiveMeLyrics {
 
         private void update_lyric(){
             new Thread<void*> (null, () => {
-                bool error = false;
-                var r = fetcher.get_lyric(last_title, last_artist);
-                var lyric = r[0];
-                var url = r[1];
-                if(url != ""){
-                    source_link.set_uri(url);
-                    source_link.show();
-                }else{
-                    source_link.hide();
-                }
-                view.buffer.text = lyric;
-                if(lyric == "" || lyric == null){
-                    error = true;
-                }
+                try{
+                    bool error = false;
+                    var r = fetcher.get_lyric(last_title, last_artist);
+                    var lyric = r[0];
+                    var url = r[1];
+                    var title = r[2];
 
-                if (error == true) {
-                    scrolled.hide();
-                    box_spinner.hide();
-                    icon.show();
-                    label_message.label = _("No lyric found");
-                } else {
-                    box_spinner.hide();
-                    box_message.hide();
-                    scrolled.show();
+                    if(title != last_title){
+                        return null;
+                    }
+                    if(url != ""){
+                        source_link.set_uri(url);
+                        source_link.show();
+                    }else{
+                        source_link.hide();
+                    }
+                    clean_text_buffer();
+
+                    if(lyric == "" || lyric == null){
+                        error = true;
+                    }
+
+                    if (error == true) {
+                        scrolled.hide();
+                        box_spinner.hide();
+                        icon.show();
+                        label_message.label = _("No lyric found");
+                    } else {
+                        view.buffer.set_text(lyric);
+                        box_spinner.hide();
+                        box_message.hide();
+                        scrolled.show();
+                    }
+                } catch (Error e) {
+                    warning("Failed to get lyric: %s", e.message);
                 }
 
 
                 return null;
             });
         }
+
+        private void clean_text_buffer(){
+            Gtk.TextIter start;
+            Gtk.TextIter end;
+            view.buffer.get_start_iter(out start);
+            view.buffer.get_end_iter(out end);
+            view.buffer.remove_all_tags(start, end);
+        }
+
 
         private static Gdk.Pixbuf? mask_pixbuf (Gdk.Pixbuf pixbuf, int scale) {
             var size = ICON_SIZE * scale;

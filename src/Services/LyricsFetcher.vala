@@ -33,8 +33,8 @@ namespace GiveMeLyrics {
         private string[] lyrics_apis = {};
 
         public LyricsFetcher () {
-            lyrics_apis += "lyrics_wikia";
             lyrics_apis += "letras_mus";
+            lyrics_apis += "lyrics_wikia";
             lyrics_apis += "api_seeds";
         }
 
@@ -96,10 +96,10 @@ namespace GiveMeLyrics {
         }
 
         private string[] get_letras_mus(string title, string artist){
-            var letras_url = "https://www.letras.com/";
+            var letras_url = "https://www.letras.mus.br/";
             var session = new Soup.Session ();
             session.timeout = 5;
-            var url = letras_url + artist.replace(" ", "-").replace("&apos;", "-").replace("&amp;", "e") + "/" + title.replace(" ", "-");
+            var url = letras_url + artist.replace(" ", "-").replace("&apos;", "-").replace("&amp;", "e") + "/" + title.replace(" ", "-").split("(")[0];
             var message = new Soup.Message ("GET", url);
 
             /* send a sync request */
@@ -135,7 +135,7 @@ namespace GiveMeLyrics {
                 }else if(s_api == "letras_mus"){
                     r = get_letras_mus(n_title, n_artist);
                 }else{
-                    return {"", ""};
+                    return {"", "", ""};
                 }
 
                 ret = r[0];
@@ -145,7 +145,7 @@ namespace GiveMeLyrics {
                     break;
                 }
             }
-            return {song_ret, url};
+            return {song_ret, url, title};
         }
 
 
@@ -195,7 +195,7 @@ namespace GiveMeLyrics {
         }
 
         private string remove_accents(string input){
-            var new_string = input.replace("ê", "e").replace("á", "á").replace("à", "à").replace("ã", "a").replace("ó", "o").replace("ç", "c").replace("í", "i");
+            var new_string = input.replace("ê", "e").replace("á", "á").replace("à", "à").replace("ã", "a").replace("ó", "o").replace("ç", "c").replace("í", "i").replace("ú", "u");
             return new_string;
         }
     }
