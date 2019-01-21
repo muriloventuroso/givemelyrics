@@ -9,6 +9,12 @@
   <summary>Lyrics for your songs</summary>
   <description><p>See the lyrics of the song that is playing, from any application.</p></description>
   <releases>
+    <release version="0.1.6" date="2019-01-21">
+      <description>
+        <p>Critical Bugfix</p>
+        <p>Fix scroll window</p>
+      </description>
+    </release>
     <release version="0.1.5" date="2019-01-18">
       <description>
         <p>Critical Bugfix</p>

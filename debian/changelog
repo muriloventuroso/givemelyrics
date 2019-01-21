@@ -1,5 +1,5 @@
-com.github.muriloventuroso.givemelyrics (0.1.5) precise; urgency=low
+com.github.muriloventuroso.givemelyrics (0.1.6) precise; urgency=low
 
 * Critical Bugfix
-* Show loading label
+* Fix scroll window
 
