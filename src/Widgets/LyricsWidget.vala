@@ -354,7 +354,11 @@ namespace GiveMeLyrics {
                     }else{
                         source_link.hide();
                     }
-                    clean_text_buffer();
+                    Idle.add(()=> {
+                        clean_text_buffer();
+                        return false;
+                    });
+
 
                     if(lyric == "" || lyric == null){
                         error = true;
@@ -366,7 +370,11 @@ namespace GiveMeLyrics {
                         icon.show();
                         label_message.label = _("No lyric found");
                     } else {
-                        view.buffer.set_text(lyric);
+                        Idle.add(()=> {
+                            insert_text(lyric);
+                            return false;
+                        });
+                        scrolled.get_vadjustment().set_value(0);
                         box_spinner.hide();
                         box_message.hide();
                         scrolled.show();
@@ -380,12 +388,22 @@ namespace GiveMeLyrics {
             });
         }
 
+        private void insert_text(string text){
+            Gtk.TextIter start;
+            Gtk.TextIter end;
+
+            view.buffer.get_start_iter(out start);
+            view.buffer.insert (ref start, text, text.length);
+            view.buffer.get_end_iter(out end);
+            view.buffer.apply_tag_by_name ("lyric", start, end);
+        }
+
         private void clean_text_buffer(){
             Gtk.TextIter start;
             Gtk.TextIter end;
             view.buffer.get_start_iter(out start);
             view.buffer.get_end_iter(out end);
-            view.buffer.remove_all_tags(start, end);
+            view.buffer.delete(ref start, ref end);
         }
 
 
