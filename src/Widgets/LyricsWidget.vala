@@ -320,6 +320,7 @@ namespace GiveMeLyrics {
                 box_message.show();
                 icon.show();
                 source_link.hide();
+                box_spinner.hide();
                 label_message.label = _("Advertising");
             }
 
