@@ -12,6 +12,14 @@ See the lyrics of the song that is playing, from any application.
 * API Seeds
 * Letras.mus.br
 
+### Syncronized Lyrics (beta)
+Sync the lyrics of the songs. Some points to consider:
+
+* The amount of music with this feature is limited (if you know of a reliable source of synchronized lyrics open a issue please).
+* Some music applications do not provide the position of the song running through the MPRIS interface (eg Spotify), so manual changes to the song position (Seek) will not be tracked by the application.
+* There are cases where the synchronization was done in a different version of the song being played (acoustic, live, etc).
+
+
 ### Donate
 <a href="https://www.paypal.me/muriloventuroso">PayPal</a> | <a href="https://www.patreon.com/muriloventuroso">Patreon</a>
 
