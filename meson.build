@@ -1,13 +1,13 @@
 # project name and programming language
 project('com.github.muriloventuroso.givemelyrics', 'vala', 'c', version: '0.1.2')
-
 message ('project name and programming language')
-
+cc = meson.get_compiler('c')
 # Adds project arguments
 message ('Adds project arguments')
 gnome = import('gnome')
 add_project_arguments([
-        '-DGETTEXT_PACKAGE=\"@0@\"'.format(meson.project_name())
+        '-DGETTEXT_PACKAGE=\"@0@\"'.format(meson.project_name()),
+        '-lm'
     ],
     language: 'c',
 )
@@ -32,11 +32,14 @@ add_global_arguments('-DGETTEXT_PACKAGE="@0@"'.format(meson.project_name()), lan
 message ('Listing dependencies')
 
 dependencies = [
+    dependency('glib-2.0', version: '>=2.30.0'),
     dependency('gio-unix-2.0', version: '>=2.20'),
     dependency('granite'),
     dependency('libsoup-2.4', version: '>=2.44'),
     dependency('json-glib-1.0'),
-    dependency('libxml-2.0')
+    dependency('libxml-2.0'),
+    cc.find_library('m', required : false)
+
 ]
 
 # Adds subfolders specific build system
@@ -99,6 +102,7 @@ code_files = files(
     'src/Application.vala',
     'src/Services/MprisClient.vala',
     'src/Widgets/LyricsWidget.vala',
+    'src/Widgets/Preferences.vala',
     'src/Services/LyricsFetcher.vala',
     'src/Services/Settings.vala'
 )

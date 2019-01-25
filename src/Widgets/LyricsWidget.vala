@@ -41,6 +41,15 @@ namespace GiveMeLyrics {
         private Gtk.Box box_spinner;
         private Gtk.Label label_message;
         private Gtk.LinkButton source_link;
+        private int? current_line_sync;
+        private bool sync_running;
+        private string last_subtitle;
+        private Gtk.TextTag bold_tag;
+        private int64 msec_change_song;
+        private int64 last_position;
+        private bool was_paused;
+        private bool updating;
+        private Gtk.Label sync_label;
 
         public LyricsWidget (Gtk.Window window) {
             Object (
@@ -51,6 +60,11 @@ namespace GiveMeLyrics {
             last_title = "";
             last_artist = "";
             last_artUrl = "";
+            last_subtitle = "";
+            current_line_sync = null;
+            sync_running = false;
+            last_position = 0;
+            was_paused = false;
             ifaces = new HashTable<string,MprisClient>(str_hash, str_equal);
 
             Idle.add(()=> {
@@ -85,16 +99,21 @@ namespace GiveMeLyrics {
             artist_label.valign = Gtk.Align.START;
             artist_label.get_style_context().add_class("h3");
 
+            var box_information = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
+            box_information.halign = Gtk.Align.END;
+            box_information.hexpand = true;
+
             titles = new Gtk.Grid ();
             titles.hexpand = true;
             titles.column_spacing = 3;
             titles.attach (overlay, 0, 0, 1, 2);
             titles.attach (title_label, 1, 0);
             titles.attach (artist_label, 1, 1);
+            titles.attach (box_information, 2, 0, 1, 2);
             titles.margin_bottom = 10;
 
             scrolled = new Gtk.ScrolledWindow (null, null);
-            var box_scrolled = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
+            scrolled.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC);
 
             view = new Gtk.TextView ();
             view.editable = false;
@@ -102,17 +121,25 @@ namespace GiveMeLyrics {
             view.vexpand = true;
             view.get_style_context().add_class("view-lyric");
             view.buffer.create_tag("lyric");
-            box_scrolled.pack_start(view, true, true, 0);
+            var subtitle_tag = view.buffer.create_tag("subtitle");
+            subtitle_tag.justification = Gtk.Justification.CENTER;
+            bold_tag = view.buffer.create_tag("bold");
+            bold_tag.weight = 700;
+            bold_tag.pixels_above_lines = 20;
+            bold_tag.pixels_below_lines = 20;
 
             source_link = new Gtk.LinkButton.with_label("http://google.com/", _("Source"));
             source_link.hexpand = false;
             source_link.vexpand = false;
             source_link.margin_bottom = 10;
             source_link.margin_top = 10;
-            source_link.halign = Gtk.Align.START;
-            box_scrolled.pack_start(source_link, false, false, 0);
+            source_link.halign = Gtk.Align.END;
 
-            scrolled.add (box_scrolled);
+            sync_label = new Gtk.Label(_("Synchronized Lyrics"));
+            box_information.pack_start(source_link, false, false, 0);
+            box_information.pack_start(sync_label, false, false, 0);
+
+            scrolled.add (view);
 
             box_message = new Gtk.Box(Gtk.Orientation.VERTICAL, 0);
             box_message.hexpand = true;
@@ -145,15 +172,13 @@ namespace GiveMeLyrics {
             box.pack_start(box_message);
             box.pack_start(scrolled, true, true, 0);
 
-            var grid_source = new Gtk.Grid();
-            grid_source.attach(source_link, 0, 0, 1, 1);
-            box.pack_start(grid_source, false, false, 0);
             add(box);
             show_all();
             titles.hide();
             scrolled.hide();
             box_spinner.hide();
             source_link.hide();
+            sync_label.hide();
         }
 
         public void setup_dbus() {
@@ -221,7 +246,7 @@ namespace GiveMeLyrics {
          * @param iface The constructed MprisClient instance
          */
         void add_iface (string name, MprisClient iface) {
-            update_from_meta(iface);
+            update_from_meta(iface, name);
             connect_to_client(iface);
             ifaces.insert(name, iface);
 
@@ -266,19 +291,20 @@ namespace GiveMeLyrics {
                     /* Handle mediaplayer2 iface */
                     p.foreach ((k,v) => {
                         if (k == "Metadata") {
-
-                            update_from_meta (client);
+                            update_from_meta (client, i);
 
                         }
                     });
                 }
             });
+
         }
 
-        protected void update_from_meta (MprisClient client) {
+        protected void update_from_meta (MprisClient client, string i) {
             var metadata = client.player.metadata;
             var playing = false;
             var must_update_lyric = false;
+
             if(client.player.playback_status == "Playing"){
                 playing = true;
                 if  ("mpris:artUrl" in metadata) {
@@ -293,10 +319,14 @@ namespace GiveMeLyrics {
                 if  ("xesam:title" in metadata && metadata["xesam:title"].is_of_type (VariantType.STRING)
                     && metadata["xesam:title"].get_string () != "") {
                     title = metadata["xesam:title"].get_string ().split("-")[0];
+                    msec_change_song = GLib.get_real_time ();
                     if(title != last_title){
                         last_title = title;
                         title_label.label = "<b>%s</b>".printf (Markup.escape_text (last_title));
                         must_update_lyric = true;
+                        last_subtitle = "";
+                        last_position = 0;
+                        was_paused = false;
                     }
                 }
 
@@ -309,6 +339,15 @@ namespace GiveMeLyrics {
                     if(artist != last_artist){
                         last_artist = artist;
                         artist_label.label = artist;
+                    }
+                }
+            }else{
+                string title = "";
+                if  ("xesam:title" in metadata && metadata["xesam:title"].is_of_type (VariantType.STRING)
+                    && metadata["xesam:title"].get_string () != "") {
+                    title = metadata["xesam:title"].get_string ().split("-")[0];
+                    if(title == last_title){
+                        was_paused = true;
                     }
                 }
             }
@@ -331,12 +370,19 @@ namespace GiveMeLyrics {
                 box_message.show();
                 box_spinner.show();
                 label_message.label = _("Loading");
-                update_lyric();
+                sync_label.hide();
+                source_link.hide();
+                update_lyric(client, i);
+            }else{
+                if(playing == true && sync_running == false && updating == false){
+                    set_sync(client, i);
+                }
             }
 
         }
 
-        private void update_lyric(){
+        private void update_lyric(MprisClient client, string i){
+            updating = true;
             new Thread<void*> (null, () => {
                 try{
                     bool error = false;
@@ -344,6 +390,7 @@ namespace GiveMeLyrics {
                     var lyric = r[0];
                     var url = r[1];
                     var title = r[2];
+                    var sub = r[3];
 
                     if(title != last_title){
                         return null;
@@ -369,11 +416,29 @@ namespace GiveMeLyrics {
                         box_spinner.hide();
                         icon.show();
                         label_message.label = _("No lyric found");
+                        sync_label.hide();
                     } else {
-                        Idle.add(()=> {
-                            insert_text(lyric);
-                            return false;
-                        });
+                        if(settings.sync_lyrics == true && sub != null && sub != ""){
+                            Idle.add(()=> {
+                                insert_subtitle(sub);
+                                return false;
+                            });
+                            set_sync(client, i);
+                            sync_label.label = _("Syncronized Lyrics");
+                            sync_label.show();
+
+                        }else{
+                            Idle.add(()=> {
+                                insert_text(lyric);
+                                return false;
+                            });
+                            if(settings.sync_lyrics == true){
+                                sync_label.label = _("Non-Syncronized Lyrics");
+                                sync_label.show();
+                            }else{
+                                sync_label.hide();
+                            }
+                        }
                         scrolled.get_vadjustment().set_value(0);
                         box_spinner.hide();
                         box_message.hide();
@@ -383,19 +448,109 @@ namespace GiveMeLyrics {
                     warning("Failed to get lyric: %s", e.message);
                 }
 
-
+                updating = false;
                 return null;
             });
         }
 
         private void insert_text(string text){
-            Gtk.TextIter start;
-            Gtk.TextIter end;
+            Gtk.TextIter text_start;
+            Gtk.TextIter text_end;
 
-            view.buffer.get_start_iter(out start);
-            view.buffer.insert (ref start, text, text.length);
-            view.buffer.get_end_iter(out end);
-            view.buffer.apply_tag_by_name ("lyric", start, end);
+            view.buffer.get_start_iter(out text_start);
+            view.buffer.insert (ref text_start, text, text.length);
+            view.buffer.get_end_iter(out text_end);
+            view.buffer.apply_tag_by_name ("lyric", text_start, text_end);
+        }
+
+        private void insert_subtitle(string subtitle){
+            Gtk.TextIter subtitle_start;
+            Gtk.TextIter subtitle_end;
+            last_subtitle = subtitle;
+            view.buffer.get_start_iter(out subtitle_start);
+            foreach(var row in subtitle.split("\n")){
+                var array = row.split("|-|");
+                var lyric = "\n";
+                if(array[0] != null){
+                    lyric = array[0].chomp() + "\n";
+                }
+                view.buffer.insert (ref subtitle_start, lyric, lyric.length);
+                view.buffer.get_end_iter(out subtitle_start);
+            }
+
+            view.buffer.get_start_iter(out subtitle_start);
+            view.buffer.get_end_iter(out subtitle_end);
+            view.buffer.apply_tag_by_name ("subtitle", subtitle_start, subtitle_end);
+
+        }
+
+        private void set_sync(MprisClient client, string iface_name){
+            sync_running = true;
+
+            Timeout.add_full (Priority.DEFAULT, 500, () => {
+                try{
+                    int64 position;
+                    var position_msec = client.prop.get_sync(iface_name, "Position").get_int64();
+                    var diff_msec = GLib.get_real_time () - msec_change_song;
+                    if(position_msec == 0){
+                        if(was_paused == true){
+                            position = diff_msec / 1000 / 1000 + last_position;
+                        }else{
+                            position = diff_msec / 1000 / 1000;
+                        }
+                    }else{
+                        position = position_msec / 1000 / 1000;
+                    }
+                    var rows = last_subtitle.split("\n");
+                    if(position < 10){
+                        scrolled.get_vadjustment().set_value(0);
+                    }
+                    if(position == 0){
+                        return true;
+                    }
+                    var find_row = false;
+                    for(var i = 0; i < rows.length; i++){
+                        var array = rows[i].split("|-|");
+                        if(array.length == 3){
+                            if(Math.round (double.parse(array[1])) - 0.1 < position && Math.round (int.parse(array[2])) > position){
+                                find_row = true;
+                                if(i != current_line_sync){
+                                    current_line_sync = i;
+                                    Idle.add(() => {
+                                        clean_bold_tag();
+                                        Gtk.TextIter line_start;
+                                        Gtk.TextIter line_end;
+                                        view.buffer.get_iter_at_line(out line_start, i);
+                                        view.buffer.get_iter_at_line_offset(out line_end, i, array[0].length);
+                                        view.buffer.apply_tag(bold_tag, line_start, line_end);
+                                        view.scroll_to_iter(line_start, 0.1, false, 0, 0);
+                                        return false;
+                                    });
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    if(client.prop.get_sync(iface_name, "PlaybackStatus").dup_string() == "Playing"){
+                        return true;
+                    }else{
+                        sync_running = false;
+                        last_position = position + 1;
+                        return false;
+                    }
+                }catch (Error e) {
+                    print(e.message);
+                    return true;
+                }
+            });
+        }
+
+        private void clean_bold_tag(){
+            Gtk.TextIter line_start;
+            Gtk.TextIter line_end;
+            view.buffer.get_start_iter(out line_start);
+            view.buffer.get_end_iter(out line_end);
+            view.buffer.remove_tag(bold_tag, line_start, line_end);
         }
 
         private void clean_text_buffer(){

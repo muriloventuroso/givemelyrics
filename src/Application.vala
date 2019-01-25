@@ -27,8 +27,13 @@ namespace GiveMeLyrics {
         private Gtk.Window main_window;
         private Gtk.HeaderBar headerbar;
         private LyricsWidget lyrics_widget;
+        private Gtk.Dialog? preferences_dialog = null;
+        private bool is_fullscreen = false;
+        private Gtk.ToggleButton btn_pref;
 
         public const string ACTION_PREFIX = "win.";
+        public const string ACTION_PREFERENCES = "action_preferences";
+        public const string ACTION_FULLSCREEN = "action-fullscreen";
 
         public SimpleActionGroup actions;
         public Gtk.ActionGroup main_actions;
@@ -40,6 +45,11 @@ namespace GiveMeLyrics {
 
         }
 
+        private const ActionEntry[] action_entries = {
+            { ACTION_FULLSCREEN, action_fullscreen },
+            { ACTION_PREFERENCES, action_preferences },
+        };
+
         construct {
             Intl.setlocale (LocaleCategory.ALL, "");
         }
@@ -50,11 +60,28 @@ namespace GiveMeLyrics {
                 return;
             }
             settings = new Settings ();
+            settings.sync_lyrics = true;
             var provider = new Gtk.CssProvider ();
             provider.load_from_resource ("/com/github/muriloventuroso/givemelyrics/Application.css");
             Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             actions = new SimpleActionGroup ();
+            actions.add_action_entries (action_entries, this);
+            main_window.insert_action_group ("win", actions);
             main_window = new Gtk.Window();
+
+            var preferences_menuitem = new Gtk.MenuItem.with_label (_("Preferences"));
+            preferences_menuitem.action_name = ACTION_PREFIX + ACTION_PREFERENCES;
+
+            var menu = new Gtk.Menu ();
+            menu.append (preferences_menuitem);
+            menu.show_all ();
+
+            Gtk.MenuButton settings_button = new Gtk.MenuButton ();
+            settings_button.image = new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            settings_button.popup = menu;
+            settings_button.tooltip_text = _("Menu");
+            settings_button.valign = Gtk.Align.CENTER;
+
 
             headerbar = new Gtk.HeaderBar ();
             headerbar.has_subtitle = false;
@@ -62,11 +89,13 @@ namespace GiveMeLyrics {
             headerbar.title = _("Give Me Lyrics");
             headerbar.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
             headerbar.get_style_context().add_class("headerbar");
+            headerbar.pack_end(settings_button);
+            main_window.set_titlebar (headerbar);
 
             main_window.application = this;
             main_window.icon_name = "givemelyrics";
             main_window.title = _("Give Me Lyrics");
-            main_window.set_titlebar (headerbar);
+            
             main_window.insert_action_group ("win", actions);
 
             load_settings();
@@ -121,6 +150,32 @@ namespace GiveMeLyrics {
                 settings.pos_y = y;
                 settings.window_height = height;
                 settings.window_width = width;
+            }
+        }
+
+        void action_fullscreen () {
+            if (is_fullscreen) {
+                main_window.unfullscreen ();
+                is_fullscreen = false;
+            } else {
+                main_window.fullscreen ();
+                is_fullscreen = true;
+            }
+        }
+
+        private void action_preferences () {
+            if (preferences_dialog == null) {
+                preferences_dialog = new Preferences (main_window);
+
+                preferences_dialog.destroy.connect (() => {
+                    preferences_dialog = null;
+                });
+            }
+
+            if(preferences_dialog.run () == Gtk.ResponseType.CLOSE){
+                preferences_dialog.destroy();
+                btn_pref.set_active(false);
+                preferences_dialog = null;
             }
         }
 

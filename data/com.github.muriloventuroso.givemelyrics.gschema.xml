@@ -31,6 +31,11 @@
             <summary>Maximized window.</summary>
             <description></description>
         </key>
+        <key name="sync-lyrics" type="b">
+            <default>true</default>
+            <summary>Synchronize lyrics.</summary>
+            <description></description>
+        </key>
 
     </schema>
 

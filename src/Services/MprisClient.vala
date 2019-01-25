@@ -44,18 +44,36 @@ namespace GiveMeLyrics {
      * Vala dbus property notifications are not working. Manually probe property changes.
      */
     [DBus (name="org.freedesktop.DBus.Properties")]
-    public interface DbusPropIface : Object {
-        public signal void properties_changed (string iface, HashTable<string,Variant> changed, string[] invalid);
-    }
+    public interface DbusPropIface : DBusProxy {
+        public signal void properties_changed(string iface, HashTable<string,Variant> changed, string[] invalid);
+
+        [DBus (name = "Get")]
+        public abstract async GLib.Variant @get(string iface, string prop) throws DBusError, IOError;
+        [DBus (name = "Set")]
+        public abstract async void @set(string iface, string prop, GLib.Variant val) throws DBusError, IOError;
+        [DBus (name = "Get")]
+        public abstract GLib.Variant get_sync(string iface, string prop) throws DBusError, IOError;
+        [DBus (name = "Set")]
+        public abstract void set_sync(string iface, string prop, GLib.Variant val) throws DBusError, IOError;
+}
 
     /**
      * Represents the base org.mpris.MediaPlayer2 spec
      */
     [DBus (name="org.mpris.MediaPlayer2")]
-    public interface MprisIface : Object {
-        public abstract void raise () throws GLib.Error;
+    public interface MprisIface : DBusProxy {
+        public abstract async void raise() throws DBusError, IOError;
+        public abstract async void quit() throws DBusError, IOError;
+
+        public abstract bool can_quit { get; set; }
+        public abstract bool fullscreen { get; } /* Optional */
+        public abstract bool can_set_fullscreen { get; } /* Optional */
         public abstract bool can_raise { get; }
-        public abstract string desktop_entry { owned get; }
+        public abstract bool has_track_list { get; }
+        public abstract string identity { owned get; }
+        public abstract string desktop_entry { owned get; } /* Optional */
+        public abstract string[] supported_uri_schemes { owned get; }
+        public abstract string[] supported_mime_types { owned get; }
     }
 
     /**
@@ -66,18 +84,36 @@ namespace GiveMeLyrics {
      */
     [DBus (name="org.mpris.MediaPlayer2.Player")]
     public interface PlayerIface : MprisIface {
-        public abstract void next () throws GLib.Error;
-        public abstract void previous () throws GLib.Error;
-        public abstract void pause () throws GLib.Error;
-        public abstract void play_pause () throws GLib.Error;
-        public abstract void stop () throws GLib.Error;
-        public abstract void play () throws GLib.Error;
+        public abstract async void next() throws DBusError, IOError;
+        public abstract async void previous() throws DBusError, IOError;
+        public abstract async void pause() throws DBusError, IOError;
+        public abstract async void play_pause() throws DBusError, IOError;
+        public abstract async void stop() throws DBusError, IOError;
+        public abstract async void play() throws DBusError, IOError;
+        public abstract async void seek(int64 offset) throws DBusError, IOError;
+        public abstract async void open_uri(string uri) throws DBusError, IOError;
+        public abstract async void set_position(GLib.ObjectPath track_id, int64 position) throws DBusError, IOError;
+
         public abstract string playback_status { owned get; }
+        public abstract string loop_status { owned get; set; } /* Optional */
+        public abstract double rate { get; set; }
+        public abstract bool shuffle { set; get; } /* Optional */
         public abstract HashTable<string,Variant> metadata { owned get; }
+        public abstract double volume {get; set; }
+        public abstract int64 position { get; }
+        public abstract double minimum_rate { get; }
+        public abstract double maximum_rate { get; }
         public abstract bool can_go_next { get; }
         public abstract bool can_go_previous { get; }
         public abstract bool can_play { get; }
         public abstract bool can_pause { get; }
-    }
+        public abstract bool can_seek { get; }
+        public abstract bool can_control { get; }
+
+        public signal void seeked (int64 position);
+
+}
+
+
 
 }

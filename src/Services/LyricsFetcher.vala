@@ -116,12 +116,64 @@ namespace GiveMeLyrics {
             if(lyricbox == null){
                 return {"", ""};
             }
+            var array_subtitle = "";
+            if(settings.sync_lyrics == true){
+                var script = getValue(doc, "//div[@id='js-scripts']//script");
+                var song_id = script.split(",")[1].split(":")[1];
+                var subtitle_id = script.split(",")[7].split(":")[1].replace("\"", "");
+                array_subtitle = get_sync_lyric_letras(song_id, subtitle_id);
+            }
 
-            return {lyricbox, url};
+
+            return {lyricbox, url, array_subtitle};
+        }
+
+        private string get_sync_lyric_letras(string song_id, string subtitle_id){
+            var result = "";
+            var letras_url = "https://www.letras.mus.br/subtitle/";
+            var url = letras_url + song_id + "/" + subtitle_id;
+            var session = new Soup.Session ();
+            session.timeout = 5;
+            var message = new Soup.Message ("GET", url);
+            /* send a sync request */
+            session.send_message (message);
+
+            try {
+                var parser = new Json.Parser ();
+                var data = (string) message.response_body.flatten ().data;
+                if(data.length < 10){
+                    return result;
+                }
+                parser.load_from_data (data, -1);
+                var root_object = parser.get_root ().get_object ();
+                if(root_object.has_member("Original")){
+                    var original = root_object.get_object_member ("Original");
+                    if(original.has_member("Subtitle")){
+                        var subtitle = original.get_string_member ("Subtitle");
+                        var parser_sub = new Json.Parser ();
+                        parser_sub.load_from_data ("{\"subtitle\":" + subtitle.replace("\\\"", "") + "}", -1);
+                        var root_subtitle = parser_sub.get_root ().get_object ();
+                        var array_sub = root_subtitle.get_array_member("subtitle");
+                        foreach(var row in array_sub.get_elements()){
+                            var array = row.get_array();
+                            var lyric = array.get_element(0).dup_string();
+                            var start = array.get_element(1).dup_string();
+                            var end = array.get_element(2).dup_string();
+                            result += lyric + "|-|" + start + "|-|" + end + "\n";
+                        }
+                    }
+                }
+            }catch(Error e){
+                print(e.message);
+            }
+
+
+            return result;
         }
 
         public string[] get_lyric(string title, string artist){
             string song_ret = "";
+            string sub = "";
             var url = "";
             string[] r;
             var n_title = remove_accents(title.replace("?", "").down());
@@ -140,12 +192,18 @@ namespace GiveMeLyrics {
 
                 ret = r[0];
                 url = r[1];
+                if(settings.sync_lyrics == true){
+                    if(r.length == 3){
+                        sub = r[2];
+                    }
+                }
                 if(ret != ""){
                     song_ret = ret;
                     break;
                 }
+
             }
-            return {song_ret, url, title};
+            return {song_ret, url, title, sub};
         }
 
 
