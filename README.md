@@ -1,3 +1,5 @@
+[![Translation status](https://hosted.weblate.org/widgets/givemelyrics/-/translations/svg-badge.svg)](https://hosted.weblate.org/engage/givemelyrics/?utm_source=widget)
+
 <h1 align="center">Give Me Lyrics</h1>
 
 See the lyrics of the song that is playing, from any application.
