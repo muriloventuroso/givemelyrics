@@ -8,18 +8,20 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-28 13:55-0200\n"
-"PO-Revision-Date: 2019-01-10 09:14-0200\n"
-"Last-Translator: NathanBnm\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-01-29 10:37+0000\n"
+"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/givemelyrics/"
+"translations/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 #: src/Application.vala:78
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: src/Application.vala:85 src/Application.vala:93
 msgid "Give Me Lyrics"
@@ -31,7 +33,7 @@ msgstr "Source"
 
 #: src/Widgets/LyricsWidget.vala:138 src/Widgets/LyricsWidget.vala:427
 msgid "Synchronized Lyrics"
-msgstr ""
+msgstr "Paroles synchronisées"
 
 #: src/Widgets/LyricsWidget.vala:155
 msgid "Nothing is playing"
@@ -51,12 +53,12 @@ msgstr "Pas de paroles trouvées"
 
 #: src/Widgets/LyricsWidget.vala:436
 msgid "Non-Synchronized Lyrics"
-msgstr ""
+msgstr "Paroles non synchronisées"
 
 #: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
-msgstr ""
+msgstr "Paroles synchronisées :"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr ""
+msgstr "Thème sombre :"
