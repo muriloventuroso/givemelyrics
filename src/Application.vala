@@ -27,12 +27,9 @@ namespace GiveMeLyrics {
         private Gtk.Window main_window;
         private Gtk.HeaderBar headerbar;
         private LyricsWidget lyrics_widget;
-        private Gtk.Dialog? preferences_dialog = null;
         private bool is_fullscreen = false;
-        private Gtk.ToggleButton btn_pref;
 
         public const string ACTION_PREFIX = "win.";
-        public const string ACTION_PREFERENCES = "action_preferences";
         public const string ACTION_FULLSCREEN = "action-fullscreen";
 
         public SimpleActionGroup actions;
@@ -46,8 +43,7 @@ namespace GiveMeLyrics {
         }
 
         private const ActionEntry[] action_entries = {
-            { ACTION_FULLSCREEN, action_fullscreen },
-            { ACTION_PREFERENCES, action_preferences },
+            { ACTION_FULLSCREEN, action_fullscreen }
         };
 
         construct {
@@ -68,17 +64,13 @@ namespace GiveMeLyrics {
             actions.add_action_entries (action_entries, this);
             main_window.insert_action_group ("win", actions);
             main_window = new Gtk.Window();
-
-            var preferences_menuitem = new Gtk.MenuItem.with_label (_("Preferences"));
-            preferences_menuitem.action_name = ACTION_PREFIX + ACTION_PREFERENCES;
-
-            var menu = new Gtk.Menu ();
-            menu.append (preferences_menuitem);
-            menu.show_all ();
+            var pref_grid = new Preferences();
+            var pref_popover = new Gtk.Popover (null);
+            pref_popover.add (pref_grid);
 
             Gtk.MenuButton settings_button = new Gtk.MenuButton ();
             settings_button.image = new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-            settings_button.popup = menu;
+            settings_button.popover = pref_popover;
             settings_button.tooltip_text = _("Menu");
             settings_button.valign = Gtk.Align.CENTER;
 
@@ -95,7 +87,7 @@ namespace GiveMeLyrics {
             main_window.application = this;
             main_window.icon_name = "givemelyrics";
             main_window.title = _("Give Me Lyrics");
-            
+
             main_window.insert_action_group ("win", actions);
 
             load_settings();
@@ -162,23 +154,6 @@ namespace GiveMeLyrics {
                 is_fullscreen = true;
             }
         }
-
-        private void action_preferences () {
-            if (preferences_dialog == null) {
-                preferences_dialog = new Preferences (main_window);
-
-                preferences_dialog.destroy.connect (() => {
-                    preferences_dialog = null;
-                });
-            }
-
-            if(preferences_dialog.run () == Gtk.ResponseType.CLOSE){
-                preferences_dialog.destroy();
-                btn_pref.set_active(false);
-                preferences_dialog = null;
-            }
-        }
-
 
         private static int main (string[] args) {
             Gtk.init (ref args);

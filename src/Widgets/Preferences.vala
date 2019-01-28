@@ -21,18 +21,17 @@
 
 
 namespace GiveMeLyrics {
-    public class Preferences : Gtk.Dialog {
+    public class Preferences : Gtk.Grid {
 
         Settings settings;
 
 
-        public Preferences (Gtk.Window? parent) {
+        public Preferences () {
             Object (
-                border_width: 5,
-                title: _("Preferences"),
-                resizable: false,
-                deletable: false,
-                transient_for: parent
+                margin: 12,
+                column_spacing: 6,
+                row_spacing: 12,
+                width_request: 200
             );
 
         }
@@ -48,29 +47,8 @@ namespace GiveMeLyrics {
                 settings.sync_lyrics = sync_lyrics_switch.active;
             });
 
-            var general_grid = new Gtk.Grid ();
-            general_grid.column_spacing = 12;
-            general_grid.row_spacing = 6;
-
-            general_grid.attach (new Granite.HeaderLabel (_("Synchronized Lyrics:")), 0, 1, 1, 1);
-            general_grid.attach (sync_lyrics_switch, 1, 1, 1, 1);
-            var main_stack = new Gtk.Stack ();
-            main_stack.margin = 6;
-            main_stack.margin_bottom = 18;
-            main_stack.margin_top = 24;
-            main_stack.add_titled (general_grid, "general", _("General"));
-
-            var main_stackswitcher = new Gtk.StackSwitcher ();
-            main_stackswitcher.set_stack (main_stack);
-            main_stackswitcher.halign = Gtk.Align.CENTER;
-
-            var main_grid = new Gtk.Grid ();
-            main_grid.attach (main_stackswitcher, 0, 0, 1, 1);
-            main_grid.attach (main_stack, 0, 1, 1, 1);
-
-            get_content_area ().add (main_grid);
-
-            add_button (_("Close"), Gtk.ResponseType.CLOSE);
+            attach (new Granite.HeaderLabel (_("Synchronized Lyrics:")), 0, 1, 1, 1);
+            attach (sync_lyrics_switch, 1, 1, 1, 1);
 
             show_all();
         }

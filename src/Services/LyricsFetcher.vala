@@ -111,6 +111,12 @@ namespace GiveMeLyrics {
             var result_string = (string) message.response_body.flatten ().data;
 
             var doc = html_cntx.read_doc(result_string.replace("<br/>", "\n").replace("</p><p>", "\n\n").replace("<p>", "").replace("</p>", ""), "");
+
+            // check song
+            var check_song = getValue(doc, "//title").down();
+            if(check_song.contains(title.down()) == false){
+                return {"", ""};
+            }
             var lyricbox = getValue(doc, "//div[contains(@class, 'cnt-letra')]//article");
 
             if(lyricbox == null){
@@ -121,7 +127,9 @@ namespace GiveMeLyrics {
                 var script = getValue(doc, "//div[@id='js-scripts']//script");
                 var song_id = script.split(",")[1].split(":")[1];
                 var subtitle_id = script.split(",")[7].split(":")[1].replace("\"", "");
-                array_subtitle = get_sync_lyric_letras(song_id, subtitle_id);
+                if(subtitle_id != ""){
+                    array_subtitle = get_sync_lyric_letras(song_id, subtitle_id);
+                }
             }
 
 
@@ -141,7 +149,7 @@ namespace GiveMeLyrics {
             try {
                 var parser = new Json.Parser ();
                 var data = (string) message.response_body.flatten ().data;
-                if(data.length < 10){
+                if(data.length < 10 || data == ""){
                     return result;
                 }
                 parser.load_from_data (data, -1);
