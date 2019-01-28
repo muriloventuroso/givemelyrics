@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 11:08-0200\n"
+"POT-Creation-Date: 2019-01-28 13:55-0200\n"
 "PO-Revision-Date: 2019-01-10 09:14-0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/Application.vala:74
+#: src/Application.vala:78
 msgid "Menu"
 msgstr ""
 
-#: src/Application.vala:81 src/Application.vala:89
+#: src/Application.vala:85 src/Application.vala:93
 msgid "Give Me Lyrics"
 msgstr "Me dê as Letras"
 
@@ -53,9 +53,13 @@ msgstr "Nenhuma letra encontrada"
 msgid "Non-Synchronized Lyrics"
 msgstr "Letras Não-Sincronizadas"
 
-#: src/Widgets/Preferences.vala:50
+#: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
 msgstr "Letras Sincronizadas:"
+
+#: src/Widgets/Preferences.vala:61
+msgid "Dark Theme:"
+msgstr ""
 
 #~ msgid "Syncronized Lyrics"
 #~ msgstr "Letra"
