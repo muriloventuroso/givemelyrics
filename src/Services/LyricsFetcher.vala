@@ -100,6 +100,7 @@ namespace GiveMeLyrics {
             var session = new Soup.Session ();
             session.timeout = 5;
             var url = letras_url + artist.replace(" ", "-").replace("&apos;", "-").replace("&amp;", "e") + "/" + title.replace(" ", "-").split("(")[0];
+            print(url);
             var message = new Soup.Message ("GET", url);
 
             /* send a sync request */
@@ -126,14 +127,51 @@ namespace GiveMeLyrics {
             if(settings.sync_lyrics == true){
                 var script = getValue(doc, "//div[@id='js-scripts']//script");
                 var song_id = script.split(",")[1].split(":")[1];
-                var subtitle_id = script.split(",")[7].split(":")[1].replace("\"", "");
-                if(subtitle_id != ""){
-                    array_subtitle = get_sync_lyric_letras(song_id, subtitle_id);
+                foreach(var subtitle_id in get_lyrics_available_letras(song_id)){
+                    if(subtitle_id != ""){
+                        array_subtitle = get_sync_lyric_letras(song_id, subtitle_id);
+                        if(array_subtitle != ""){
+                            break;
+                        }
+                    }
                 }
             }
 
 
             return {lyricbox, url, array_subtitle};
+        }
+
+        private string[] get_lyrics_available_letras(string song_id){
+            string[] result = {};
+            var letras_url = "https://www.letras.mus.br/subtitle/";
+            var url = letras_url + song_id;
+            var session = new Soup.Session ();
+            session.timeout = 5;
+            var message = new Soup.Message ("GET", url);
+            /* send a sync request */
+            session.send_message (message);
+
+            try {
+                var parser = new Json.Parser ();
+                var data = (string) message.response_body.flatten ().data;
+                if(data.length < 10 || data == ""){
+                    return result;
+                }
+                parser.load_from_data ("{\"subtitle\":" + data+ "}", -1);
+                var root_object = parser.get_root ().get_object ();
+
+                if(root_object.has_member("subtitle")){
+                    var array_sub = root_object.get_array_member("subtitle");
+                    foreach(var row in array_sub.get_elements()){
+                        result += row.dup_string();
+                    }
+                }
+
+            }catch(Error e){
+                print(e.message);
+            }
+
+            return result;
         }
 
         private string get_sync_lyric_letras(string song_id, string subtitle_id){

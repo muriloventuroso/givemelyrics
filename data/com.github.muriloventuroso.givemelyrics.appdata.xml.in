@@ -7,7 +7,7 @@
   <project_license>GPL-3.0+</project_license>
   <name>Give Me Lyrics</name>
   <summary>Lyrics for your songs</summary>
-  <description><p>See the lyrics of the song that is playing, from any application.</p></description>
+  <description><p>See the lyrics of the song that is playing, from any application. Sing along with the option to sync lyrics.</p></description>
   <releases>
     <release version="0.1.6" date="2019-01-21">
       <description>
@@ -54,6 +54,9 @@
   <screenshots>
     <screenshot type="default">
       <image>https://raw.githubusercontent.com/muriloventuroso/givemelyrics/master/data/screenshot.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/muriloventuroso/givemelyrics/master/data/screenshot-sync.png</image>
     </screenshot>
   </screenshots>
   <provides>

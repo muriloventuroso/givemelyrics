@@ -24,7 +24,7 @@ Sync the lyrics of the songs. Some points to consider:
 <a href="https://www.paypal.me/muriloventuroso">PayPal</a> | <a href="https://www.patreon.com/muriloventuroso">Patreon</a>
 
 ![Screenshot](data/screenshot.png)
-
+![Screenshot](data/screenshot-sync.png)
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.muriloventuroso.givemelyrics)
 
