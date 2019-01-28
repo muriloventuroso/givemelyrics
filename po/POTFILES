@@ -1,5 +1,6 @@
 src/Application.vala
 src/Services/MprisClient.vala
 src/Widgets/LyricsWidget.vala
+src/Widgets/Preferences.vala
 src/Services/LyricsFetcher.vala
 src/Services/Settings.vala
