@@ -100,7 +100,6 @@ namespace GiveMeLyrics {
             var session = new Soup.Session ();
             session.timeout = 5;
             var url = letras_url + artist.replace(" ", "-").replace("&apos;", "-").replace("&amp;", "e") + "/" + title.replace(" ", "-").split("(")[0];
-            print(url);
             var message = new Soup.Message ("GET", url);
 
             /* send a sync request */

@@ -28,6 +28,7 @@ namespace GiveMeLyrics {
         public int window_height { get; set; }
         public bool window_maximized { get; set; }
         public bool sync_lyrics {get; set;}
+        public bool use_dark_theme {get; set;}
 
         public static Settings get_default () {
             if (settings == null) {

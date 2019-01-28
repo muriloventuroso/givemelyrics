@@ -56,7 +56,11 @@ namespace GiveMeLyrics {
                 return;
             }
             settings = new Settings ();
-            settings.sync_lyrics = true;
+            Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = settings.use_dark_theme;
+            settings.notify["use-dark-theme"].connect (
+                () => {
+                    Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = settings.use_dark_theme;
+            });
             var provider = new Gtk.CssProvider ();
             provider.load_from_resource ("/com/github/muriloventuroso/givemelyrics/Application.css");
             Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);

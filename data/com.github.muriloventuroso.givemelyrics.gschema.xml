@@ -36,6 +36,11 @@
             <summary>Synchronize lyrics.</summary>
             <description></description>
         </key>
+        <key name="use-dark-theme" type="b">
+            <default>false</default>
+            <summary>Dark Theme.</summary>
+            <description></description>
+        </key>
 
     </schema>
 

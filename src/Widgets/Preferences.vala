@@ -47,8 +47,19 @@ namespace GiveMeLyrics {
                 settings.sync_lyrics = sync_lyrics_switch.active;
             });
 
+            var dark_theme_switch = new Gtk.Switch();
+            dark_theme_switch.halign = Gtk.Align.START;
+            dark_theme_switch.valign = Gtk.Align.CENTER;
+            dark_theme_switch.set_active(settings.use_dark_theme);
+            dark_theme_switch.notify["active"].connect (() => {
+                settings.use_dark_theme = dark_theme_switch.active;
+            });
+
             attach (new Granite.HeaderLabel (_("Synchronized Lyrics:")), 0, 1, 1, 1);
             attach (sync_lyrics_switch, 1, 1, 1, 1);
+
+            attach (new Granite.HeaderLabel (_("Dark Theme:")), 0, 2, 1, 1);
+            attach (dark_theme_switch, 1, 2, 1, 1);
 
             show_all();
         }
