@@ -424,7 +424,7 @@ namespace GiveMeLyrics {
                                 return false;
                             });
                             set_sync(client, i);
-                            sync_label.label = _("Syncronized Lyrics");
+                            sync_label.label = _("Synchronized Lyrics");
                             sync_label.show();
 
                         }else{
@@ -433,7 +433,7 @@ namespace GiveMeLyrics {
                                 return false;
                             });
                             if(settings.sync_lyrics == true){
-                                sync_label.label = _("Non-Syncronized Lyrics");
+                                sync_label.label = _("Non-Synchronized Lyrics");
                                 sync_label.show();
                             }else{
                                 sync_label.hide();

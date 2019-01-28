@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 11:04-0200\n"
+"POT-Creation-Date: 2019-01-28 11:08-0200\n"
 "PO-Revision-Date: 2019-01-17 19:00-0600\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: \n"
@@ -30,7 +30,7 @@ msgstr "Give Me Lyrics"
 msgid "Source"
 msgstr "Origen"
 
-#: src/Widgets/LyricsWidget.vala:138
+#: src/Widgets/LyricsWidget.vala:138 src/Widgets/LyricsWidget.vala:427
 msgid "Synchronized Lyrics"
 msgstr ""
 
@@ -50,12 +50,8 @@ msgstr "Cargando"
 msgid "No lyric found"
 msgstr "No se encontró ninguna letra"
 
-#: src/Widgets/LyricsWidget.vala:427
-msgid "Syncronized Lyrics"
-msgstr ""
-
 #: src/Widgets/LyricsWidget.vala:436
-msgid "Non-Syncronized Lyrics"
+msgid "Non-Synchronized Lyrics"
 msgstr ""
 
 #: src/Widgets/Preferences.vala:50
