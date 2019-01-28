@@ -1,5 +1,5 @@
-com.github.muriloventuroso.givemelyrics (0.1.6) precise; urgency=low
+com.github.muriloventuroso.givemelyrics (0.2.0) precise; urgency=low
 
-* Critical Bugfix
-* Fix scroll window
+* Sync Lyrics
+* Dark Theme
 
