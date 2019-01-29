@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-28 11:08-0200\n"
-"PO-Revision-Date: 2019-01-28 15:30+0000\n"
+"PO-Revision-Date: 2019-01-29 11:54+0000\n"
 "Last-Translator: Murilo Venturoso <muriloventuroso@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "givemelyrics/translations/pt_BR/>\n"
@@ -61,7 +61,7 @@ msgstr "Letras Sincronizadas:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr ""
+msgstr "Tema Escuro:"
 
 #~ msgid "Syncronized Lyrics"
 #~ msgstr "Letra"
