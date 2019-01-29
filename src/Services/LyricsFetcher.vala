@@ -122,6 +122,9 @@ namespace GiveMeLyrics {
             if(lyricbox == null){
                 return {"", ""};
             }
+            if(lyricbox.contains("Essa música foi removida em razão de solicitação do(s) titular(es) da obra.")){
+                return {"", ""};
+            }
             var array_subtitle = "";
             if(settings.sync_lyrics == true){
                 var script = getValue(doc, "//div[@id='js-scripts']//script");
