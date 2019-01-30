@@ -318,7 +318,7 @@ namespace GiveMeLyrics {
                 string title = "";
                 if  ("xesam:title" in metadata && metadata["xesam:title"].is_of_type (VariantType.STRING)
                     && metadata["xesam:title"].get_string () != "") {
-                    title = metadata["xesam:title"].get_string ().split("-")[0];
+                    title = metadata["xesam:title"].get_string ().split(" - ")[0];
                     msec_change_song = GLib.get_real_time ();
                     if(title != last_title){
                         last_title = title;
@@ -345,7 +345,7 @@ namespace GiveMeLyrics {
                 string title = "";
                 if  ("xesam:title" in metadata && metadata["xesam:title"].is_of_type (VariantType.STRING)
                     && metadata["xesam:title"].get_string () != "") {
-                    title = metadata["xesam:title"].get_string ().split("-")[0];
+                    title = metadata["xesam:title"].get_string ().split(" - ")[0];
                     if(title == last_title){
                         was_paused = true;
                     }
