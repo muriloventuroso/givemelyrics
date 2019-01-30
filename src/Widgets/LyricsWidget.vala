@@ -114,6 +114,7 @@ namespace GiveMeLyrics {
 
             scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.set_policy (Gtk.PolicyType.AUTOMATIC, Gtk.PolicyType.AUTOMATIC);
+            scrolled.margin_bottom = 30;
 
             view = new Gtk.TextView ();
             view.editable = false;
