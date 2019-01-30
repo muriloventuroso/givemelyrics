@@ -96,7 +96,7 @@ namespace GiveMeLyrics {
         }
 
         private string[] get_letras_mus(string title, string artist){
-            var letras_url = "https://www.letras.mus.br/";
+            var letras_url = "https://m.letras.mus.br/";
             var session = new Soup.Session ();
             session.timeout = 5;
             var url = letras_url + artist.replace(" ", "-").replace("&apos;", "-").replace("&amp;", "e") + "/" + title.replace(" ", "-").split("(")[0];
@@ -113,15 +113,27 @@ namespace GiveMeLyrics {
             var doc = html_cntx.read_doc(result_string.replace("<br/>", "\n").replace("</p><p>", "\n\n").replace("<p>", "").replace("</p>", ""), "");
 
             // check song
-            var check_song = getValue(doc, "//title").down();
+            var check_song = getValue(doc, "//div[contains(@class, 'lyric-title')]//h1").down();
+
             if(check_song.contains(title.down()) == false){
                 return {"", ""};
             }
-            var lyricbox = getValue(doc, "//div[contains(@class, 'cnt-letra')]//article");
+
+            if(check_song.contains("feat") == true){
+                if(title.down().contains("feat") == false){
+                    return {"", ""};
+                }
+            }
+            var lyricbox = getValue(doc, "//div[contains(@class, 'lyric-tra_l')]//article");
 
             if(lyricbox == null){
-                return {"", ""};
+                lyricbox = getValue(doc, "//div[contains(@class, 'lyric-cnt')]//article");
+
+                if(lyricbox == null){
+                    return {"", ""};
+                }
             }
+
             if(lyricbox.contains("Essa música foi removida em razão de solicitação do(s) titular(es) da obra.")){
                 return {"", ""};
             }
