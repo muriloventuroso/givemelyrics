@@ -8,55 +8,60 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-28 13:55-0200\n"
-"PO-Revision-Date: 2019-01-10 09:14-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-02-02 14:09+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"givemelyrics/translations/nb_NO/>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 #: src/Application.vala:78
 msgid "Menu"
-msgstr ""
+msgstr "Meny"
 
 #: src/Application.vala:85 src/Application.vala:93
+#, fuzzy
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "Give me Lyrics"
 
 #: src/Widgets/LyricsWidget.vala:131
 msgid "Source"
-msgstr ""
+msgstr "Kilde"
 
 #: src/Widgets/LyricsWidget.vala:138 src/Widgets/LyricsWidget.vala:427
 msgid "Synchronized Lyrics"
-msgstr ""
+msgstr "Synkroniserte sangtekster"
 
 #: src/Widgets/LyricsWidget.vala:155
 msgid "Nothing is playing"
-msgstr ""
+msgstr "Ingenting spilles av"
 
 #: src/Widgets/LyricsWidget.vala:363
 msgid "Advertising"
-msgstr ""
+msgstr "Publisering"
 
 #: src/Widgets/LyricsWidget.vala:372
 msgid "Loading"
-msgstr ""
+msgstr "Laster inn …"
 
 #: src/Widgets/LyricsWidget.vala:418
 msgid "No lyric found"
-msgstr ""
+msgstr "Fant ikke noen sangtekster"
 
 #: src/Widgets/LyricsWidget.vala:436
+#, fuzzy
 msgid "Non-Synchronized Lyrics"
-msgstr ""
+msgstr "Ikke-synkroniserte tekster"
 
 #: src/Widgets/Preferences.vala:58
+#, fuzzy
 msgid "Synchronized Lyrics:"
-msgstr ""
+msgstr "Synkroniserte tekster:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr ""
+msgstr "Mørk drakt:"
