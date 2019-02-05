@@ -38,7 +38,7 @@ namespace GiveMeLyrics {
             lyrics_apis += "api_seeds";
         }
 
-        private string[] get_api_seeds(string title, string artist){
+        private Lyric? get_api_seeds(string title, string artist){
             var seeds_url = "https://orion.apiseeds.com/api/music/lyric/";
             var api_key = "DasGEcpYgIQRlcEEs0reSyuvn9uIcvisOaFW1QiVK7uS3mPpYL7Qb25YmPIVl60r";
             var session = new Soup.Session ();
@@ -57,18 +57,21 @@ namespace GiveMeLyrics {
                     var result = root_object.get_object_member ("result");
                     var track = result.get_object_member ("track");
                     var text = track.get_string_member("text");
-                    return {text, ""};
+                    var lyric = new Lyric();
+                    lyric.lyric = text;
+                    lyric.current_url = "";
+                    return lyric;
                 }
 
 
             } catch (Error e) {
                 stderr.printf ("I guess something is not working...\n");
-                return {"", ""};
+                return null;
             }
-            return {"", ""};
+            return null;
         }
 
-        private string[] get_lyrics_wikia(string title, string artist){
+        private Lyric? get_lyrics_wikia(string title, string artist){
             var seeds_url = "http://lyrics.wikia.com/wiki/";
             var session = new Soup.Session ();
             session.timeout = 5;
@@ -87,15 +90,18 @@ namespace GiveMeLyrics {
             var lyricbox = getValue(doc, "//div[contains(@class, 'lyricbox')]");
 
             if(lyricbox == null){
-                return {"", ""};
+                return null;
             }
             if(lyricbox.contains("Unfortunately, we are not licensed to display the full lyrics for this song at the moment.")){
-                return {"", ""};
+                return null;
             }
-            return {lyricbox, url};
+            var lyric = new Lyric();
+            lyric.lyric = lyricbox;
+            lyric.current_url = url;
+            return lyric;
         }
 
-        private string[] get_letras_mus(string title, string artist){
+        private Lyric? get_letras_mus(string title, string artist){
             var letras_url = "https://m.letras.mus.br/";
             var session = new Soup.Session ();
             session.timeout = 5;
@@ -116,43 +122,42 @@ namespace GiveMeLyrics {
             var check_song = getValue(doc, "//div[contains(@class, 'lyric-title')]//h1").down();
 
             if(check_song.contains(title.down()) == false){
-                return {"", ""};
+                return null;
             }
 
-            if(check_song.contains("feat") == true){
-                if(title.down().contains("feat") == false){
-                    return {"", ""};
-                }
-            }
             var lyricbox = getValue(doc, "//div[contains(@class, 'lyric-tra_l')]//article");
 
             if(lyricbox == null){
                 lyricbox = getValue(doc, "//div[contains(@class, 'lyric-cnt')]//article");
 
                 if(lyricbox == null){
-                    return {"", ""};
+                    return null;
                 }
             }
 
             if(lyricbox.contains("Essa música foi removida em razão de solicitação do(s) titular(es) da obra.")){
-                return {"", ""};
+                return null;
             }
             var array_subtitle = "";
+            var lyric = new Lyric();
             if(settings.sync_lyrics == true){
                 var script = getValue(doc, "//div[@id='js-scripts']//script");
                 var song_id = script.split(",")[1].split(":")[1];
                 foreach(var subtitle_id in get_lyrics_available_letras(song_id)){
                     if(subtitle_id != ""){
-                        array_subtitle = get_sync_lyric_letras(song_id, subtitle_id);
-                        if(array_subtitle != ""){
-                            break;
+                        var c_url = "https://www.letras.mus.br/subtitle/" + song_id + "/" + subtitle_id;
+                        lyric.add_url(c_url);
+                        if(array_subtitle == ""){
+                            array_subtitle = get_sync_lyric_letras(c_url);
+                            lyric.current_sync_url = c_url;
                         }
                     }
                 }
             }
-
-
-            return {lyricbox, url, array_subtitle};
+            lyric.lyric = lyricbox;
+            lyric.current_url = url;
+            lyric.lyric_sync = array_subtitle;
+            return lyric;
         }
 
         private string[] get_lyrics_available_letras(string song_id){
@@ -188,10 +193,8 @@ namespace GiveMeLyrics {
             return result;
         }
 
-        private string get_sync_lyric_letras(string song_id, string subtitle_id){
+        private string get_sync_lyric_letras(string url){
             var result = "";
-            var letras_url = "https://www.letras.mus.br/subtitle/";
-            var url = letras_url + song_id + "/" + subtitle_id;
             var session = new Soup.Session ();
             session.timeout = 5;
             var message = new Soup.Message ("GET", url);
@@ -231,15 +234,11 @@ namespace GiveMeLyrics {
             return result;
         }
 
-        public string[] get_lyric(string title, string artist){
-            string song_ret = "";
-            string sub = "";
-            var url = "";
-            string[] r;
+        public Lyric? get_lyric(string title, string artist){
+            Lyric? r = null;
             var n_title = remove_accents(title.replace("?", "").down());
             var n_artist = remove_accents(artist.down());
             foreach (var s_api in lyrics_apis) {
-                var ret = "";
                 if(s_api == "api_seeds"){
                     r = get_api_seeds(n_title, n_artist);
                 }else if(s_api == "lyrics_wikia"){
@@ -247,23 +246,29 @@ namespace GiveMeLyrics {
                 }else if(s_api == "letras_mus"){
                     r = get_letras_mus(n_title, n_artist);
                 }else{
-                    return {"", "", ""};
+                    return null;
                 }
-
-                ret = r[0];
-                url = r[1];
-                if(settings.sync_lyrics == true){
-                    if(r.length == 3){
-                        sub = r[2];
-                    }
+                if(r == null){
+                    continue;
                 }
-                if(ret != ""){
-                    song_ret = ret;
+                if(r.lyric != ""){
                     break;
                 }
 
             }
-            return {song_ret, url, title, sub};
+            if(r != null){
+                r.title = title;
+                r.artist = artist;
+            }
+            return r;
+        }
+
+        public Lyric get_lyric_from_url(string url, Lyric lyric){
+            if(url.contains("letras.mus.br")){
+                var sub = get_sync_lyric_letras(url);
+                lyric.lyric_sync = sub;
+            }
+            return lyric;
         }
 
 
@@ -313,7 +318,7 @@ namespace GiveMeLyrics {
         }
 
         private string remove_accents(string input){
-            var new_string = input.replace("ê", "e").replace("á", "á").replace("à", "à").replace("ã", "a").replace("ó", "o").replace("ç", "c").replace("í", "i").replace("ú", "u");
+            var new_string = input.replace("ê", "e").replace("á", "á").replace("à", "à").replace("ã", "a").replace("ó", "o").replace("ç", "c").replace("í", "i").replace("ú", "u").replace("å", "a").replace("ö", "o");
             return new_string;
         }
     }

@@ -50,6 +50,11 @@ namespace GiveMeLyrics {
         private bool was_paused;
         private bool updating;
         private Gtk.Label sync_label;
+        private Lyric current_lyric;
+        private Gtk.Box box_change_lyric;
+        private Gtk.Button arrow_lyric_left;
+        private Gtk.Button arrow_lyric_right;
+        private Gtk.Label label_change_lyric;
 
         public LyricsWidget (Gtk.Window window) {
             Object (
@@ -133,12 +138,29 @@ namespace GiveMeLyrics {
             source_link.hexpand = false;
             source_link.vexpand = false;
             source_link.margin_bottom = 10;
-            source_link.margin_top = 10;
+            source_link.margin_top = 0;
             source_link.halign = Gtk.Align.END;
 
             sync_label = new Gtk.Label(_("Synchronized Lyrics"));
+            sync_label.margin_bottom = 10;
+
+            box_change_lyric = new Gtk.Box(Gtk.Orientation.HORIZONTAL, 0);
+            box_change_lyric.halign = Gtk.Align.END;
+            arrow_lyric_left = new Gtk.Button.from_icon_name ("pan-start-symbolic", Gtk.IconSize.BUTTON);
+            arrow_lyric_left.relief = Gtk.ReliefStyle.NONE;
+            arrow_lyric_left.clicked.connect(change_lyric_left);
+
+            arrow_lyric_right = new Gtk.Button.from_icon_name ("pan-end-symbolic", Gtk.IconSize.BUTTON);
+            arrow_lyric_right.relief = Gtk.ReliefStyle.NONE;
+            arrow_lyric_right.clicked.connect(change_lyric_right);
+            label_change_lyric = new Gtk.Label("1");
+            box_change_lyric.pack_start(arrow_lyric_left, false, false, 0);
+            box_change_lyric.pack_start(label_change_lyric, false, false, 0);
+            box_change_lyric.pack_start(arrow_lyric_right, false, false, 0);
+
             box_information.pack_start(source_link, false, false, 0);
             box_information.pack_start(sync_label, false, false, 0);
+            box_information.pack_start(box_change_lyric, false, false, 0);
 
             scrolled.add (view);
 
@@ -180,6 +202,7 @@ namespace GiveMeLyrics {
             box_spinner.hide();
             source_link.hide();
             sync_label.hide();
+            box_change_lyric.hide();
         }
 
         public void setup_dbus() {
@@ -372,7 +395,11 @@ namespace GiveMeLyrics {
                 box_spinner.show();
                 label_message.label = _("Loading");
                 sync_label.hide();
+                box_change_lyric.hide();
                 source_link.hide();
+                arrow_lyric_left.set_sensitive(false);
+                arrow_lyric_right.set_sensitive(true);
+                label_change_lyric.label = "1";
                 update_lyric(client, i);
             }else{
                 if(playing == true && sync_running == false && updating == false){
@@ -384,31 +411,37 @@ namespace GiveMeLyrics {
 
         private void update_lyric(MprisClient client, string i){
             updating = true;
-
+            var sub = "";
+            var title = "";
+            var url = "";
+            var lyric = "";
             try{
                 bool error = false;
                 var r = fetcher.get_lyric(last_title, last_artist);
-                var lyric = r[0];
-                var url = r[1];
-                var title = r[2];
-                var sub = r[3];
+                if(r != null){
+                    lyric = r.lyric;
+                    url = r.current_url;
+                    title = r.title;
+                    sub = r.lyric_sync;
+                    if(title != last_title){
+                        return;
+                    }
+                    if(url != ""){
+                        source_link.set_uri(url);
+                        source_link.show();
+                    }else{
+                        source_link.hide();
+                    }
+                    Idle.add(()=> {
+                        clean_text_buffer();
+                        return false;
+                    });
 
-                if(title != last_title){
-                    return;
-                }
-                if(url != ""){
-                    source_link.set_uri(url);
-                    source_link.show();
+                    if(lyric == "" || lyric == null){
+                        error = true;
+                    }
+                    current_lyric = r;
                 }else{
-                    source_link.hide();
-                }
-                Idle.add(()=> {
-                    clean_text_buffer();
-                    return false;
-                });
-
-
-                if(lyric == "" || lyric == null){
                     error = true;
                 }
 
@@ -418,8 +451,9 @@ namespace GiveMeLyrics {
                     icon.show();
                     label_message.label = _("No lyric found");
                     sync_label.hide();
+                    box_change_lyric.hide();
                 } else {
-                    if(settings.sync_lyrics == true && sub != null && sub != ""){
+                    if(settings.sync_lyrics == true && sub != "" && sub != null){
                         Idle.add(()=> {
                             insert_subtitle(sub);
                             return false;
@@ -427,8 +461,14 @@ namespace GiveMeLyrics {
                         set_sync(client, i);
                         sync_label.label = _("Synchronized Lyrics");
                         sync_label.show();
+                        if(current_lyric.get_len_urls() > 1){
+                            box_change_lyric.show();
+                        }else{
+                            box_change_lyric.hide();
+                        }
 
                     }else{
+                        box_change_lyric.hide();
                         Idle.add(()=> {
                             insert_text(lyric);
                             return false;
@@ -625,6 +665,55 @@ namespace GiveMeLyrics {
                 background.gicon = null;
                 background.get_style_context ().set_scale (scale);
             }
+        }
+
+        private void change_lyric_right(){
+            var current = int.parse(label_change_lyric.label);
+            if(current < current_lyric.get_len_urls()){
+                change_lyric(current + 1);
+                label_change_lyric.label = (current + 1).to_string();
+                arrow_lyric_left.set_sensitive(true);
+            }
+            current = int.parse(label_change_lyric.label);
+            if(current == 1){
+                arrow_lyric_left.set_sensitive(false);
+            }
+            if(current == current_lyric.get_len_urls()){
+                arrow_lyric_right.set_sensitive(false);
+            }
+        }
+
+        private void change_lyric_left(){
+            var current = int.parse(label_change_lyric.label);
+            if(current > 1){
+                change_lyric(current - 1);
+                label_change_lyric.label = (current - 1).to_string();
+                arrow_lyric_right.set_sensitive(true);
+            }
+            current = int.parse(label_change_lyric.label);
+            if(current == 1){
+                arrow_lyric_left.set_sensitive(false);
+            }
+            if(current == current_lyric.get_len_urls()){
+                arrow_lyric_right.set_sensitive(false);
+            }
+        }
+
+        private void change_lyric(int index_url){
+            var url = current_lyric.get_url_from_index(index_url - 1);
+            if(url == "" || url == null){
+                return;
+            }
+            var new_lyric = fetcher.get_lyric_from_url(url, current_lyric);
+            current_lyric = new_lyric;
+            Idle.add(()=> {
+                clean_text_buffer();
+                return false;
+            });
+            Idle.add(()=> {
+                insert_subtitle(new_lyric.lyric_sync);
+                return false;
+            });
         }
 
 
