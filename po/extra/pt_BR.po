@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-28 11:09-0200\n"
-"PO-Revision-Date: 2019-01-29 11:54+0000\n"
+"PO-Revision-Date: 2019-02-20 21:17+0000\n"
 "Last-Translator: Murilo Venturoso <muriloventuroso@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "givemelyrics/extra/pt_BR/>\n"
@@ -47,8 +47,8 @@ msgstr "Veja a letra da música que está tocando."
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:8
 msgid "com.github.muriloventuroso.givemelyrics"
-msgstr ""
+msgstr "com.github.muriloventuroso.givemelyrics"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:12
 msgid "audio;lyrics;"
-msgstr ""
+msgstr "audio;letras;"
