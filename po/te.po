@@ -8,54 +8,57 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-28 13:55-0200\n"
-"PO-Revision-Date: 2019-01-10 09:14-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-02-24 14:17+0000\n"
+"Last-Translator: Devalla Lakshmi Raghavi <raghavi.devalla27@gmail.com>\n"
+"Language-Team: Telugu <https://hosted.weblate.org/projects/givemelyrics/"
+"translations/te/>\n"
 "Language: te\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.5-dev\n"
 
 #: src/Application.vala:78
 msgid "Menu"
-msgstr ""
+msgstr "మెను"
 
 #: src/Application.vala:85 src/Application.vala:93
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "సాహిత్యం ఇవ్వు"
 
 #: src/Widgets/LyricsWidget.vala:131
 msgid "Source"
-msgstr ""
+msgstr "మూలం"
 
 #: src/Widgets/LyricsWidget.vala:138 src/Widgets/LyricsWidget.vala:427
 msgid "Synchronized Lyrics"
-msgstr ""
+msgstr "సమకాలీకరించబడిన  సాహిత్యం"
 
 #: src/Widgets/LyricsWidget.vala:155
 msgid "Nothing is playing"
-msgstr ""
+msgstr "ఎమీ ఆడుట్డలేదు"
 
 #: src/Widgets/LyricsWidget.vala:363
 msgid "Advertising"
-msgstr ""
+msgstr "ప్రకతనలు"
 
 #: src/Widgets/LyricsWidget.vala:372
 msgid "Loading"
-msgstr ""
+msgstr "లోడ్"
 
 #: src/Widgets/LyricsWidget.vala:418
 msgid "No lyric found"
-msgstr ""
+msgstr "సాహిత్యం దొరకలేదు"
 
 #: src/Widgets/LyricsWidget.vala:436
 msgid "Non-Synchronized Lyrics"
-msgstr ""
+msgstr "సమకాలీకరించబడలేని  సాహిత్యం"
 
 #: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
-msgstr ""
+msgstr "సమకాలీకరించబడిన  సాహిత్యం"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr ""
+msgstr "చీకటి థీమ్"
