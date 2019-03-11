@@ -8,55 +8,57 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-28 13:55-0200\n"
-"PO-Revision-Date: 2019-01-10 09:14-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-03-12 12:03+0000\n"
+"Last-Translator: Güner Acet <kurama632@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/givemelyrics/"
+"translations/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.5.1\n"
 
 #: src/Application.vala:78
 msgid "Menu"
-msgstr ""
+msgstr "Menü"
 
 #: src/Application.vala:85 src/Application.vala:93
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "Şarkı Sözlerini Getir"
 
 #: src/Widgets/LyricsWidget.vala:131
 msgid "Source"
-msgstr ""
+msgstr "Kaynak"
 
 #: src/Widgets/LyricsWidget.vala:138 src/Widgets/LyricsWidget.vala:427
 msgid "Synchronized Lyrics"
-msgstr ""
+msgstr "Eşzamanlı Şarkı Sözleri"
 
 #: src/Widgets/LyricsWidget.vala:155
 msgid "Nothing is playing"
-msgstr ""
+msgstr "Oynatılan bir şey yok"
 
 #: src/Widgets/LyricsWidget.vala:363
 msgid "Advertising"
-msgstr ""
+msgstr "Reklam"
 
 #: src/Widgets/LyricsWidget.vala:372
 msgid "Loading"
-msgstr ""
+msgstr "Yükleniyor"
 
 #: src/Widgets/LyricsWidget.vala:418
 msgid "No lyric found"
-msgstr ""
+msgstr "Şarkı sözü bulunamadı"
 
 #: src/Widgets/LyricsWidget.vala:436
 msgid "Non-Synchronized Lyrics"
-msgstr ""
+msgstr "Senkronize Edilmemiş Şarkı Sözleri"
 
 #: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
-msgstr ""
+msgstr "Senkronize Şarkı Sözleri:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr ""
+msgstr "Karanlık Tema:"
