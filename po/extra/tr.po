@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 11:09-0200\n"
+"POT-Creation-Date: 2019-03-23 23:48+0100\n"
 "PO-Revision-Date: 2019-03-12 12:03+0000\n"
 "Last-Translator: Güner Acet <kurama632@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/givemelyrics/"
@@ -39,7 +39,66 @@ msgstr ""
 "Herhangi bir uygulamadan, çalan şarkının sözlerine bakın. Şarkı sözlerini "
 "senkronize etme seçeneğiyle birlikte şarkı söyleyin."
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:94
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
+msgid "Change sync lyrics"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:45
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:57
+msgid "Bugfix"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:20
+msgid "New Translations"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
+msgid "Sync Lyrics"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:26
+msgid "Dark Theme"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
+msgid "Critical Bugfix"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:32
+msgid "Fix scroll window"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:38
+msgid "Show loading label"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
+msgid "Label Advertising"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:44
+msgid "Source link"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
+msgid "New icon"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:51
+msgid "New translation: French"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
+msgid "New Source: letras.mus.br"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
+msgid "Show lyrics"
+msgstr ""
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:111
 #, fuzzy
 msgid "Murilo Venturoso"
 msgstr "Murilo Venturoso"

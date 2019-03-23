@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 13:55-0200\n"
+"POT-Creation-Date: 2019-03-23 23:47+0100\n"
 "PO-Revision-Date: 2019-03-15 21:03+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/givemelyrics/"
@@ -27,31 +27,31 @@ msgstr "Menu"
 msgid "Give Me Lyrics"
 msgstr "Give Me Lyrics"
 
-#: src/Widgets/LyricsWidget.vala:131
+#: src/Widgets/LyricsWidget.vala:137
 msgid "Source"
 msgstr "Bron"
 
-#: src/Widgets/LyricsWidget.vala:138 src/Widgets/LyricsWidget.vala:427
+#: src/Widgets/LyricsWidget.vala:144 src/Widgets/LyricsWidget.vala:462
 msgid "Synchronized Lyrics"
 msgstr "Gesynchroniseerde songtekst"
 
-#: src/Widgets/LyricsWidget.vala:155
+#: src/Widgets/LyricsWidget.vala:178
 msgid "Nothing is playing"
 msgstr "Er wordt niks afgespeeld"
 
-#: src/Widgets/LyricsWidget.vala:363
+#: src/Widgets/LyricsWidget.vala:387
 msgid "Advertising"
 msgstr "Reclame"
 
-#: src/Widgets/LyricsWidget.vala:372
+#: src/Widgets/LyricsWidget.vala:396
 msgid "Loading"
 msgstr "Bezig met laden..."
 
-#: src/Widgets/LyricsWidget.vala:418
+#: src/Widgets/LyricsWidget.vala:452
 msgid "No lyric found"
 msgstr "Geen songtekst gevonden"
 
-#: src/Widgets/LyricsWidget.vala:436
+#: src/Widgets/LyricsWidget.vala:477
 msgid "Non-Synchronized Lyrics"
 msgstr "Niet-gesynchroniseerde songtekst"
 

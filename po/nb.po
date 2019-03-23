@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 13:55-0200\n"
+"POT-Creation-Date: 2019-03-23 23:47+0100\n"
 "PO-Revision-Date: 2019-02-02 14:09+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
@@ -28,31 +28,31 @@ msgstr "Meny"
 msgid "Give Me Lyrics"
 msgstr "Give me Lyrics"
 
-#: src/Widgets/LyricsWidget.vala:131
+#: src/Widgets/LyricsWidget.vala:137
 msgid "Source"
 msgstr "Kilde"
 
-#: src/Widgets/LyricsWidget.vala:138 src/Widgets/LyricsWidget.vala:427
+#: src/Widgets/LyricsWidget.vala:144 src/Widgets/LyricsWidget.vala:462
 msgid "Synchronized Lyrics"
 msgstr "Synkroniserte sangtekster"
 
-#: src/Widgets/LyricsWidget.vala:155
+#: src/Widgets/LyricsWidget.vala:178
 msgid "Nothing is playing"
 msgstr "Ingenting spilles av"
 
-#: src/Widgets/LyricsWidget.vala:363
+#: src/Widgets/LyricsWidget.vala:387
 msgid "Advertising"
 msgstr "Publisering"
 
-#: src/Widgets/LyricsWidget.vala:372
+#: src/Widgets/LyricsWidget.vala:396
 msgid "Loading"
 msgstr "Laster inn …"
 
-#: src/Widgets/LyricsWidget.vala:418
+#: src/Widgets/LyricsWidget.vala:452
 msgid "No lyric found"
 msgstr "Fant ikke noen sangtekster"
 
-#: src/Widgets/LyricsWidget.vala:436
+#: src/Widgets/LyricsWidget.vala:477
 #, fuzzy
 msgid "Non-Synchronized Lyrics"
 msgstr "Ikke-synkroniserte tekster"
