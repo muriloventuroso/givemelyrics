@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-28 11:08-0200\n"
+"POT-Creation-Date: 2019-03-23 23:47+0100\n"
 "PO-Revision-Date: 2019-01-29 11:54+0000\n"
 "Last-Translator: Murilo Venturoso <muriloventuroso@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
@@ -27,31 +27,31 @@ msgstr "Menu"
 msgid "Give Me Lyrics"
 msgstr "Me Dê as Letras"
 
-#: src/Widgets/LyricsWidget.vala:131
+#: src/Widgets/LyricsWidget.vala:137
 msgid "Source"
 msgstr "Fonte"
 
-#: src/Widgets/LyricsWidget.vala:138 src/Widgets/LyricsWidget.vala:427
+#: src/Widgets/LyricsWidget.vala:144 src/Widgets/LyricsWidget.vala:462
 msgid "Synchronized Lyrics"
 msgstr "Letras Sincronizadas"
 
-#: src/Widgets/LyricsWidget.vala:155
+#: src/Widgets/LyricsWidget.vala:178
 msgid "Nothing is playing"
 msgstr "Nada está tocando"
 
-#: src/Widgets/LyricsWidget.vala:363
+#: src/Widgets/LyricsWidget.vala:387
 msgid "Advertising"
 msgstr "Propaganda"
 
-#: src/Widgets/LyricsWidget.vala:372
+#: src/Widgets/LyricsWidget.vala:396
 msgid "Loading"
 msgstr "Carregando"
 
-#: src/Widgets/LyricsWidget.vala:418
+#: src/Widgets/LyricsWidget.vala:452
 msgid "No lyric found"
 msgstr "Nenhuma letra encontrada"
 
-#: src/Widgets/LyricsWidget.vala:436
+#: src/Widgets/LyricsWidget.vala:477
 msgid "Non-Synchronized Lyrics"
 msgstr "Letras Não-Sincronizadas"
 
