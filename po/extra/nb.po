@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-23 23:48+0100\n"
-"PO-Revision-Date: 2019-02-02 14:09+0000\n"
+"PO-Revision-Date: 2019-03-26 17:38+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "givemelyrics/extra/nb_NO/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Weblate 3.6-dev\n"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:8
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:3
@@ -39,31 +39,33 @@ msgstr ""
 "med synkroniserte tekster."
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
+#, fuzzy
 msgid "Change sync lyrics"
-msgstr ""
+msgstr "Endre synkronisering av sangtekster"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:45
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:57
 msgid "Bugfix"
-msgstr ""
+msgstr "Feilretting"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:20
 msgid "New Translations"
-msgstr ""
+msgstr "Nye oversettelser"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
+#, fuzzy
 msgid "Sync Lyrics"
-msgstr ""
+msgstr "Synkroniser sangtekster"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:26
 msgid "Dark Theme"
-msgstr ""
+msgstr "Mørk drakt"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Critical Bugfix"
-msgstr ""
+msgstr "Kritisk feilretting"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:32
 msgid "Fix scroll window"
@@ -79,23 +81,24 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:44
 msgid "Source link"
-msgstr ""
+msgstr "Kildelenke"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
 msgid "New icon"
-msgstr ""
+msgstr "Nytt ikon"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:51
 msgid "New translation: French"
-msgstr ""
+msgstr "Ny oversettelse: Fransk"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
 msgid "New Source: letras.mus.br"
-msgstr ""
+msgstr "Ny kilde: letras.mus.br"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
+#, fuzzy
 msgid "Show lyrics"
-msgstr ""
+msgstr "Vis sangtekster"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:111
 msgid "Murilo Venturoso"
