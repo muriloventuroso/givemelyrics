@@ -9,6 +9,11 @@
   <summary>Lyrics for your songs</summary>
   <description><p>See the lyrics of the song that is playing, from any application. Sing along with the option to sync lyrics.</p></description>
   <releases>
+    <release version="0.2.3" date="2019-03-25">
+      <description>
+        <p>Fix Translations</p>
+      </description>
+    </release>
     <release version="0.2.2" date="2019-02-06">
       <description>
         <p>Change sync lyrics</p>
