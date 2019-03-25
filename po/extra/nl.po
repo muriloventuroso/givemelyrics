@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-23 23:48+0100\n"
-"PO-Revision-Date: 2019-03-15 21:03+0000\n"
+"PO-Revision-Date: 2019-03-26 17:38+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/givemelyrics/extra/"
 "nl/>\n"
@@ -39,62 +39,62 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 msgid "Change sync lyrics"
-msgstr ""
+msgstr "Gesynchroniseerde songtekst wijzigen"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:45
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:57
 msgid "Bugfix"
-msgstr ""
+msgstr "Foutoplossing"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:20
 msgid "New Translations"
-msgstr ""
+msgstr "Nieuwe vertalingen"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
 msgid "Sync Lyrics"
-msgstr ""
+msgstr "Songteksten synchroniseren"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:26
 msgid "Dark Theme"
-msgstr ""
+msgstr "Donker thema"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Critical Bugfix"
-msgstr ""
+msgstr "Kritieke foutoplossing"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:32
 msgid "Fix scroll window"
-msgstr ""
+msgstr "Scrollen in venster opgelost"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:38
 msgid "Show loading label"
-msgstr ""
+msgstr "Label \"bezig met laden...\" toegevoegd"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
 msgid "Label Advertising"
-msgstr ""
+msgstr "Labelreclame"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:44
 msgid "Source link"
-msgstr ""
+msgstr "Bronlink"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
 msgid "New icon"
-msgstr ""
+msgstr "Nieuw pictogram"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:51
 msgid "New translation: French"
-msgstr ""
+msgstr "Nieuwe vertaling: Frans"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
 msgid "New Source: letras.mus.br"
-msgstr ""
+msgstr "Nieuwe bron: letras.mus.br"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
 msgid "Show lyrics"
-msgstr ""
+msgstr "Songteksten tonen"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:111
 msgid "Murilo Venturoso"
