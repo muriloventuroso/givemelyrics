@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-23 23:48+0100\n"
-"PO-Revision-Date: 2019-03-27 21:03+0000\n"
+"PO-Revision-Date: 2019-03-29 18:04+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/givemelyrics/"
 "extra/lt/>\n"
@@ -41,13 +41,13 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 msgid "Change sync lyrics"
-msgstr ""
+msgstr "Pakeisti dainos žodžių sinchronizavimą"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:45
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:57
 msgid "Bugfix"
-msgstr ""
+msgstr "Klaidos pataisymas"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:20
 msgid "New Translations"
@@ -55,7 +55,7 @@ msgstr "Nauji vertimai"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
 msgid "Sync Lyrics"
-msgstr ""
+msgstr "Sinchronizuoti dainos žodžius"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:26
 msgid "Dark Theme"
@@ -64,39 +64,39 @@ msgstr "Tamsi tema"
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Critical Bugfix"
-msgstr ""
+msgstr "Kritinės klaidos pataisymas"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:32
 msgid "Fix scroll window"
-msgstr ""
+msgstr "Pataisytas lango slinkimas"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:38
 msgid "Show loading label"
-msgstr ""
+msgstr "Rodyti įkėlimo etiketę"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
 msgid "Label Advertising"
-msgstr ""
+msgstr "Etiketės reklamavimas"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:44
 msgid "Source link"
-msgstr ""
+msgstr "Šaltinio nuoroda"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
 msgid "New icon"
-msgstr ""
+msgstr "Nauja piktograma"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:51
 msgid "New translation: French"
-msgstr ""
+msgstr "Naujas vertimas: Prancūzų"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
 msgid "New Source: letras.mus.br"
-msgstr ""
+msgstr "Naujas šaltinis: letras.mus.br"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
 msgid "Show lyrics"
-msgstr ""
+msgstr "Rodyti dainų žodžius"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:111
 msgid "Murilo Venturoso"
