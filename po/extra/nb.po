@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-23 23:48+0100\n"
+"POT-Creation-Date: 2019-03-30 09:04+0100\n"
 "PO-Revision-Date: 2019-03-26 17:38+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
@@ -40,67 +40,72 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 #, fuzzy
+msgid "Fix Translations"
+msgstr "Nye oversettelser"
+
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
+#, fuzzy
 msgid "Change sync lyrics"
 msgstr "Endre synkronisering av sangtekster"
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:45
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:57
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:24
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
 msgid "Bugfix"
 msgstr "Feilretting"
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:20
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
 msgid "New Translations"
 msgstr "Nye oversettelser"
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:30
 #, fuzzy
 msgid "Sync Lyrics"
 msgstr "Synkroniser sangtekster"
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:26
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
 msgid "Dark Theme"
 msgstr "Mørk drakt"
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:36
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:42
 msgid "Critical Bugfix"
 msgstr "Kritisk feilretting"
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:32
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Fix scroll window"
 msgstr ""
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:38
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
 msgid "Show loading label"
 msgstr ""
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:48
 msgid "Label Advertising"
 msgstr ""
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:44
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:49
 msgid "Source link"
 msgstr "Kildelenke"
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:55
 msgid "New icon"
 msgstr "Nytt ikon"
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:51
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
 msgid "New translation: French"
 msgstr "Ny oversettelse: Fransk"
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:61
 msgid "New Source: letras.mus.br"
 msgstr "Ny kilde: letras.mus.br"
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:67
 #, fuzzy
 msgid "Show lyrics"
 msgstr "Vis sangtekster"
 
-#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:111
+#: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:116
 msgid "Murilo Venturoso"
 msgstr "Murilo Venturoso"
 
