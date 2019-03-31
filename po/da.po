@@ -1,15 +1,15 @@
 # Danish translations for com.github.muriloventuroso.givemelyrics package.
 # Copyright (C) 2019 THE com.github.muriloventuroso.givemelyrics'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.muriloventuroso.givemelyrics package.
-# Automatically generated, 2019.
+# Siigdev, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-23 23:47+0100\n"
-"PO-Revision-Date: 2019-01-10 09:14-0200\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2019-03-31 13:22+0100\n"
+"Last-Translator: Siigdev\n"
 "Language-Team: none\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -19,44 +19,44 @@ msgstr ""
 
 #: src/Application.vala:78
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: src/Application.vala:85 src/Application.vala:93
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "Give Me Lyrics"
 
 #: src/Widgets/LyricsWidget.vala:137
 msgid "Source"
-msgstr ""
+msgstr "Kilde"
 
 #: src/Widgets/LyricsWidget.vala:144 src/Widgets/LyricsWidget.vala:462
 msgid "Synchronized Lyrics"
-msgstr ""
+msgstr "Synkroniseret sangtekst"
 
 #: src/Widgets/LyricsWidget.vala:178
 msgid "Nothing is playing"
-msgstr ""
+msgstr "Intet afspilles"
 
 #: src/Widgets/LyricsWidget.vala:387
 msgid "Advertising"
-msgstr ""
+msgstr "Reklame"
 
 #: src/Widgets/LyricsWidget.vala:396
 msgid "Loading"
-msgstr ""
+msgstr "Indlæser"
 
 #: src/Widgets/LyricsWidget.vala:452
 msgid "No lyric found"
-msgstr ""
+msgstr "Ingen sangtekster fundet"
 
 #: src/Widgets/LyricsWidget.vala:477
 msgid "Non-Synchronized Lyrics"
-msgstr ""
+msgstr "Ikke synkroniseret sangtekst"
 
 #: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
-msgstr ""
+msgstr "Synkroniseret sangtekst:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr ""
+msgstr "Mørkt tema"

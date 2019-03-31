@@ -1,15 +1,15 @@
 # Danish translations for extra package.
 # Copyright (C) 2019 THE extra'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# Automatically generated, 2019.
+# Siigdev, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-23 23:48+0100\n"
-"PO-Revision-Date: 2019-01-28 11:07-0200\n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2019-03-31 13:23+0100\n"
+"Last-Translator: Siigdev\n"
 "Language-Team: none\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -21,89 +21,91 @@ msgstr ""
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:3
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:4
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "Give Me Lyrics"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:9
 msgid "Lyrics for your songs"
-msgstr ""
+msgstr "Sangtekster til dine sange"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:10
 msgid ""
 "See the lyrics of the song that is playing, from any application. Sing along "
 "with the option to sync lyrics."
 msgstr ""
+"Se sangteksten for den sang som afspilles fra enhver applikation. Syng med på sangene "
+"med muligheden for at synkronisere sangteksterne."
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 msgid "Change sync lyrics"
-msgstr ""
+msgstr "Skift sangtekstsynkronisering"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:45
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:57
 msgid "Bugfix"
-msgstr ""
+msgstr "Fejlrettelse"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:20
 msgid "New Translations"
-msgstr ""
+msgstr "Nye oversættelser"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
 msgid "Sync Lyrics"
-msgstr ""
+msgstr "Synkroniserede sangtekster"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:26
 msgid "Dark Theme"
-msgstr ""
+msgstr "Mørkt tema"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Critical Bugfix"
-msgstr ""
+msgstr "Kritisk fejlrettelse"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:32
 msgid "Fix scroll window"
-msgstr ""
+msgstr "Fix scroll i vinduet"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:38
 msgid "Show loading label"
-msgstr ""
+msgstr "Vis loading tekst"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
 msgid "Label Advertising"
-msgstr ""
+msgstr "Reklame tekst"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:44
 msgid "Source link"
-msgstr ""
+msgstr "Kildekode link"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
 msgid "New icon"
-msgstr ""
+msgstr "Nyt ikon"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:51
 msgid "New translation: French"
-msgstr ""
+msgstr "Ny oversættelse: Fransk"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
 msgid "New Source: letras.mus.br"
-msgstr ""
+msgstr "Ny kilde: letras.mus.br"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
 msgid "Show lyrics"
-msgstr ""
+msgstr "Vis lyrik"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:111
 msgid "Murilo Venturoso"
-msgstr ""
+msgstr "Murilo Venturoso"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:5
 msgid "See the lyrics of the song that is playing."
-msgstr ""
+msgstr "Se sangteksten for den sang som spiller."
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:8
 msgid "com.github.muriloventuroso.givemelyrics"
-msgstr ""
+msgstr "com.github.muriloventuroso.givemelyrics"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:12
 msgid "audio;lyrics;"
-msgstr ""
+msgstr "lyd;sangtekster;"
