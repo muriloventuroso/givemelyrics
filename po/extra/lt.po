@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2019-03-29 18:04+0000\n"
+"PO-Revision-Date: 2019-04-02 20:02+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/givemelyrics/"
 "extra/lt/>\n"
@@ -40,9 +40,8 @@ msgstr ""
 "naudodami dainos žodžių sinchronizavimo parametrą."
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
-#, fuzzy
 msgid "Fix Translations"
-msgstr "Nauji vertimai"
+msgstr "Ištaisyti vertimai"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
 msgid "Change sync lyrics"
