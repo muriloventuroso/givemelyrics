@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-23 23:47+0100\n"
+"POT-Creation-Date: 2019-04-09 16:55-0300\n"
 "PO-Revision-Date: 2019-03-15 21:03+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/givemelyrics/"
@@ -31,7 +31,7 @@ msgstr "Give Me Lyrics"
 msgid "Source"
 msgstr "Bron"
 
-#: src/Widgets/LyricsWidget.vala:144 src/Widgets/LyricsWidget.vala:462
+#: src/Widgets/LyricsWidget.vala:144 src/Widgets/LyricsWidget.vala:463
 msgid "Synchronized Lyrics"
 msgstr "Gesynchroniseerde songtekst"
 
@@ -47,11 +47,11 @@ msgstr "Reclame"
 msgid "Loading"
 msgstr "Bezig met laden..."
 
-#: src/Widgets/LyricsWidget.vala:452
+#: src/Widgets/LyricsWidget.vala:453
 msgid "No lyric found"
 msgstr "Geen songtekst gevonden"
 
-#: src/Widgets/LyricsWidget.vala:477
+#: src/Widgets/LyricsWidget.vala:478
 msgid "Non-Synchronized Lyrics"
 msgstr "Niet-gesynchroniseerde songtekst"
 

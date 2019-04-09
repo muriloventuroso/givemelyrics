@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-23 23:47+0100\n"
+"POT-Creation-Date: 2019-04-09 16:55-0300\n"
 "PO-Revision-Date: 2019-01-29 11:54+0000\n"
 "Last-Translator: Murilo Venturoso <muriloventuroso@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
@@ -31,7 +31,7 @@ msgstr "Me Dê as Letras"
 msgid "Source"
 msgstr "Fonte"
 
-#: src/Widgets/LyricsWidget.vala:144 src/Widgets/LyricsWidget.vala:462
+#: src/Widgets/LyricsWidget.vala:144 src/Widgets/LyricsWidget.vala:463
 msgid "Synchronized Lyrics"
 msgstr "Letras Sincronizadas"
 
@@ -47,11 +47,11 @@ msgstr "Propaganda"
 msgid "Loading"
 msgstr "Carregando"
 
-#: src/Widgets/LyricsWidget.vala:452
+#: src/Widgets/LyricsWidget.vala:453
 msgid "No lyric found"
 msgstr "Nenhuma letra encontrada"
 
-#: src/Widgets/LyricsWidget.vala:477
+#: src/Widgets/LyricsWidget.vala:478
 msgid "Non-Synchronized Lyrics"
 msgstr "Letras Não-Sincronizadas"
 
