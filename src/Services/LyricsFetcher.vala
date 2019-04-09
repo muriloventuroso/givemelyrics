@@ -125,10 +125,10 @@ namespace GiveMeLyrics {
                 return null;
             }
 
-            var lyricbox = getValue(doc, "//div[contains(@class, 'lyric-tra_l')]//article");
+            var lyricbox = getValue(doc, "//div[contains(@class, 'lyric-tra_l')]");
 
             if(lyricbox == null){
-                lyricbox = getValue(doc, "//div[contains(@class, 'lyric-cnt')]//article");
+                lyricbox = getValue(doc, "//div[contains(@class, 'lyric-cnt')]");
 
                 if(lyricbox == null){
                     return null;
@@ -205,6 +205,7 @@ namespace GiveMeLyrics {
                 var parser = new Json.Parser ();
                 var data = (string) message.response_body.flatten ().data;
                 if(data.length < 10 || data == ""){
+
                     return result;
                 }
                 parser.load_from_data (data, -1);
@@ -230,7 +231,6 @@ namespace GiveMeLyrics {
                 print(e.message);
             }
 
-
             return result;
         }
 
@@ -249,11 +249,14 @@ namespace GiveMeLyrics {
                     return null;
                 }
                 if(r == null){
+                    print("null");
                     continue;
                 }
                 if(r.lyric != ""){
+
                     break;
                 }
+                print(r.lyric);
 
             }
             if(r != null){

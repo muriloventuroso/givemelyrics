@@ -410,87 +410,89 @@ namespace GiveMeLyrics {
         }
 
         private void update_lyric(MprisClient client, string i){
-            updating = true;
-            var sub = "";
-            var title = "";
-            var url = "";
-            var lyric = "";
-            try{
-                bool error = false;
-                var r = fetcher.get_lyric(last_title, last_artist);
-                if(r != null){
-                    lyric = r.lyric;
-                    url = r.current_url;
-                    title = r.title;
-                    sub = r.lyric_sync;
-                    if(title != last_title){
-                        return;
-                    }
-                    if(url != ""){
-                        source_link.set_uri(url);
-                        source_link.show();
-                    }else{
-                        source_link.hide();
-                    }
-                    Idle.add(()=> {
-                        clean_text_buffer();
-                        return false;
-                    });
+            new Thread<void*> (null, () => {
+                updating = true;
+                var sub = "";
+                var title = "";
+                var url = "";
+                var lyric = "";
+                try{
+                    bool error = false;
+                    var r = fetcher.get_lyric(last_title, last_artist);
+                    if(r != null){
+                        lyric = r.lyric;
+                        url = r.current_url;
+                        title = r.title;
+                        sub = r.lyric_sync;
+                        if(title != last_title){
+                            return null;
+                        }
+                        if(url != ""){
+                            source_link.set_uri(url);
+                            source_link.show();
+                        }else{
+                            source_link.hide();
+                        }
+                        Idle.add(()=> {
+                            clean_text_buffer();
+                            return false;
+                        });
 
-                    if(lyric == "" || lyric == null){
+                        if(lyric == "" || lyric == null){
+                            error = true;
+                        }
+                        current_lyric = r;
+                    }else{
                         error = true;
                     }
-                    current_lyric = r;
-                }else{
-                    error = true;
-                }
 
-                if (error == true) {
-                    scrolled.hide();
-                    box_spinner.hide();
-                    icon.show();
-                    label_message.label = _("No lyric found");
-                    sync_label.hide();
-                    box_change_lyric.hide();
-                } else {
-                    if(settings.sync_lyrics == true && sub != "" && sub != null){
-                        Idle.add(()=> {
-                            insert_subtitle(sub);
-                            return false;
-                        });
-                        set_sync(client, i);
-                        sync_label.label = _("Synchronized Lyrics");
-                        sync_label.show();
-                        if(current_lyric.get_len_urls() > 1){
-                            box_change_lyric.show();
+                    if (error == true) {
+                        scrolled.hide();
+                        box_spinner.hide();
+                        icon.show();
+                        label_message.label = _("No lyric found");
+                        sync_label.hide();
+                        box_change_lyric.hide();
+                    } else {
+                        if(settings.sync_lyrics == true && sub != "" && sub != null){
+                            Idle.add(()=> {
+                                insert_subtitle(sub);
+                                return false;
+                            });
+                            set_sync(client, i);
+                            sync_label.label = _("Synchronized Lyrics");
+                            sync_label.show();
+                            if(current_lyric.get_len_urls() > 1){
+                                box_change_lyric.show();
+                            }else{
+                                box_change_lyric.hide();
+                            }
+
                         }else{
                             box_change_lyric.hide();
+                            Idle.add(()=> {
+                                insert_text(lyric);
+                                return false;
+                            });
+                            if(settings.sync_lyrics == true){
+                                sync_label.label = _("Non-Synchronized Lyrics");
+                                sync_label.show();
+                            }else{
+                                sync_label.hide();
+                            }
                         }
-
-                    }else{
-                        box_change_lyric.hide();
-                        Idle.add(()=> {
-                            insert_text(lyric);
-                            return false;
-                        });
-                        if(settings.sync_lyrics == true){
-                            sync_label.label = _("Non-Synchronized Lyrics");
-                            sync_label.show();
-                        }else{
-                            sync_label.hide();
-                        }
+                        scrolled.get_vadjustment().set_value(0);
+                        box_spinner.hide();
+                        box_message.hide();
+                        scrolled.show();
                     }
-                    scrolled.get_vadjustment().set_value(0);
-                    box_spinner.hide();
-                    box_message.hide();
-                    scrolled.show();
+                } catch (Error e) {
+                    warning("Failed to get lyric: %s", e.message);
                 }
-            } catch (Error e) {
-                warning("Failed to get lyric: %s", e.message);
-            }
 
-            updating = false;
-            return;
+                updating = false;
+                return null;
+            });
 
         }
 
