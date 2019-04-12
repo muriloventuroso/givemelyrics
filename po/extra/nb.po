@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2019-03-26 17:38+0000\n"
+"PO-Revision-Date: 2019-04-12 22:04+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "givemelyrics/extra/nb_NO/>\n"
@@ -74,15 +74,15 @@ msgstr "Kritisk feilretting"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Fix scroll window"
-msgstr ""
+msgstr "Fiks rullevindu"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
 msgid "Show loading label"
-msgstr ""
+msgstr "Vis innlastingsetikett"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:48
 msgid "Label Advertising"
-msgstr ""
+msgstr "Merk reklamering"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:49
 msgid "Source link"
