@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2019-02-20 21:17+0000\n"
-"Last-Translator: Murilo Venturoso <muriloventuroso@gmail.com>\n"
+"PO-Revision-Date: 2019-04-20 19:33+0000\n"
+"Last-Translator: Rui Mendes <xz9@protonmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "givemelyrics/extra/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Weblate 3.6\n"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:8
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:3
@@ -39,66 +39,66 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 msgid "Fix Translations"
-msgstr ""
+msgstr "Corrigir traduções"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
 msgid "Change sync lyrics"
-msgstr ""
+msgstr "Alterar letras sincronizadas"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:24
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
 msgid "Bugfix"
-msgstr ""
+msgstr "Correção"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
 msgid "New Translations"
-msgstr ""
+msgstr "Novas traduções"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:30
 msgid "Sync Lyrics"
-msgstr ""
+msgstr "Sincronizar letras"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
 msgid "Dark Theme"
-msgstr ""
+msgstr "Tema escuro"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:36
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:42
 msgid "Critical Bugfix"
-msgstr ""
+msgstr "Correção importante"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Fix scroll window"
-msgstr ""
+msgstr "Correção da rolagem da janela"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
 msgid "Show loading label"
-msgstr ""
+msgstr "Mostrar etiqueta carregando"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:48
 msgid "Label Advertising"
-msgstr ""
+msgstr "Etiqueta de publicidade"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:49
 msgid "Source link"
-msgstr ""
+msgstr "Link da fonte"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:55
 msgid "New icon"
-msgstr ""
+msgstr "Novo ícone"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
 msgid "New translation: French"
-msgstr ""
+msgstr "Nova tradução: francês"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:61
 msgid "New Source: letras.mus.br"
-msgstr ""
+msgstr "Nova fonte: letras.mus.br"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:67
 msgid "Show lyrics"
-msgstr ""
+msgstr "Mostrar letras"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:116
 msgid "Murilo Venturoso"
