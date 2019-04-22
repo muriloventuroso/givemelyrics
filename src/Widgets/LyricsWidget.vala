@@ -409,8 +409,8 @@ namespace GiveMeLyrics {
 
         }
 
-        private void update_lyric(MprisClient client, string i){
-            new Thread<void*> (null, () => {
+        private async void update_lyric(MprisClient client, string i){
+            ThreadFunc<void*> run = () => {
                 updating = true;
                 var sub = "";
                 var title = "";
@@ -492,7 +492,13 @@ namespace GiveMeLyrics {
 
                 updating = false;
                 return null;
-            });
+            };
+
+            try {
+                new Thread<void*>.try (null, run);
+            } catch (Error e) {
+                warning (e.message);
+            }
 
         }
 
