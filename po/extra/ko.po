@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2019-04-25 13:48+0000\n"
+"PO-Revision-Date: 2019-05-06 14:48+0000\n"
 "Last-Translator: Jun Hyung Shin <shmishmi79@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/givemelyrics/"
 "extra/ko/>\n"
@@ -27,89 +27,89 @@ msgstr "노래 가사 내놔"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:9
 msgid "Lyrics for your songs"
-msgstr ""
+msgstr "당신의 노래를 위한 가사"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:10
 msgid ""
 "See the lyrics of the song that is playing, from any application. Sing along "
 "with the option to sync lyrics."
-msgstr ""
+msgstr "어느 앱을 사용하시든 간에 노래의 가사를 보세요. 동기화된 가사에 따라 함께 노래부르세요."
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 msgid "Fix Translations"
-msgstr ""
+msgstr "번역 고치기"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
 msgid "Change sync lyrics"
-msgstr ""
+msgstr "동기화된 가사 바꾸기"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:24
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
 msgid "Bugfix"
-msgstr ""
+msgstr "버그 고치기"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
 msgid "New Translations"
-msgstr ""
+msgstr "새로운 번역"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:30
 msgid "Sync Lyrics"
-msgstr ""
+msgstr "가사 동기화하기"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
 msgid "Dark Theme"
-msgstr ""
+msgstr "어두운 테마"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:36
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:42
 msgid "Critical Bugfix"
-msgstr ""
+msgstr "심각한 버그 고치기"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Fix scroll window"
-msgstr ""
+msgstr "창 스크롤 고치기"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
 msgid "Show loading label"
-msgstr ""
+msgstr "로딩창 보기"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:48
 msgid "Label Advertising"
-msgstr ""
+msgstr "광고 붙이기"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:49
 msgid "Source link"
-msgstr ""
+msgstr "소스 링크"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:55
 msgid "New icon"
-msgstr ""
+msgstr "새로운 아이콘"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
 msgid "New translation: French"
-msgstr ""
+msgstr "새로운 번역  : 프랑스어"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:61
 msgid "New Source: letras.mus.br"
-msgstr ""
+msgstr "새로운 소스 : letras.mus.br"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:67
 msgid "Show lyrics"
-msgstr ""
+msgstr "가사 보기"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:116
 msgid "Murilo Venturoso"
-msgstr ""
+msgstr "개발자"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:5
 msgid "See the lyrics of the song that is playing."
-msgstr ""
+msgstr "재생중인 노래의 가사 보기."
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:8
 msgid "com.github.muriloventuroso.givemelyrics"
-msgstr ""
+msgstr "com.github.muriloventuroso.givemelyrics (개발자 주소)"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:12
 msgid "audio;lyrics;"
-msgstr ""
+msgstr "노래;가사;"
