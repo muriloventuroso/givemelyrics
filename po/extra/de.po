@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2019-04-16 12:04+0000\n"
-"Last-Translator: Artur Schönfeld <schoenfeld.artur@ymail.com>\n"
+"PO-Revision-Date: 2019-05-07 19:16+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/givemelyrics/"
 "extra/de/>\n"
 "Language: de\n"
@@ -17,27 +17,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6-dev\n"
+"X-Generator: Weblate 3.7-dev\n"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:8
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:3
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:4
-#, fuzzy
 msgid "Give Me Lyrics"
-msgstr "Gib' mir den Text"
+msgstr "Give Me Lyrics"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:9
 msgid "Lyrics for your songs"
 msgstr "Text für deine Lieder"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:10
-#, fuzzy
 msgid ""
 "See the lyrics of the song that is playing, from any application. Sing along "
 "with the option to sync lyrics."
 msgstr ""
-"Schau den Text des laufenden Liedes an - von jeder Anwendung. Singe mit der "
-"Möglichkeit der Text-Synchronisation."
+"Sehen Sie sich die Texte des abgespielten Songs aus jeder Anwendung an. "
+"Singen Sie mit, mit der Option, Liedtexte zu synchronisieren."
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 msgid "Fix Translations"
@@ -72,7 +70,7 @@ msgstr "Kritischer Bugfix"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Fix scroll window"
-msgstr ""
+msgstr "Fensterscrollen korrigieren"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
 msgid "Show loading label"
@@ -80,7 +78,7 @@ msgstr "Ladebildschirm anzeigen"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:48
 msgid "Label Advertising"
-msgstr ""
+msgstr "Werbungsetiketten"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:49
 msgid "Source link"
@@ -112,7 +110,7 @@ msgstr "Sieh' den Text des laufenden Liedes."
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:8
 msgid "com.github.muriloventuroso.givemelyrics"
-msgstr ""
+msgstr "com.github.muriloventuroso.givemelyrics"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:12
 msgid "audio;lyrics;"
