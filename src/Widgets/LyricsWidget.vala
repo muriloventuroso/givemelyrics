@@ -365,6 +365,11 @@ namespace GiveMeLyrics {
                         artist_label.label = artist;
                     }
                 }
+
+                var window_title = artist + " - " + title;
+                if(window.title != window_title){
+                    window.title = window_title;
+                }
             }else{
                 string title = "";
                 if  ("xesam:title" in metadata && metadata["xesam:title"].is_of_type (VariantType.STRING)
@@ -374,6 +379,7 @@ namespace GiveMeLyrics {
                         was_paused = true;
                     }
                 }
+                window.title = _("Give Me Lyrics");
             }
 
             if(last_title == "Spotify" || last_title == "Advertisement" && last_artist == ""){
