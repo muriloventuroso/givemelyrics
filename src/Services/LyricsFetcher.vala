@@ -119,20 +119,22 @@ namespace GiveMeLyrics {
             var doc = html_cntx.read_doc(result_string.replace("<br/>", "\n").replace("</p><p>", "\n\n").replace("<p>", "").replace("</p>", ""), "");
 
             // check song
-            var check_song = getValue(doc, "//div[contains(@class, 'lyric-title')]//h1").down();
+            var check_song = getValue(doc, "//div[contains(@class, 'lyric-title')]//h1");
 
-            if(check_song.contains(title.down()) == false){
+            if(check_song.down().contains(title.down()) == false){
                 return null;
             }
 
             var lyricbox = getValue(doc, "//div[contains(@class, 'lyric-tra_l')]");
-
+            var remove_first_line = false;
             if(lyricbox == null){
                 lyricbox = getValue(doc, "//div[contains(@class, 'lyric-cnt')]");
 
                 if(lyricbox == null){
                     return null;
                 }
+            }else{
+                remove_first_line = true;
             }
 
             if(lyricbox.contains("Essa música foi removida em razão de solicitação do(s) titular(es) da obra.")){
@@ -153,6 +155,11 @@ namespace GiveMeLyrics {
                         }
                     }
                 }
+            }
+            if(remove_first_line == true){
+                Regex regex = new GLib.Regex ("^" + check_song);
+                lyricbox = regex.replace (lyricbox, lyricbox.length, 0, "");
+                lyricbox = lyricbox.strip();
             }
             lyric.lyric = lyricbox;
             lyric.current_url = url;
