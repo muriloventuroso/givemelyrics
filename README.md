@@ -23,7 +23,7 @@ Sync the lyrics of the songs. Some points to consider:
 
 
 ### Donate
-<a href="https://www.paypal.me/muriloventuroso">PayPal</a> | <a href="https://www.patreon.com/muriloventuroso">Patreon</a>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=YQ7R5KQJPUNNU&currency_code=BRL&source=url">PayPal</a> | <a href="https://www.patreon.com/muriloventuroso">Patreon</a>
 
 ![Screenshot](data/screenshot.png)
 ![Screenshot](data/screenshot-sync.png)
