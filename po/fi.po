@@ -8,55 +8,57 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-22 13:48-0300\n"
-"PO-Revision-Date: 2019-01-10 09:14-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-09-18 15:24+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/givemelyrics/"
+"translations/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9-dev\n"
 
 #: src/Application.vala:78
 msgid "Menu"
-msgstr ""
+msgstr "Valikko"
 
 #: src/Application.vala:85 src/Application.vala:93
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "Give Me Lyrics"
 
 #: src/Widgets/LyricsWidget.vala:137
 msgid "Source"
-msgstr ""
+msgstr "Lähde"
 
 #: src/Widgets/LyricsWidget.vala:144 src/Widgets/LyricsWidget.vala:463
 msgid "Synchronized Lyrics"
-msgstr ""
+msgstr "Synkronoidut sanoitukset"
 
 #: src/Widgets/LyricsWidget.vala:178
 msgid "Nothing is playing"
-msgstr ""
+msgstr "Mitään ei toisteta"
 
 #: src/Widgets/LyricsWidget.vala:387
 msgid "Advertising"
-msgstr ""
+msgstr "Mainostaminen"
 
 #: src/Widgets/LyricsWidget.vala:396
 msgid "Loading"
-msgstr ""
+msgstr "Ladataan"
 
 #: src/Widgets/LyricsWidget.vala:453
 msgid "No lyric found"
-msgstr ""
+msgstr "Sanoitusta ei löydy"
 
 #: src/Widgets/LyricsWidget.vala:478
 msgid "Non-Synchronized Lyrics"
-msgstr ""
+msgstr "Synkronoimattomat sanoitukset"
 
 #: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
-msgstr ""
+msgstr "Synkronoidut sanoitukset:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr ""
+msgstr "Tumma teema:"
