@@ -8,54 +8,57 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-22 13:48-0300\n"
-"PO-Revision-Date: 2019-01-10 09:14-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-11-11 21:04+0000\n"
+"Last-Translator: Danjela Hoxha <danjelahoxha@gmail.com>\n"
+"Language-Team: Albanian <https://hosted.weblate.org/projects/givemelyrics/"
+"translations/sq/>\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10-dev\n"
 
 #: src/Application.vala:78
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: src/Application.vala:85 src/Application.vala:93
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "Më Jep Tekstin"
 
 #: src/Widgets/LyricsWidget.vala:137
 msgid "Source"
-msgstr ""
+msgstr "Burimi"
 
 #: src/Widgets/LyricsWidget.vala:144 src/Widgets/LyricsWidget.vala:463
 msgid "Synchronized Lyrics"
-msgstr ""
+msgstr "Tekste të sinkronizuara"
 
 #: src/Widgets/LyricsWidget.vala:178
 msgid "Nothing is playing"
-msgstr ""
+msgstr "Asgjë nuk është duke u luajtur"
 
 #: src/Widgets/LyricsWidget.vala:387
 msgid "Advertising"
-msgstr ""
+msgstr "Reklama"
 
 #: src/Widgets/LyricsWidget.vala:396
 msgid "Loading"
-msgstr ""
+msgstr "Po ngarkohet"
 
 #: src/Widgets/LyricsWidget.vala:453
 msgid "No lyric found"
-msgstr ""
+msgstr "Nuk ka gjetur lyrics"
 
 #: src/Widgets/LyricsWidget.vala:478
 msgid "Non-Synchronized Lyrics"
-msgstr ""
+msgstr "Tekste jo të sinkronizuara"
 
 #: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
-msgstr ""
+msgstr "Tekste të sinkronizuara:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr ""
+msgstr "Tema e errët:"
