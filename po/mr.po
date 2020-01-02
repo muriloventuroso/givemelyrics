@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-04-22 13:48-0300\n"
-"PO-Revision-Date: 2019-12-26 07:21+0000\n"
+"PO-Revision-Date: 2020-01-03 18:21+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://hosted.weblate.org/projects/givemelyrics/"
 "translations/mr/>\n"
@@ -25,7 +25,7 @@ msgstr "मेनू"
 
 #: src/Application.vala:85 src/Application.vala:93
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "गिव्ह मी लिरिक्स"
 
 #: src/Widgets/LyricsWidget.vala:137
 msgid "Source"
@@ -37,7 +37,7 @@ msgstr "सिंक्रोनाइझ गीत"
 
 #: src/Widgets/LyricsWidget.vala:178
 msgid "Nothing is playing"
-msgstr ""
+msgstr "काहीही वाजत नाही आहे"
 
 #: src/Widgets/LyricsWidget.vala:387
 msgid "Advertising"
