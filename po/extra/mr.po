@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2020-01-03 18:21+0000\n"
+"PO-Revision-Date: 2020-01-07 03:21+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://hosted.weblate.org/projects/givemelyrics/"
 "extra/mr/>\n"
@@ -34,6 +34,8 @@ msgid ""
 "See the lyrics of the song that is playing, from any application. Sing along "
 "with the option to sync lyrics."
 msgstr ""
+"कोणत्याही अनुप्रयोगावरून चालत असलेल्या गाण्याचे बोल पहा. गीत समक्रमित "
+"करण्याच्या पर्यायासह गा."
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 msgid "Fix Translations"
@@ -75,9 +77,8 @@ msgid "Show loading label"
 msgstr "लोडिंग लेबल दर्शवा"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:48
-#, fuzzy
 msgid "Label Advertising"
-msgstr "लेबल जाहिरात"
+msgstr "जाहिरातीस लेबल लावा"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:49
 msgid "Source link"
