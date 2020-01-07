@@ -64,9 +64,7 @@ namespace GiveMeLyrics {
             var provider = new Gtk.CssProvider ();
             provider.load_from_resource ("/com/github/muriloventuroso/givemelyrics/Application.css");
             Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-            actions = new SimpleActionGroup ();
-            actions.add_action_entries (action_entries, this);
-            main_window.insert_action_group ("win", actions);
+
             main_window = new Gtk.Window();
             var pref_grid = new Preferences();
             var pref_popover = new Gtk.Popover (null);
@@ -92,6 +90,8 @@ namespace GiveMeLyrics {
             main_window.icon_name = "givemelyrics";
             main_window.title = _("Give Me Lyrics");
 
+            actions = new SimpleActionGroup ();
+            actions.add_action_entries (action_entries, this);
             main_window.insert_action_group ("win", actions);
 
             load_settings();
