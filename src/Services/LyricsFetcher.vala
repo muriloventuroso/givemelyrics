@@ -121,7 +121,7 @@ namespace GiveMeLyrics {
             // check song
             var check_song = getValue(doc, "//div[contains(@class, 'lyric-title')]//h1");
 
-            if(check_song.down().contains(title.down()) == false){
+            if(check_song == null || check_song.down().contains(title.down()) == false){
                 return null;
             }
 
