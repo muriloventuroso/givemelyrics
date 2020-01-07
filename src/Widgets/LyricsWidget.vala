@@ -463,6 +463,7 @@ namespace GiveMeLyrics {
                         if(settings.sync_lyrics == true && sub != "" && sub != null){
                             Idle.add(()=> {
                                 insert_subtitle(sub);
+                                show_lyrics();
                                 return false;
                             });
                             set_sync(client, i);
@@ -478,6 +479,7 @@ namespace GiveMeLyrics {
                             box_change_lyric.hide();
                             Idle.add(()=> {
                                 insert_text(lyric);
+                                show_lyrics();
                                 return false;
                             });
                             if(settings.sync_lyrics == true){
@@ -487,10 +489,6 @@ namespace GiveMeLyrics {
                                 sync_label.hide();
                             }
                         }
-                        scrolled.get_vadjustment().set_value(0);
-                        box_spinner.hide();
-                        box_message.hide();
-                        scrolled.show();
                     }
                 } catch (Error e) {
                     warning("Failed to get lyric: %s", e.message);
@@ -516,6 +514,13 @@ namespace GiveMeLyrics {
             view.buffer.insert (ref text_start, text, text.length);
             view.buffer.get_end_iter(out text_end);
             view.buffer.apply_tag_by_name ("lyric", text_start, text_end);
+        }
+
+        private void show_lyrics(){
+            scrolled.get_vadjustment().set_value(0);
+            box_spinner.hide();
+            box_message.hide();
+            scrolled.show();
         }
 
         private void insert_subtitle(string subtitle){
