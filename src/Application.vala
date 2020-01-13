@@ -107,6 +107,7 @@ namespace GiveMeLyrics {
             var quit_action = new SimpleAction ("quit", null);
 
             add_action (quit_action);
+            set_accels_for_action("app.quit", {"<Ctrl>Q"});
 
             quit_action.activate.connect (() => {
                 if (main_window != null) {
