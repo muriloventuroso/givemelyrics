@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
 "PO-Revision-Date: 2020-01-14 06:21+0000\n"
-"Last-Translator: Francesco Bisignani <tassobaramba2@gmail.com>\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/givemelyrics/"
 "extra/it/>\n"
 "Language: it\n"
@@ -78,7 +78,7 @@ msgstr "Mostra barra di caricamento"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:48
 msgid "Label Advertising"
-msgstr ""
+msgstr "Etichetta pubblicitaria"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:49
 msgid "Source link"
