@@ -1,11 +1,11 @@
 .mainwindow {
-    background-color: @bg_color;
+    background-color: @theme_bg_color;
 }
 .headerbar {
-    background-color: @bg_color;
+    background-color: @theme_bg_color;
 }
 .view-lyric text{
-    background-color: @bg_color;
+    background-color: @theme_bg_color;
 }
 .view-lyric {
     font-size: 18px;
