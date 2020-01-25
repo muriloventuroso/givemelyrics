@@ -33,9 +33,92 @@ namespace GiveMeLyrics {
         private string[] lyrics_apis = {};
 
         public LyricsFetcher () {
+            lyrics_apis += "music_163";
             lyrics_apis += "letras_mus";
             lyrics_apis += "lyrics_wikia";
             lyrics_apis += "api_seeds";
+        }
+
+        private Lyric? get_music_163(string title, string artist){
+            var 163_url = "http://music.163.com/api/search/pc?offset=0&limit=1&type=1&s=";
+            var session = new Soup.Session ();
+            session.timeout = 5;
+            var url = 163_url + title + "," + artist;
+            var message = new Soup.Message ("GET", url);
+            /* send a sync request */
+            session.send_message (message);
+            try {
+                var parser = new Json.Parser ();
+                parser.load_from_data ((string) message.response_body.flatten ().data, -1);
+
+                var root_object = parser.get_root ().get_object ();
+                if(root_object.get_int_member ("code") == 200){
+                    var result = root_object.get_object_member ("result");
+                    var songs = result.get_array_member ("songs");
+                    if((int)songs.get_length > 0){
+                        var song = songs.get_object_element(0);
+                        var song_id = song.get_int_member("id");
+                        163_url = "https://music.163.com/api/song/lyric?os=pc&lv=-1&kv=-1&tv=-1&id=";
+                        session = new Soup.Session ();
+                        session.timeout = 5;
+                        url = 163_url + song_id.to_string();
+                        message = new Soup.Message ("GET", url);
+                        /* send a sync request */
+                        session.send_message (message);
+                        try {
+                            parser = new Json.Parser ();
+                            parser.load_from_data ((string) message.response_body.flatten ().data, -1);
+
+                            root_object = parser.get_root ().get_object ();
+                            if(root_object.has_member ("lrc")){
+                                var lyric = new Lyric();
+                                var lrc = root_object.get_object_member ("lrc");
+                                var string_lyric = lrc.get_string_member ("lyric");
+                                var result_lyric_sync = "";
+                                var result_lyric = "";
+                                var split_lyric = string_lyric.split("\n");
+                                GLib.Regex exp = /\[(.*?)\](.*)/;
+                                for(var i = 0;i < split_lyric.length; i++){
+                                    GLib.MatchInfo mi;
+                                    exp.match (split_lyric[i], 0, out mi);
+                                    mi.matches();
+                                    var fetch_position = mi.fetch (1);
+                                    var position = "";
+                                    if(fetch_position != null){
+                                        var position_split = fetch_position.split(":");
+                                        if(position_split.length > 0){
+                                            if(position_split[1] == "00.000"){
+                                                continue;
+                                            }
+                                            position = (int.parse(position_split[1].split(".")[0]) + (int.parse(position_split[0]) * 60)).to_string();
+                                            if(result_lyric_sync != ""){
+                                                result_lyric_sync += "|-|" + position + "\n";
+                                            }
+                                        }
+                                    }
+                                    result_lyric_sync += mi.fetch (2) + "|-|" + position;
+
+                                    result_lyric += mi.fetch (2) + "\n";
+                                }
+                                lyric.lyric = result_lyric;
+                                lyric.current_url = "https://music.163.com";
+                                lyric.lyric_sync = result_lyric_sync;
+                                return lyric;
+                            }
+
+                        } catch (Error e) {
+                            print ("I guess something is not working...\n");
+                            return null;
+                        }
+                    }
+                }
+
+
+            } catch (Error e) {
+                stderr.printf ("I guess something is not working...\n");
+                return null;
+            }
+            return null;
         }
 
         private Lyric? get_api_seeds(string title, string artist){
@@ -246,7 +329,9 @@ namespace GiveMeLyrics {
             var n_title = remove_accents(title.replace("?", "").down());
             var n_artist = remove_accents(artist.down());
             foreach (var s_api in lyrics_apis) {
-                if(s_api == "api_seeds"){
+                if(s_api == "music_163"){
+                    r = get_music_163(n_title, n_artist);
+                }else if(s_api == "api_seeds"){
                     r = get_api_seeds(n_title, n_artist);
                 }else if(s_api == "lyrics_wikia"){
                     r = get_lyrics_wikia(n_title, n_artist);
@@ -256,14 +341,12 @@ namespace GiveMeLyrics {
                     return null;
                 }
                 if(r == null){
-                    print("null");
                     continue;
                 }
                 if(r.lyric != ""){
 
                     break;
                 }
-                print(r.lyric);
 
             }
             if(r != null){

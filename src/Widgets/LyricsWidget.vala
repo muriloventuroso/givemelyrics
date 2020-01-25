@@ -550,7 +550,11 @@ namespace GiveMeLyrics {
             Timeout.add_full (Priority.DEFAULT, 500, () => {
                 try{
                     int64 position;
-                    var position_msec = client.prop.get_sync(iface_name, "Position").get_int64();
+                    int64 position_msec = 0;
+                    try{
+                        position_msec = client.prop.get_sync(iface_name, "Position").get_int64();
+                    }catch(Error e){
+                    }
                     var diff_msec = GLib.get_real_time () - msec_change_song;
                     if(position_msec == 0){
                         if(was_paused == true){
@@ -590,6 +594,9 @@ namespace GiveMeLyrics {
                                 }
                             }
                         }
+                    }
+                    if(sync_label.visible == false){
+                        return false;
                     }
                     if(client.prop.get_sync(iface_name, "PlaybackStatus").dup_string() == "Playing"){
                         return true;
