@@ -70,7 +70,8 @@ code_files = files(
     'src/Widgets/Preferences.vala',
     'src/Services/LyricsFetcher.vala',
     'src/Services/Settings.vala',
-    'src/Lyric.vala'
+    'src/Lyric.vala',
+    'src/MainWindow.vala'
 )
 
 message ('Defines executable')

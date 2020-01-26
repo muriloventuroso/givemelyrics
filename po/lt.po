@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-22 13:48-0300\n"
+"POT-Creation-Date: 2020-01-25 19:53-0300\n"
 "PO-Revision-Date: 2019-02-16 11:19+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/givemelyrics/"
@@ -21,39 +21,35 @@ msgstr ""
 "1 : 2);\n"
 "X-Generator: Weblate 3.5-dev\n"
 
-#: src/Application.vala:78
-msgid "Menu"
-msgstr "Meniu"
-
-#: src/Application.vala:85 src/Application.vala:93
-msgid "Give Me Lyrics"
-msgstr "Give Me Lyrics"
-
-#: src/Widgets/LyricsWidget.vala:137
+#: src/Widgets/LyricsWidget.vala:130
 msgid "Source"
 msgstr "Šaltinis"
 
-#: src/Widgets/LyricsWidget.vala:144 src/Widgets/LyricsWidget.vala:463
+#: src/Widgets/LyricsWidget.vala:137 src/Widgets/LyricsWidget.vala:344
 msgid "Synchronized Lyrics"
 msgstr "Sinchronizuoti dainos žodžiai"
 
-#: src/Widgets/LyricsWidget.vala:178
+#: src/Widgets/LyricsWidget.vala:171
 msgid "Nothing is playing"
 msgstr "Nieko negrojama"
 
-#: src/Widgets/LyricsWidget.vala:387
+#: src/Widgets/LyricsWidget.vala:256
+msgid "Give Me Lyrics"
+msgstr "Give Me Lyrics"
+
+#: src/Widgets/LyricsWidget.vala:267
 msgid "Advertising"
 msgstr "Reklamavimas"
 
-#: src/Widgets/LyricsWidget.vala:396
+#: src/Widgets/LyricsWidget.vala:276
 msgid "Loading"
 msgstr "Įkeliama"
 
-#: src/Widgets/LyricsWidget.vala:453
+#: src/Widgets/LyricsWidget.vala:333
 msgid "No lyric found"
 msgstr "Nerasta dainos žodžių"
 
-#: src/Widgets/LyricsWidget.vala:478
+#: src/Widgets/LyricsWidget.vala:360
 msgid "Non-Synchronized Lyrics"
 msgstr "Nesinchronizuoti dainos žodžiai"
 
@@ -64,3 +60,6 @@ msgstr "Sinchronizuoti dainos žodžiai:"
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
 msgstr "Tamsi tema:"
+
+#~ msgid "Menu"
+#~ msgstr "Meniu"

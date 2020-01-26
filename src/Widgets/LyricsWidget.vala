@@ -22,8 +22,6 @@ const int ICON_SIZE = 64;
 namespace GiveMeLyrics {
     public class LyricsWidget : Gtk.Box{
 
-        DBusImpl impl;
-        HashTable<string,MprisClient> ifaces;
         private Gtk.Image? background = null;
         public Gtk.Window window { get; construct; }
         public string last_title;
@@ -70,12 +68,7 @@ namespace GiveMeLyrics {
             sync_running = false;
             last_position = 0;
             was_paused = false;
-            ifaces = new HashTable<string,MprisClient>(str_hash, str_equal);
 
-            Idle.add(()=> {
-                setup_dbus();
-                return false;
-            });
         }
         construct {
             fetcher = new LyricsFetcher();
@@ -205,126 +198,7 @@ namespace GiveMeLyrics {
             box_change_lyric.hide();
         }
 
-        public void setup_dbus() {
-            try {
-                impl = Bus.get_proxy_sync(BusType.SESSION, "org.freedesktop.DBus", "/org/freedesktop/DBus");
-                var names = impl.list_names();
-
-                /* Search for existing players (launched prior to our start) */
-                foreach (var name in names) {
-                    if (name.has_prefix("org.mpris.MediaPlayer2.")) {
-                        bool add = true;
-                        foreach (string name2 in ifaces.get_keys ()) {
-                            // skip if already a interface is present.
-                            // some version of vlc register two
-                            if (name2.has_prefix (name) || name.has_prefix (name2)) {
-                                add = false;
-                            }
-                        }
-                        if (add) {
-                            var iface = new_iface(name);
-                            if (iface != null) {
-                                add_iface(name, iface);
-                            }
-                        }
-                    }
-                }
-
-                /* Also check for new mpris clients coming up while we're up */
-                impl.name_owner_changed.connect((n,o,ne)=> {
-                    /* Separate.. */
-                    if (n.has_prefix("org.mpris.MediaPlayer2.")) {
-                        if (o == "") {
-                            // delay the sync because otherwise the dbus properties are not yet intialized!
-                            Timeout.add (100, () => {
-                                foreach (string name in ifaces.get_keys ()) {
-                                    // skip if already a interface is present.
-                                    // some version of vlc register two
-                                    if (name.has_prefix (n) || n.has_prefix (name)) {
-                                        return false;
-                                    }
-                                }
-                                var iface = new_iface(n);
-                                if (iface != null) {
-                                    add_iface(n, iface);
-                                }
-                                return false;
-                            });
-                        } else {
-                            Idle.add(()=> {
-                                destroy_iface(n);
-                                return false;
-                            });
-                        }
-                    }
-                });
-            } catch (Error e) {
-                warning("Failed to initialise dbus: %s", e.message);
-            }
-        }
-
-        /**
-         * Add an interface handler/widget to known list and UI
-         *
-         * @param name DBUS name (object path)
-         * @param iface The constructed MprisClient instance
-         */
-        void add_iface (string name, MprisClient iface) {
-            update_from_meta(iface, name);
-            connect_to_client(iface);
-            ifaces.insert(name, iface);
-
-        }
-
-        /**
-         * Destroy an interface handler and remove from UI
-         *
-         * @param name DBUS name to remove handler for
-         */
-        void destroy_iface(string name) {
-
-            ifaces.remove(name);
-
-        }
-
-        public MprisClient? new_iface(string busname) {
-            PlayerIface? play = null;
-            MprisClient? cl = null;
-            DbusPropIface? prop = null;
-
-            try {
-                play = Bus.get_proxy_sync(BusType.SESSION, busname, "/org/mpris/MediaPlayer2");
-            } catch (Error e) {
-                message(e.message);
-                return null;
-            }
-            try {
-                prop = Bus.get_proxy_sync(BusType.SESSION, busname, "/org/mpris/MediaPlayer2");
-            } catch (Error e) {
-                message(e.message);
-                return null;
-            }
-            cl = new MprisClient(play, prop);
-
-            return cl;
-        }
-
-        private void connect_to_client (MprisClient client) {
-            client.prop.properties_changed.connect ((i,p,inv) => {
-                if (i == "org.mpris.MediaPlayer2.Player") {
-                    /* Handle mediaplayer2 iface */
-                    p.foreach ((k,v) => {
-                        if (k == "Metadata") {
-                            update_from_meta (client, i);
-
-                        }
-                    });
-                }
-            });
-
-        }
-
-        protected void update_from_meta (MprisClient client, string i) {
+        public void update_from_meta (MprisClient client, string i) {
             var metadata = client.player.metadata;
             var playing = false;
             var must_update_lyric = false;

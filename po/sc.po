@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-04-22 13:48-0300\n"
+"POT-Creation-Date: 2020-01-25 19:53-0300\n"
 "PO-Revision-Date: 2019-04-12 22:04+0000\n"
 "Last-Translator: Ajeje Brazorf <lmelonimamo@yahoo.it>\n"
 "Language-Team: Sardinian <https://hosted.weblate.org/projects/givemelyrics/"
@@ -19,41 +19,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.6-dev\n"
 
-#: src/Application.vala:78
-msgid "Menu"
-msgstr "Menù"
-
-#: src/Application.vala:85 src/Application.vala:93
-#, fuzzy
-msgid "Give Me Lyrics"
-msgstr "Give Me Lyrics"
-
-#: src/Widgets/LyricsWidget.vala:137
+#: src/Widgets/LyricsWidget.vala:130
 msgid "Source"
 msgstr "Mitza"
 
-#: src/Widgets/LyricsWidget.vala:144 src/Widgets/LyricsWidget.vala:463
+#: src/Widgets/LyricsWidget.vala:137 src/Widgets/LyricsWidget.vala:344
 #, fuzzy
 msgid "Synchronized Lyrics"
 msgstr "Paràulas sincronizadas"
 
-#: src/Widgets/LyricsWidget.vala:178
+#: src/Widgets/LyricsWidget.vala:171
 msgid "Nothing is playing"
 msgstr "Non b'at nudda in riprodutzione"
 
-#: src/Widgets/LyricsWidget.vala:387
+#: src/Widgets/LyricsWidget.vala:256
+#, fuzzy
+msgid "Give Me Lyrics"
+msgstr "Give Me Lyrics"
+
+#: src/Widgets/LyricsWidget.vala:267
 msgid "Advertising"
 msgstr "Publitzidade"
 
-#: src/Widgets/LyricsWidget.vala:396
+#: src/Widgets/LyricsWidget.vala:276
 msgid "Loading"
 msgstr "Carrighende"
 
-#: src/Widgets/LyricsWidget.vala:453
+#: src/Widgets/LyricsWidget.vala:333
 msgid "No lyric found"
 msgstr "Perunu testu agatadu"
 
-#: src/Widgets/LyricsWidget.vala:478
+#: src/Widgets/LyricsWidget.vala:360
 #, fuzzy
 msgid "Non-Synchronized Lyrics"
 msgstr "Paràulas non sincronizadas"
@@ -66,3 +62,6 @@ msgstr "Paràulas sincronizadas:"
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
 msgstr "Tema iscuru:"
+
+#~ msgid "Menu"
+#~ msgstr "Menù"

@@ -24,16 +24,8 @@ namespace GiveMeLyrics {
     public Settings settings;
 
     public class Application : Granite.Application {
-        private Gtk.Window main_window;
-        private Gtk.HeaderBar headerbar;
-        private LyricsWidget lyrics_widget;
-        private bool is_fullscreen = false;
+        private MainWindow main_window;
 
-        public const string ACTION_PREFIX = "win.";
-        public const string ACTION_FULLSCREEN = "action-fullscreen";
-
-        public SimpleActionGroup actions;
-        public Gtk.ActionGroup main_actions;
 
         public Application () {
             Object (application_id: "com.github.muriloventuroso.givemelyrics",
@@ -41,10 +33,6 @@ namespace GiveMeLyrics {
 
 
         }
-
-        private const ActionEntry[] action_entries = {
-            { ACTION_FULLSCREEN, action_fullscreen }
-        };
 
         construct {
             Intl.setlocale (LocaleCategory.ALL, "");
@@ -55,59 +43,13 @@ namespace GiveMeLyrics {
                 get_windows ().data.present ();
                 return;
             }
-            settings = new Settings ();
-            Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = settings.use_dark_theme;
-            settings.notify["use-dark-theme"].connect (
-                () => {
-                    Gtk.Settings.get_default ().gtk_application_prefer_dark_theme = settings.use_dark_theme;
-            });
-            var provider = new Gtk.CssProvider ();
-            provider.load_from_resource ("/com/github/muriloventuroso/givemelyrics/Application.css");
-            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-            main_window = new Gtk.Window();
-            var pref_grid = new Preferences();
-            var pref_popover = new Gtk.Popover (null);
-            pref_popover.add (pref_grid);
-
-            Gtk.MenuButton settings_button = new Gtk.MenuButton ();
-            settings_button.image = new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-            settings_button.popover = pref_popover;
-            settings_button.tooltip_text = _("Menu");
-            settings_button.valign = Gtk.Align.CENTER;
-
-
-            headerbar = new Gtk.HeaderBar ();
-            headerbar.has_subtitle = false;
-            headerbar.show_close_button = true;
-            headerbar.title = _("Give Me Lyrics");
-            headerbar.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-            headerbar.get_style_context().add_class("headerbar");
-            headerbar.pack_end(settings_button);
-            main_window.set_titlebar (headerbar);
-
-            main_window.application = this;
-            main_window.icon_name = "givemelyrics";
-            main_window.title = _("Give Me Lyrics");
-
-            actions = new SimpleActionGroup ();
-            actions.add_action_entries (action_entries, this);
-            main_window.insert_action_group ("win", actions);
-
-            load_settings();
-
-            main_window.show_all();
-            lyrics_widget = new LyricsWidget(main_window);
-            main_window.add(lyrics_widget);
-
-            main_window.get_style_context().add_class("mainwindow");
+            main_window = new MainWindow(this);
 
             add_window (main_window);
 
             var quit_action = new SimpleAction ("quit", null);
 
             add_action (quit_action);
-            set_accels_for_action("app.quit", {"<Ctrl>Q"});
 
             quit_action.activate.connect (() => {
                 if (main_window != null) {
@@ -115,50 +57,9 @@ namespace GiveMeLyrics {
                 }
             });
 
-            main_window.delete_event.connect (
-                () => {
-                    save_settings ();
-                    return false;
-                });
-
-
         }
 
-        private void load_settings () {
-            if (settings.window_maximized) {
-                main_window.maximize ();
-                main_window.set_default_size (1024, 720);
-            } else {
-                main_window.set_default_size (settings.window_width, settings.window_height);
-            }
-            main_window.move (settings.pos_x, settings.pos_y);
-
-        }
-
-        private void save_settings () {
-
-            settings.window_maximized = main_window.is_maximized;
-
-            if (!settings.window_maximized) {
-                int x, y, width, height;
-                main_window.get_position (out x, out y);
-                main_window.get_size (out width, out height);
-                settings.pos_x = x;
-                settings.pos_y = y;
-                settings.window_height = height;
-                settings.window_width = width;
-            }
-        }
-
-        void action_fullscreen () {
-            if (is_fullscreen) {
-                main_window.unfullscreen ();
-                is_fullscreen = false;
-            } else {
-                main_window.fullscreen ();
-                is_fullscreen = true;
-            }
-        }
+        
 
         private static int main (string[] args) {
             Gtk.init (ref args);
