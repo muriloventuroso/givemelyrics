@@ -9,6 +9,13 @@
   <summary>Lyrics for your songs</summary>
   <description><p>See the lyrics of the song that is playing, from any application. Sing along with the option to sync lyrics.</p></description>
   <releases>
+    <release version="0.4.5" date="2020-01-26">
+      <description>
+        <p>HeaderBar Music Controls</p>
+        <p>New API: Music 163</p>
+        <p>Many bugfixes</p>
+      </description>
+    </release>
     <release version="0.4.0" date="2020-01-13">
       <description>
         <p>Bugfix</p>
