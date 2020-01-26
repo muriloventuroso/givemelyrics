@@ -55,7 +55,7 @@ namespace GiveMeLyrics {
                 if(root_object.get_int_member ("code") == 200){
                     var result = root_object.get_object_member ("result");
                     var songs = result.get_array_member ("songs");
-                    if((int)songs.get_length > 0){
+                    if(songs.get_elements().length() > 0){
                         var song = songs.get_object_element(0);
                         var song_id = song.get_int_member("id");
                         163_url = "https://music.163.com/api/song/lyric?os=pc&lv=-1&kv=-1&tv=-1&id=";
@@ -259,6 +259,9 @@ namespace GiveMeLyrics {
             var message = new Soup.Message ("GET", url);
             /* send a sync request */
             session.send_message (message);
+            if(message.status_code != 200){
+                return result;
+            }
 
             try {
                 var parser = new Json.Parser ();
