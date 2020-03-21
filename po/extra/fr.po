@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2019-01-29 10:37+0000\n"
-"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"PO-Revision-Date: 2020-03-23 03:48+0000\n"
+"Last-Translator: Jeannette L <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/givemelyrics/"
 "extra/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:8
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:3
@@ -40,11 +40,11 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 msgid "Fix Translations"
-msgstr "Correction des traductions"
+msgstr "Corriger les traductions"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
 msgid "Change sync lyrics"
-msgstr "Modification de la synchronisation des paroles"
+msgstr "Modifier de la synchronisation des paroles"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:24
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
@@ -91,7 +91,7 @@ msgstr "Nouvelle icône"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
 msgid "New translation: French"
-msgstr "Nouvelle traduction : Français"
+msgstr "Nouvelle traduction : français"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:61
 msgid "New Source: letras.mus.br"
@@ -99,7 +99,7 @@ msgstr "Nouvelle source : letras.mus.br"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:67
 msgid "Show lyrics"
-msgstr "Affichage des paroles"
+msgstr "Afficher les paroles"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:116
 msgid "Murilo Venturoso"
@@ -107,7 +107,7 @@ msgstr "Murilo Venturoso"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:5
 msgid "See the lyrics of the song that is playing."
-msgstr "Visualisez les paroles de la musique en cours de lecture."
+msgstr "Visualiser les paroles de la musique en cours de lecture."
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:8
 msgid "com.github.muriloventuroso.givemelyrics"
