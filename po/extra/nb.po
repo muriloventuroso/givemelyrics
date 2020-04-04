@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2019-04-12 22:04+0000\n"
+"PO-Revision-Date: 2020-04-04 11:29+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "givemelyrics/extra/nb_NO/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:8
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:3
@@ -39,14 +39,12 @@ msgstr ""
 "med synkroniserte tekster."
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
-#, fuzzy
 msgid "Fix Translations"
-msgstr "Nye oversettelser"
+msgstr "Fiks oversettelser"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
-#, fuzzy
 msgid "Change sync lyrics"
-msgstr "Endre synkronisering av sangtekster"
+msgstr "Endre sangtekster"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:24
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
@@ -59,9 +57,8 @@ msgid "New Translations"
 msgstr "Nye oversettelser"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:30
-#, fuzzy
 msgid "Sync Lyrics"
-msgstr "Synkroniser sangtekster"
+msgstr "Sangtekster"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
 msgid "Dark Theme"
@@ -101,7 +98,6 @@ msgid "New Source: letras.mus.br"
 msgstr "Ny kilde: letras.mus.br"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:67
-#, fuzzy
 msgid "Show lyrics"
 msgstr "Vis sangtekster"
 
