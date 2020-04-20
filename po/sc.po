@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-26 13:51-0300\n"
-"PO-Revision-Date: 2019-04-12 22:04+0000\n"
+"PO-Revision-Date: 2020-04-20 18:18+0000\n"
 "Last-Translator: Ajeje Brazorf <lmelonimamo@yahoo.it>\n"
 "Language-Team: Sardinian <https://hosted.weblate.org/projects/givemelyrics/"
 "translations/sc/>\n"
@@ -17,16 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6-dev\n"
+"X-Generator: Weblate 4.0.2-dev\n"
 
 #: src/Widgets/LyricsWidget.vala:130
 msgid "Source"
 msgstr "Mitza"
 
 #: src/Widgets/LyricsWidget.vala:137 src/Widgets/LyricsWidget.vala:344
-#, fuzzy
 msgid "Synchronized Lyrics"
-msgstr "Paràulas sincronizadas"
+msgstr "Testo sincronizadu"
 
 #: src/Widgets/LyricsWidget.vala:171
 msgid "Nothing is playing"
@@ -50,14 +49,12 @@ msgid "No lyric found"
 msgstr "Perunu testu agatadu"
 
 #: src/Widgets/LyricsWidget.vala:360
-#, fuzzy
 msgid "Non-Synchronized Lyrics"
-msgstr "Paràulas non sincronizadas"
+msgstr "Testu non sincronizadu"
 
 #: src/Widgets/Preferences.vala:58
-#, fuzzy
 msgid "Synchronized Lyrics:"
-msgstr "Paràulas sincronizadas:"
+msgstr "Testu sincronizadu:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
