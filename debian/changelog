@@ -1,6 +1,5 @@
-com.github.muriloventuroso.givemelyrics (0.4.5) precise; urgency=low
+com.github.muriloventuroso.givemelyrics (0.5.0) precise; urgency=low
 
-* HeaderBar Music Controls
-* New API: Music 163
+* New Translations
 * Many bugfixes
 
