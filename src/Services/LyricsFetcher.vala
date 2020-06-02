@@ -85,9 +85,16 @@ namespace GiveMeLyrics {
                                     var fetch_position = mi.fetch (1);
                                     var position = "";
                                     if(fetch_position != null){
-                                        var position_split = fetch_position.split(":");
+                                        var position_split = new string[0];
+                                        if(fetch_position.contains(":")) {
+                                            position_split = fetch_position.split(":");
+                                        } else if (fetch_position.contains(";")) {
+                                            position_split = fetch_position.split(";");
+                                        } else {
+                                            continue;
+                                        }
                                         if(position_split.length > 0){
-                                            if(position_split[1] == "00.000"){
+                                            if(position_split[1] == "00.000" || position_split[1] == ""){
                                                 continue;
                                             }
                                             position = (int.parse(position_split[1].split(".")[0]) + (int.parse(position_split[0]) * 60)).to_string();
