@@ -8,50 +8,54 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-26 13:51-0300\n"
-"PO-Revision-Date: 2019-01-10 09:14-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-01-22 23:44+0000\n"
+"Last-Translator: Gareth Vaughan Jones <garethvjones@me.com>\n"
+"Language-Team: Welsh <https://hosted.weblate.org/projects/givemelyrics/"
+"translations/cy/>\n"
 "Language: cy\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0) ? 0 : (n==1) ? 1 : (n==2) ? 2 : "
+"(n==3) ? 3 :(n==6) ? 4 : 5;\n"
+"X-Generator: Weblate 4.5-dev\n"
 
 #: src/Widgets/LyricsWidget.vala:130
 msgid "Source"
-msgstr ""
+msgstr "Ffynhonell"
 
 #: src/Widgets/LyricsWidget.vala:137 src/Widgets/LyricsWidget.vala:344
 msgid "Synchronized Lyrics"
-msgstr ""
+msgstr "Geiriau mewn cydamseriad"
 
 #: src/Widgets/LyricsWidget.vala:171
 msgid "Nothing is playing"
-msgstr ""
+msgstr "Does dim yn chwarae"
 
 #: src/Widgets/LyricsWidget.vala:256
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "Dangos y geiriau"
 
 #: src/Widgets/LyricsWidget.vala:267
 msgid "Advertising"
-msgstr ""
+msgstr "Hysbysebu"
 
 #: src/Widgets/LyricsWidget.vala:276
 msgid "Loading"
-msgstr ""
+msgstr "Llwytho"
 
 #: src/Widgets/LyricsWidget.vala:333
 msgid "No lyric found"
-msgstr ""
+msgstr "Dim geiriau ar gael"
 
 #: src/Widgets/LyricsWidget.vala:360
 msgid "Non-Synchronized Lyrics"
-msgstr ""
+msgstr "Geiriau heb ei cydamseru"
 
 #: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
-msgstr ""
+msgstr "Geiriau sydd wedi ei cydamseru:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr ""
+msgstr "Thema tywyll:"
