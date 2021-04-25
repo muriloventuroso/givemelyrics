@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-26 13:51-0300\n"
-"PO-Revision-Date: 2020-08-21 10:36+0000\n"
-"Last-Translator: Luna Jernberg <droidbittin@gmail.com>\n"
+"PO-Revision-Date: 2021-04-26 07:32+0000\n"
+"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/givemelyrics/"
 "translations/sv/>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.2.1-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: src/Widgets/LyricsWidget.vala:130
 msgid "Source"
@@ -25,11 +25,11 @@ msgstr "Källa"
 
 #: src/Widgets/LyricsWidget.vala:137 src/Widgets/LyricsWidget.vala:344
 msgid "Synchronized Lyrics"
-msgstr ""
+msgstr "Synkroniserade texter"
 
 #: src/Widgets/LyricsWidget.vala:171
 msgid "Nothing is playing"
-msgstr ""
+msgstr "Inget spelas"
 
 #: src/Widgets/LyricsWidget.vala:256
 msgid "Give Me Lyrics"
@@ -37,23 +37,23 @@ msgstr "Give Me Lyrics"
 
 #: src/Widgets/LyricsWidget.vala:267
 msgid "Advertising"
-msgstr ""
+msgstr "Annonserar"
 
 #: src/Widgets/LyricsWidget.vala:276
 msgid "Loading"
-msgstr "Laddar"
+msgstr "Läser in"
 
 #: src/Widgets/LyricsWidget.vala:333
 msgid "No lyric found"
-msgstr ""
+msgstr "Ingen text hittades"
 
 #: src/Widgets/LyricsWidget.vala:360
 msgid "Non-Synchronized Lyrics"
-msgstr ""
+msgstr "Osynkroniserade texter"
 
 #: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
-msgstr ""
+msgstr "Synkroniserade texter:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
