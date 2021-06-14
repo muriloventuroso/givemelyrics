@@ -8,22 +8,24 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-26 13:51-0300\n"
-"PO-Revision-Date: 2019-01-10 09:14-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-06-15 22:33+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"Language-Team: English (Canada) <https://hosted.weblate.org/projects/"
+"givemelyrics/translations/en_CA/>\n"
 "Language: en_CA\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: src/Widgets/LyricsWidget.vala:130
 msgid "Source"
-msgstr ""
+msgstr "Source"
 
 #: src/Widgets/LyricsWidget.vala:137 src/Widgets/LyricsWidget.vala:344
 msgid "Synchronized Lyrics"
-msgstr ""
+msgstr "Synchronized lyrics"
 
 #: src/Widgets/LyricsWidget.vala:171
 msgid "Nothing is playing"
@@ -35,11 +37,11 @@ msgstr "Give Me Lyrics"
 
 #: src/Widgets/LyricsWidget.vala:267
 msgid "Advertising"
-msgstr ""
+msgstr "Advertising"
 
 #: src/Widgets/LyricsWidget.vala:276
 msgid "Loading"
-msgstr ""
+msgstr "Loading"
 
 #: src/Widgets/LyricsWidget.vala:333
 msgid "No lyric found"
@@ -47,12 +49,12 @@ msgstr "No lyric found"
 
 #: src/Widgets/LyricsWidget.vala:360
 msgid "Non-Synchronized Lyrics"
-msgstr ""
+msgstr "Non-synchronized lyrics"
 
 #: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
-msgstr ""
+msgstr "Synchronized lyrics:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr ""
+msgstr "Dark theme:"
