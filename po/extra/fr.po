@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2020-03-23 03:48+0000\n"
-"Last-Translator: Jeannette L <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2021-06-15 22:33+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/givemelyrics/"
 "extra/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.7-dev\n"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:8
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:3
@@ -50,7 +50,7 @@ msgstr "Modifier de la synchronisation des paroles"
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
 msgid "Bugfix"
-msgstr "Correction de bugs"
+msgstr "Correction d'erreurs"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
 msgid "New Translations"
@@ -67,7 +67,7 @@ msgstr "Thème sombre"
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:36
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:42
 msgid "Critical Bugfix"
-msgstr "Correction de bugs critiques"
+msgstr "Correction d'erreurs critiques"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Fix scroll window"
