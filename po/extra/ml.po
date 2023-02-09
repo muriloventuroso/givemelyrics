@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2020-09-19 03:36+0000\n"
-"Last-Translator: vachan-maker <vachan2014carmel@gmail.com>\n"
+"PO-Revision-Date: 2023-02-10 07:35+0000\n"
+"Last-Translator: Raman <translations.0l5zc@simplelogin.com>\n"
 "Language-Team: Malayalam <https://hosted.weblate.org/projects/givemelyrics/"
 "extra/ml/>\n"
 "Language: ml\n"
@@ -17,14 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3-dev\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:8
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:3
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:4
-#, fuzzy
 msgid "Give Me Lyrics"
-msgstr "Give Me Lyrics"
+msgstr "എനിക്ക് വരികൾ തരൂ"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:9
 msgid "Lyrics for your songs"
@@ -38,11 +37,11 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 msgid "Fix Translations"
-msgstr ""
+msgstr "വിവർത്തനങ്ങൾ പരിഹരിക്കുക"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
 msgid "Change sync lyrics"
-msgstr ""
+msgstr "സമന്വയ വരികൾ മാറ്റുക"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:24
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
@@ -52,20 +51,20 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
 msgid "New Translations"
-msgstr ""
+msgstr "പുതിയ വിവർത്തനങ്ങൾ"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:30
 msgid "Sync Lyrics"
-msgstr ""
+msgstr "വരികൾ സമന്വയിപ്പിക്കുക"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
 msgid "Dark Theme"
-msgstr ""
+msgstr "ഇരുണ്ട പ്രതിപാദ്യം"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:36
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:42
 msgid "Critical Bugfix"
-msgstr ""
+msgstr "ഗുരുതരമായ പിശക് പരിഹരിച്ചു"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Fix scroll window"
@@ -81,15 +80,15 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:49
 msgid "Source link"
-msgstr ""
+msgstr "ഉറവിട ശൃംഗലാംഗം"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:55
 msgid "New icon"
-msgstr ""
+msgstr "പുതിയ ബിംബം"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
 msgid "New translation: French"
-msgstr ""
+msgstr "പുതിയ വിവർത്തനം: ഫ്രഞ്ച്"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:61
 msgid "New Source: letras.mus.br"
@@ -97,15 +96,15 @@ msgstr ""
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:67
 msgid "Show lyrics"
-msgstr ""
+msgstr "വരികൾ കാണിക്കുക"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:116
 msgid "Murilo Venturoso"
-msgstr ""
+msgstr "മുറിലോ വെന്റുറോസോ"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:5
 msgid "See the lyrics of the song that is playing."
-msgstr ""
+msgstr "കളിക്കുന്ന പാട്ടിന്റെ വരികൾ കാണുക."
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:8
 msgid "com.github.muriloventuroso.givemelyrics"
