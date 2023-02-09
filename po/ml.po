@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-26 13:51-0300\n"
-"PO-Revision-Date: 2020-09-19 03:36+0000\n"
-"Last-Translator: vachan-maker <vachan2014carmel@gmail.com>\n"
+"PO-Revision-Date: 2023-02-10 07:35+0000\n"
+"Last-Translator: Raman <translations.0l5zc@simplelogin.com>\n"
 "Language-Team: Malayalam <https://hosted.weblate.org/projects/givemelyrics/"
 "translations/ml/>\n"
 "Language: ml\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3-dev\n"
+"X-Generator: Weblate 4.16-dev\n"
 
 #: src/Widgets/LyricsWidget.vala:130
 msgid "Source"
@@ -29,12 +29,11 @@ msgstr "സമന്വയിപ്പിച്ച വരികൾ"
 
 #: src/Widgets/LyricsWidget.vala:171
 msgid "Nothing is playing"
-msgstr "ഒന്നും പ്ലേ ചെയ്യുന്നില്ല"
+msgstr "ഒന്നും കളിക്കുന്നില്ല"
 
 #: src/Widgets/LyricsWidget.vala:256
-#, fuzzy
 msgid "Give Me Lyrics"
-msgstr "Give Me Lyrics"
+msgstr "എനിക്ക് വരികൾ തരൂ"
 
 #: src/Widgets/LyricsWidget.vala:267
 msgid "Advertising"
@@ -46,7 +45,7 @@ msgstr "ലഭ്യമാക്കുന്നു"
 
 #: src/Widgets/LyricsWidget.vala:333
 msgid "No lyric found"
-msgstr ""
+msgstr "ഗാനരചനകളൊന്നും കണ്ടെത്തിയില്ല"
 
 #: src/Widgets/LyricsWidget.vala:360
 msgid "Non-Synchronized Lyrics"
@@ -58,4 +57,4 @@ msgstr "സമന്വയിപ്പിച്ച വരികൾ:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr "ഇരുണ്ട തീം:"
+msgstr "ഇരുണ്ട പ്രതിപാദ്യം:"
