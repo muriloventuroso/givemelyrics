@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2023-02-10 07:35+0000\n"
+"PO-Revision-Date: 2023-02-17 04:45+0000\n"
 "Last-Translator: Raman <translations.0l5zc@simplelogin.com>\n"
 "Language-Team: Malayalam <https://hosted.weblate.org/projects/givemelyrics/"
 "extra/ml/>\n"
@@ -30,10 +30,13 @@ msgid "Lyrics for your songs"
 msgstr "നിങ്ങളുടെ പാട്ടുകൾക്കുള്ള വരികൾ"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:10
+#, fuzzy
 msgid ""
 "See the lyrics of the song that is playing, from any application. Sing along "
 "with the option to sync lyrics."
 msgstr ""
+"ഏത് പ്രയോഗത്തിൽ നിന്നും കളിക്കുന്ന പാട്ടിന്റെ വരികൾ കാണുക. വരികൾ "
+"സമന്വയിപ്പിക്കാനുള്ള ഓപ്ഷനോടൊപ്പം പാടുക."
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 msgid "Fix Translations"
@@ -47,7 +50,7 @@ msgstr "സമന്വയ വരികൾ മാറ്റുക"
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
 msgid "Bugfix"
-msgstr ""
+msgstr "പരിഹരിച്ച പിശക്"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
 msgid "New Translations"
@@ -92,7 +95,7 @@ msgstr "പുതിയ വിവർത്തനം: ഫ്രഞ്ച്"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:61
 msgid "New Source: letras.mus.br"
-msgstr ""
+msgstr "പുതിയ ഉറവിടം: ലെട്രാസ്.മസ്.ബിആർ"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:67
 msgid "Show lyrics"
@@ -108,7 +111,7 @@ msgstr "കളിക്കുന്ന പാട്ടിന്റെ വരി�
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:8
 msgid "com.github.muriloventuroso.givemelyrics"
-msgstr ""
+msgstr "com.github.muriloventuroso.givemelyrics"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:12
 msgid "audio;lyrics;"
