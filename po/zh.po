@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-26 13:51-0300\n"
 "PO-Revision-Date: 2023-03-04 10:35+0000\n"
-"Last-Translator: poi <erbaotao@outlook.com>\n"
+"Last-Translator: 火紅之葉 <Web_13234@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "givemelyrics/translations/zh_Hans/>\n"
 "Language: zh\n"
@@ -37,7 +37,7 @@ msgstr ""
 
 #: src/Widgets/LyricsWidget.vala:267
 msgid "Advertising"
-msgstr ""
+msgstr "广告"
 
 #: src/Widgets/LyricsWidget.vala:276
 msgid "Loading"
