@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-26 13:51-0300\n"
-"PO-Revision-Date: 2019-02-16 11:19+0000\n"
-"Last-Translator: Moo <hazap@hotmail.com>\n"
+"PO-Revision-Date: 2023-05-27 17:47+0000\n"
+"Last-Translator: Vaclovas Intas <vaclovas1999@gmail.com>\n"
 "Language-Team: Lithuanian <https://hosted.weblate.org/projects/givemelyrics/"
 "translations/lt/>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
-"X-Generator: Weblate 3.5-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: src/Widgets/LyricsWidget.vala:130
 msgid "Source"
@@ -31,7 +31,7 @@ msgstr "Sinchronizuoti dainos žodžiai"
 
 #: src/Widgets/LyricsWidget.vala:171
 msgid "Nothing is playing"
-msgstr "Nieko negrojama"
+msgstr "Niekas negrojama"
 
 #: src/Widgets/LyricsWidget.vala:256
 msgid "Give Me Lyrics"
@@ -43,7 +43,7 @@ msgstr "Reklamavimas"
 
 #: src/Widgets/LyricsWidget.vala:276
 msgid "Loading"
-msgstr "Įkeliama"
+msgstr "Kraunama"
 
 #: src/Widgets/LyricsWidget.vala:333
 msgid "No lyric found"
