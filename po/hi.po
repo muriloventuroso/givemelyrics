@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-26 13:51-0300\n"
-"PO-Revision-Date: 2023-02-02 10:37+0000\n"
-"Last-Translator: Raman <translations.0l5zc@simplelogin.com>\n"
+"PO-Revision-Date: 2024-02-29 14:02+0000\n"
+"Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/givemelyrics/"
 "translations/hi/>\n"
 "Language: hi\n"
@@ -17,44 +17,44 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: src/Widgets/LyricsWidget.vala:130
 msgid "Source"
-msgstr ""
+msgstr "स्रोत"
 
 #: src/Widgets/LyricsWidget.vala:137 src/Widgets/LyricsWidget.vala:344
 msgid "Synchronized Lyrics"
-msgstr ""
+msgstr "सिंक्रोनाइज़्ड बोल"
 
 #: src/Widgets/LyricsWidget.vala:171
 msgid "Nothing is playing"
-msgstr ""
+msgstr "कुछ भी नहीं बज रहा है"
 
 #: src/Widgets/LyricsWidget.vala:256
 msgid "Give Me Lyrics"
-msgstr "मुझे गीत दो"
+msgstr "मुझे बोल दो"
 
 #: src/Widgets/LyricsWidget.vala:267
 msgid "Advertising"
-msgstr ""
+msgstr "विज्ञापन देना"
 
 #: src/Widgets/LyricsWidget.vala:276
 msgid "Loading"
-msgstr ""
+msgstr "लोड हो रहा है"
 
 #: src/Widgets/LyricsWidget.vala:333
 msgid "No lyric found"
-msgstr ""
+msgstr "कोई बोल नहीं मिला"
 
 #: src/Widgets/LyricsWidget.vala:360
 msgid "Non-Synchronized Lyrics"
-msgstr ""
+msgstr "गैर-सिंक्रोनाइज़्ड बोल"
 
 #: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
-msgstr ""
+msgstr "सिंक्रोनाइज़्ड बोल:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr ""
+msgstr "गहरी थीम:"
