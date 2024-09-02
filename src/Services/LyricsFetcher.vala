@@ -43,6 +43,7 @@ namespace GiveMeLyrics {
             var 163_url = "http://music.163.com/api/search/pc?offset=0&limit=1&type=1&s=";
             var session = new Soup.Session ();
             session.timeout = 5;
+            session.user_agent = "Mozilla/5.0 (X11; Linux x86_64; rv:129.0) Gecko/20100101 Firefox/129.0";
             var url = 163_url + title + "," + artist;
             var message = new Soup.Message ("GET", url);
             /* send a sync request */

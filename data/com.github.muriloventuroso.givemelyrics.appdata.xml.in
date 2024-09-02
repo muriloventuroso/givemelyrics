@@ -149,6 +149,7 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
+  <launchable type="desktop-id">com.github.muriloventuroso.givemelyrics.desktop</launchable>
   <developer_name>Murilo Venturoso</developer_name>
   <url type="homepage">https://github.com/muriloventuroso/givemelyrics</url>
   <url type="bugtracker">https://github.com/muriloventuroso/givemelyrics/issues</url>
