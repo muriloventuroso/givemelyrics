@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2024-11-19 19:17+0000\n"
+"PO-Revision-Date: 2024-11-23 23:00+0000\n"
 "Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/givemelyrics/"
 "extra/et/>\n"
@@ -70,48 +70,48 @@ msgstr "Kriitiline veaparandus"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Fix scroll window"
-msgstr ""
+msgstr "Parandasime akna kerimisvea"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
 msgid "Show loading label"
-msgstr ""
+msgstr "Näita laadimisteadet"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:48
 msgid "Label Advertising"
-msgstr ""
+msgstr "Sildipõhine reklaam"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:49
 msgid "Source link"
-msgstr ""
+msgstr "Lähtekoodi link"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:55
 msgid "New icon"
-msgstr ""
+msgstr "Uus ikoon"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
 msgid "New translation: French"
-msgstr ""
+msgstr "Uus tõlge: prantsuse keel"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:61
 msgid "New Source: letras.mus.br"
-msgstr ""
+msgstr "Uus andmeallikas: letras.mus.br"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:67
 msgid "Show lyrics"
-msgstr ""
+msgstr "Vaata laulusõnu"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:116
 msgid "Murilo Venturoso"
-msgstr ""
+msgstr "Murilo Venturoso"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:5
 msgid "See the lyrics of the song that is playing."
-msgstr ""
+msgstr "Vaata esitamisel oleva laulu sõnu."
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:8
 msgid "com.github.muriloventuroso.givemelyrics"
-msgstr ""
+msgstr "com.github.muriloventuroso.givemelyrics"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:12
 msgid "audio;lyrics;"
-msgstr ""
+msgstr "audio;lyrics;laulusõnad;muusika;laulud;"
