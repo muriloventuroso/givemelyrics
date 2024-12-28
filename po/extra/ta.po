@@ -8,105 +8,110 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2019-01-28 11:07-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2024-12-29 17:00+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/givemelyrics/extra/"
+"ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10-dev\n"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:8
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:3
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:4
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "எனக்கு பாடல் கொடுங்கள்"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:9
 msgid "Lyrics for your songs"
-msgstr ""
+msgstr "உங்கள் பாடல்களுக்கான வரிகள்"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:10
 msgid ""
 "See the lyrics of the song that is playing, from any application. Sing along "
 "with the option to sync lyrics."
 msgstr ""
+"எந்தவொரு பயன்பாட்டிலிருந்தும் வாசிக்கும் பாடலின் வரிகளை காண்க. பாடல் வரிகளை ஒத்திசைக்கும் "
+"விருப்பத்துடன் சேர்ந்து பாடுங்கள்."
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 msgid "Fix Translations"
-msgstr ""
+msgstr "மொழிபெயர்ப்புகளை சரிசெய்யவும்"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
 msgid "Change sync lyrics"
-msgstr ""
+msgstr "ஒத்திசைவு வரிகளை மாற்றவும்"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:24
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
 msgid "Bugfix"
-msgstr ""
+msgstr "பிழைத்திருத்தம்"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
 msgid "New Translations"
-msgstr ""
+msgstr "புதிய மொழிபெயர்ப்புகள்"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:30
 msgid "Sync Lyrics"
-msgstr ""
+msgstr "ஒத்திசைவு பாடல்"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
 msgid "Dark Theme"
-msgstr ""
+msgstr "இருண்ட கருப்பொருள்"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:36
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:42
 msgid "Critical Bugfix"
-msgstr ""
+msgstr "சிக்கலான பிழைத்திருத்த"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Fix scroll window"
-msgstr ""
+msgstr "உருள் சாளரத்தை சரிசெய்யவும்"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
 msgid "Show loading label"
-msgstr ""
+msgstr "ஏற்றுதல் லேபிளைக் காட்டு"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:48
 msgid "Label Advertising"
-msgstr ""
+msgstr "விளம்பரம் சிட்டை"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:49
 msgid "Source link"
-msgstr ""
+msgstr "மூல இணைப்பு"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:55
 msgid "New icon"
-msgstr ""
+msgstr "புதிய படவுரு"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
 msgid "New translation: French"
-msgstr ""
+msgstr "புதிய மொழிபெயர்ப்பு: பிரஞ்சு"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:61
 msgid "New Source: letras.mus.br"
-msgstr ""
+msgstr "புதிய ஆதாரம்: letras.mus.br"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:67
 msgid "Show lyrics"
-msgstr ""
+msgstr "பாடல் காட்டு"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:116
 msgid "Murilo Venturoso"
-msgstr ""
+msgstr "முரிலோ வென்டூரோசோ"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:5
 msgid "See the lyrics of the song that is playing."
-msgstr ""
+msgstr "பாடும் பாடலின் வரிகளை பாருங்கள்."
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:8
 msgid "com.github.muriloventuroso.givemelyrics"
-msgstr ""
+msgstr "com.github.muriloventuroso.givemelirics"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:12
 msgid "audio;lyrics;"
-msgstr ""
+msgstr "ஆடியோ; பாடல்;"
