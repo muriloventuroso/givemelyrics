@@ -9,7 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-26 13:51-0300\n"
 "PO-Revision-Date: 2025-06-04 16:37+0000\n"
-"Last-Translator: \"Cheng R.Zhu\" <zcr@users.noreply.hosted.weblate.org>\n"
+"Last-Translator: \"https://medium.com/@porkifiableoinking\" "
+"<erbaotao@outlook.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/givemelyrics/translations/zh_Hans/>\n"
 "Language: zh\n"
@@ -31,7 +32,7 @@ msgstr "同步歌词"
 
 #: src/Widgets/LyricsWidget.vala:171
 msgid "Nothing is playing"
-msgstr ""
+msgstr "未在播放"
 
 #: src/Widgets/LyricsWidget.vala:256
 #, fuzzy
