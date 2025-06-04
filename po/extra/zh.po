@@ -9,7 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
 "PO-Revision-Date: 2025-06-04 16:37+0000\n"
-"Last-Translator: \"Cheng R.Zhu\" <zcr@users.noreply.hosted.weblate.org>\n"
+"Last-Translator: \"https://medium.com/@porkifiableoinking\" "
+"<erbaotao@outlook.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/givemelyrics/extra/zh_Hans/>\n"
 "Language: zh\n"
@@ -28,7 +29,7 @@ msgstr "Give Me Lyrics"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:9
 msgid "Lyrics for your songs"
-msgstr ""
+msgstr "找到的歌词"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:10
 #, fuzzy
