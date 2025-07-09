@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2019-08-11 10:24+0000\n"
-"Last-Translator: Madhumitha Thanneeru <chinni.t2000@gmail.com>\n"
+"PO-Revision-Date: 2025-07-10 12:01+0000\n"
+"Last-Translator: Divakar <divakar.galaxys9@gmail.com>\n"
 "Language-Team: Telugu <https://hosted.weblate.org/projects/givemelyrics/"
 "extra/te/>\n"
 "Language: te\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.8-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:8
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:3
@@ -70,7 +70,7 @@ msgstr "క్లిష్టమైన తప్పిదాన్ని ప�
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Fix scroll window"
-msgstr ""
+msgstr "స్క్రోల్ విండోను పరిష్కరించండి"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
 msgid "Show loading label"
@@ -94,7 +94,7 @@ msgstr "కొత్త అనువాదము:ఫ్రెంచ్"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:61
 msgid "New Source: letras.mus.br"
-msgstr ""
+msgstr "కొత్త మూలం: letras.mus.br"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:67
 msgid "Show lyrics"
