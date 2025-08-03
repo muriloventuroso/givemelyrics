@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-26 13:51-0300\n"
-"PO-Revision-Date: 2024-09-24 14:15+0000\n"
+"PO-Revision-Date: 2025-08-04 18:02+0000\n"
 "Last-Translator: Itsmechinmoy <itsmechinmoy@users.noreply.hosted.weblate.org>"
 "\n"
 "Language-Team: Assamese <https://hosted.weblate.org/projects/givemelyrics/"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.8-dev\n"
+"X-Generator: Weblate 5.13-dev\n"
 
 #: src/Widgets/LyricsWidget.vala:130
 msgid "Source"
@@ -26,11 +26,11 @@ msgstr "উত্‍স"
 
 #: src/Widgets/LyricsWidget.vala:137 src/Widgets/LyricsWidget.vala:344
 msgid "Synchronized Lyrics"
-msgstr "সমন্বিত গীতৰ কথা"
+msgstr "সিংক্ৰ’নাইজড গীতৰ কথা"
 
 #: src/Widgets/LyricsWidget.vala:171
 msgid "Nothing is playing"
-msgstr "একো খেলা নাই"
+msgstr "একো চলা নাই"
 
 #: src/Widgets/LyricsWidget.vala:256
 msgid "Give Me Lyrics"
@@ -42,19 +42,19 @@ msgstr "বিজ্ঞাপন"
 
 #: src/Widgets/LyricsWidget.vala:276
 msgid "Loading"
-msgstr "লোড হৈ আছে"
+msgstr "ল’ড হৈ আছে"
 
 #: src/Widgets/LyricsWidget.vala:333
 msgid "No lyric found"
-msgstr "কোনো গীতৰ কথা পোৱা নগ'ল"
+msgstr "কোনো গীতৰ কথা পোৱা নগ’ল"
 
 #: src/Widgets/LyricsWidget.vala:360
 msgid "Non-Synchronized Lyrics"
-msgstr "নন-চিংক্ৰ'নাইজড গীতৰ কথা"
+msgstr "অসিংক্ৰ’নাইজড গীতৰ কথা"
 
 #: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
-msgstr "সমন্বিত গীতৰ কথা:"
+msgstr "সিংক্ৰ’নাইজড গীতৰ কথা:"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
