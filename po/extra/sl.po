@@ -8,25 +8,27 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2019-01-28 11:07-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-03-26 11:09+0000\n"
+"Last-Translator: nikolaj <Nikolaj.farkas@borg-radkersburg.at>\n"
+"Language-Team: Slovenian <https://hosted.weblate.org/projects/givemelyrics/"
+"extra/sl/>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.17-dev\n"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:8
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:3
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:4
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "daj mi besedilo"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:9
 msgid "Lyrics for your songs"
-msgstr ""
+msgstr "besedila za tvoje pesmi"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:10
 msgid ""
