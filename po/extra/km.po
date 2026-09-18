@@ -8,105 +8,110 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-30 09:04+0100\n"
-"PO-Revision-Date: 2019-01-28 11:07-0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-09-18 12:48+0000\n"
+"Last-Translator: SeyhaLite <sok123230@gmail.com>\n"
+"Language-Team: Khmer (Central) <https://hosted.weblate.org/projects/"
+"givemelyrics/extra/km/>\n"
 "Language: km\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:8
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:3
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:4
 msgid "Give Me Lyrics"
-msgstr ""
+msgstr "Give Me Lyrics"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:9
 msgid "Lyrics for your songs"
-msgstr ""
+msgstr "អត្ថបទចម្រៀងសម្រាប់បទចម្រៀង"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:10
 msgid ""
 "See the lyrics of the song that is playing, from any application. Sing along "
 "with the option to sync lyrics."
 msgstr ""
+"មើលអត្ថបទចម្រៀងនៃបទចម្រៀងដែលកំពុងលេង ពីកម្មវិធីណាមួយ។ ច្រៀងតាមជាមួយ ជាមួយជម្រើសធ្វើសមកាលកម្មអ"
+"ត្ថបទចម្រៀង។"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:14
 msgid "Fix Translations"
-msgstr ""
+msgstr "ជួសជុលការបកប្រែ"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:19
 msgid "Change sync lyrics"
-msgstr ""
+msgstr "ផ្លាស់ប្តូរអត្ថបទចម្រៀងដែលធ្វើសមកាលកម្ម"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:24
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:50
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:62
 msgid "Bugfix"
-msgstr ""
+msgstr "ជួសជុលកំហុស"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:25
 msgid "New Translations"
-msgstr ""
+msgstr "ការបកប្រែថ្មី"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:30
 msgid "Sync Lyrics"
-msgstr ""
+msgstr "ធ្វើសមកាលកម្មអត្ថបទចម្រៀង"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:31
 msgid "Dark Theme"
-msgstr ""
+msgstr "ផ្ទាំងងងឹត"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:36
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:42
 msgid "Critical Bugfix"
-msgstr ""
+msgstr "ជួសជុលកំហុសធ្ងន់ធ្ងរ"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:37
 msgid "Fix scroll window"
-msgstr ""
+msgstr "ជួសជុលផ្ទាំងរំកិល"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:43
 msgid "Show loading label"
-msgstr ""
+msgstr "បង្ហាញស្លាកកំពុងផ្ទុក"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:48
 msgid "Label Advertising"
-msgstr ""
+msgstr "ស្លាកផ្សាយពាណិជ្ជកម្ម"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:49
 msgid "Source link"
-msgstr ""
+msgstr "តំណប្រភព"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:55
 msgid "New icon"
-msgstr ""
+msgstr "រូបតំណាងថ្មី"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:56
 msgid "New translation: French"
-msgstr ""
+msgstr "ការបកប្រែថ្មី៖ ភាសាបារាំង"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:61
 msgid "New Source: letras.mus.br"
-msgstr ""
+msgstr "ប្រភពថ្មី៖ letras.mus.br"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:67
 msgid "Show lyrics"
-msgstr ""
+msgstr "បង្ហាញអត្ថបទចម្រៀង"
 
 #: data/com.github.muriloventuroso.givemelyrics.appdata.xml.in:116
 msgid "Murilo Venturoso"
-msgstr ""
+msgstr "Murilo Venturoso"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:5
 msgid "See the lyrics of the song that is playing."
-msgstr ""
+msgstr "មើលអត្ថបទចម្រៀងនៃបទចម្រៀងដែលកំពុងលេង។"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:8
 msgid "com.github.muriloventuroso.givemelyrics"
-msgstr ""
+msgstr "com.github.muriloventuroso.givemelyrics"
 
 #: data/com.github.muriloventuroso.givemelyrics.desktop.in:12
 msgid "audio;lyrics;"
-msgstr ""
+msgstr "សំឡេង;អត្ថបទចម្រៀង;"
