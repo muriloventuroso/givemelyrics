@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.muriloventuroso.givemelyrics\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-26 13:51-0300\n"
-"PO-Revision-Date: 2026-09-18 12:48+0000\n"
+"PO-Revision-Date: 2026-09-19 12:51+0000\n"
 "Last-Translator: SeyhaLite <sok123230@gmail.com>\n"
 "Language-Team: Khmer (Central) <https://hosted.weblate.org/projects/"
 "givemelyrics/translations/km/>\n"
@@ -21,15 +21,15 @@ msgstr ""
 
 #: src/Widgets/LyricsWidget.vala:130
 msgid "Source"
-msgstr ""
+msgstr "ប្រភព"
 
 #: src/Widgets/LyricsWidget.vala:137 src/Widgets/LyricsWidget.vala:344
 msgid "Synchronized Lyrics"
-msgstr ""
+msgstr "អត្ថបទចម្រៀងធ្វើសមកាលកម្ម"
 
 #: src/Widgets/LyricsWidget.vala:171
 msgid "Nothing is playing"
-msgstr ""
+msgstr "គ្មានអ្វីកំពុងលេងទេ"
 
 #: src/Widgets/LyricsWidget.vala:256
 msgid "Give Me Lyrics"
@@ -37,24 +37,24 @@ msgstr "Give Me Lyrics"
 
 #: src/Widgets/LyricsWidget.vala:267
 msgid "Advertising"
-msgstr ""
+msgstr "ការផ្សាយពាណិជ្ជកម្ម"
 
 #: src/Widgets/LyricsWidget.vala:276
 msgid "Loading"
-msgstr ""
+msgstr "កំពុងផ្ទុក"
 
 #: src/Widgets/LyricsWidget.vala:333
 msgid "No lyric found"
-msgstr ""
+msgstr "រកមិនឃើញអត្ថបទចម្រៀងទេ"
 
 #: src/Widgets/LyricsWidget.vala:360
 msgid "Non-Synchronized Lyrics"
-msgstr ""
+msgstr "អត្ថបទចម្រៀងមិនធ្វើសមកាលកម្ម"
 
 #: src/Widgets/Preferences.vala:58
 msgid "Synchronized Lyrics:"
-msgstr ""
+msgstr "អត្ថបទចម្រៀងធ្វើសមកាលកម្ម៖"
 
 #: src/Widgets/Preferences.vala:61
 msgid "Dark Theme:"
-msgstr ""
+msgstr "រចនាប័ទ្មងងឹត៖"
